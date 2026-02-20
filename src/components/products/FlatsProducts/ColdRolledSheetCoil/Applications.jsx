@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion'
 import { ChevronRight } from 'lucide-react'
-import image from "../../../../assets/application.jpg"
+import image from "../../../../assets/flatsproducts/coldrolled/cold-rolled-coilsC.jpg"
 
 export default function Applications() {
 	const applications = [

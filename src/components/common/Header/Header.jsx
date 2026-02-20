@@ -13,10 +13,10 @@ const Header = () => {
 
 	return (
 		<>
-			<header className="w-full bg-primary shadow-sm relative z-50 ">
+			<header className="w-full bg-white shadow-sm relative z-50 ">
 				{/* Top Bar */}
 				<div className="border-b border-border">
-					<div className="container mx-auto px-4 lg:px-8">
+					<div className="px-4 mx-auto ">
 						<div className="flex items-center justify-between py-4">
 							{/* Logo */}
 							<motion.div
@@ -25,7 +25,7 @@ const Header = () => {
 								transition={{ duration: 0.5 }}
 								className="shrink-0"
 							>
-								<img src="/logo2.jpeg" className="h-12 w-12" alt="" srcset="" />
+								<img src="/logo4.png" className="h-8 w-62" alt="" srcset="" />
 							</motion.div>
 
 							{/* Contact Info */}
@@ -38,33 +38,33 @@ const Header = () => {
 								{/* Phone */}
 								<div className="flex items-center gap-3">
 									<div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-										<Phone className="w-5 h-5 text-white" />
+										<Phone className="w-5 h-5 text-primary" />
 									</div>
 									<div>
-										<p className="text-xs text-white font-medium">Call</p>
-										<p className="text-sm font-semibold text-white">+966-13-3444036</p>
+										<p className="text-xs text-primary font-medium">Call</p>
+										<p className="text-sm font-semibold text-primary">+966-13-3444036</p>
 									</div>
 								</div>
 
 								{/* Email */}
 								<div className="flex items-center gap-3">
 									<div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-										<Mail className="w-5 h-5 text-white" />
+										<Mail className="w-5 h-5 text-primary" />
 									</div>
 									<div>
-										<p className="text-xs text-white font-medium">Email</p>
-										<p className="text-sm font-semibold text-white">sales@ikt.sa</p>
+										<p className="text-xs text-primary font-medium">Email</p>
+										<p className="text-sm font-semibold text-primary">sales@ikt.sa</p>
 									</div>
 								</div>
 
 								{/* Time */}
 								<div className="flex items-center gap-3">
 									<div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-										<Clock className="w-5 h-5 text-white" />
+										<Clock className="w-5 h-5 text-primary" />
 									</div>
 									<div>
-										<p className="text-xs text-white font-medium">Time</p>
-										<p className="text-sm font-semibold text-white">08AM - 04PM</p>
+										<p className="text-xs text-primary font-medium">Time</p>
+										<p className="text-sm font-semibold text-primary">08AM - 04PM</p>
 									</div>
 								</div>
 							</motion.div>
@@ -75,7 +75,7 @@ const Header = () => {
 								animate={{ opacity: 1, x: 0 }}
 								transition={{ duration: 0.5 }}
 								onClick={() => setIsDrawerOpen(true)}
-								className="lg:hidden w-10 h-10 flex items-center justify-center text-white hover:bg-primary/10 rounded-lg transition-colors"
+								className="lg:hidden w-10 h-10 flex items-center justify-center text-primary hover:bg-primary/10 rounded-lg transition-colors"
 							>
 								<Menu className="w-6 h-6" />
 							</motion.button>
@@ -85,7 +85,7 @@ const Header = () => {
 
 				{/* Navigation Bar */}
 				<nav className="bg-background border-b border-border">
-					<div className="container mx-auto px-4 lg:px-8">
+					<div className=" mx-auto  ">
 						<div className="flex items-center justify-between">
 							<motion.ul
 								initial={{ opacity: 0 }}

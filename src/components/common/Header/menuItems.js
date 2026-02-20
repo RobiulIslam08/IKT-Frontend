@@ -107,26 +107,7 @@ export const menuItems = [
       //   items: ["EN 10025 S690QL", "EN 10025 S890QL"],
       //   href: generateProductUrl("Quenched-And-Tempered-Steel"),
       // },
-      {
-        name: "Abraclad-Chromium-Carbide-Wear-Plate",
-        items: [],
-        href: generateProductUrl("ABRACLAD-CHROMIUM-CARBIDE-WEAR-PLATE"),
-      },
-      {
-        name: "Creusabro®-4800-&-Creusabro®-8000",
-        items: [],
-        href: generateProductUrl("CREUSABRO®-4800-&-CREUSABRO®-8000"),
-      },
-      {
-        name: "Abrasion-&-Wear-Resistant-Steel",
-        items: [],
-        href: generateProductUrl("ABRASION-&-WEAR-RESISTANT-STEEL"),
-      },
-      {
-        name: "High-Yield-Cold-Forming-Steel-Plate",
-        items: [],
-        href: generateProductUrl("HIGH-YIELD-COLD-FORMING-STEEL-PLATE"),
-      },
+
       {
         name: "460-Yield-Steel-Plate",
         items: [
@@ -157,7 +138,7 @@ export const menuItems = [
         name: "Hic-Steel-Plate",
         items: ["CARELSO HIC PREMIUM+", "ASME SA516 HIC AND ASTM A516 HIC"],
       },
-     
+
       {
         name: "Non-Ferrous-Metals",
         items: ["Aluminum", "Brass", "Bronze", "Copper"],
@@ -171,7 +152,7 @@ export const menuItems = [
           "Chrome-Bar",
         ],
       },
-       {
+      {
         name: "Weather-Resistant-Steel-Plate",
         items: [],
         href: generateProductUrl("WEATHER-RESISTANT-STEEL-PLATE"),
@@ -238,7 +219,27 @@ export const menuItems = [
             name: "Quenched-And-Tempered-Steel",
             subItems: ["EN 10025 S690QL", "EN 10025 S890QL"],
           },
-          "Abraclad-Chromium-Carbide-Wear-Plate",
+          
+          {
+            name: "Abraclad-Chromium-Carbide-Wear-Plate",
+            items: [],
+            href: generateProductUrl("ABRACLAD-CHROMIUM-CARBIDE-WEAR-PLATE"),
+          },
+          {
+            name: "Creusabro®-4800-&-Creusabro®-8000",
+            items: [],
+            href: generateProductUrl("CREUSABRO®-4800-&-CREUSABRO®-8000"),
+          },
+          {
+            name: "Abrasion-&-Wear-Resistant-Steel",
+            items: [],
+            href: generateProductUrl("ABRASION-&-WEAR-RESISTANT-STEEL"),
+          },
+          {
+            name: "High-Yield-Cold-Forming-Steel-Plate",
+            items: [],
+            href: generateProductUrl("HIGH-YIELD-COLD-FORMING-STEEL-PLATE"),
+          },
           "Creusabro-4800-8000",
           "Armour-Plate",
         ],

@@ -5,112 +5,134 @@ import { motion } from 'framer-motion';
 import { LayersIcon, FileTextIcon, CircleCheckIcon } from 'lucide-react';
 
 export function InfoSection() {
-	const containerVariants = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				staggerChildren: 0.1,
-				delayChildren: 0.3,
-			},
-		},
-	};
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.3,
+            },
+        },
+    };
 
-	const itemVariants = {
-		hidden: { opacity: 0, y: 20 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				duration: 0.5,
-				ease: 'easeOut',
-			},
-		},
-	};
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                ease: 'easeOut',
+            },
+        },
+    };
 
-	const cardVariants = {
-		hidden: { opacity: 0, y: 30 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				duration: 0.6,
-				ease: 'easeOut',
-			},
-		},
-		hover: {
-			y: -8,
-			boxShadow: '0 20px 25px -5px rgba(6, 175, 207, 0.15)',
-			transition: {
-				duration: 0.3,
-			},
-		},
-	};
+    const cardVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: 'easeOut',
+            },
+        },
+        hover: {
+            y: -8,
+            boxShadow: '0 20px 25px -5px rgba(6, 175, 207, 0.15)',
+            transition: {
+                duration: 0.3,
+            },
+        },
+    };
 
-	return (
-		<div className="min-h-screen bg-background">
-			<motion.section
-				variants={containerVariants}
-				initial="hidden"
-				whileInView="visible"
-				viewport={{ once: true, amount: 0.3 }}
-				className="px-6 py-16 md:px-12 md:py-24"
-			>
-				<motion.div variants={itemVariants} className="mb-16">
-					<h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-						More Information
-					</h1>
-					<p className="text-muted-foreground text-lg">
-						FLAT, SQUARE & ROUND BARS
-					</p>
-				</motion.div>
+    const barData = [
+        {
+            title: "SQUARE BARS",
+            icon: <LayersIcon className="w-10 h-10 text-primary" />,
+            grades: "ASTM A36 / EN10025 S275JR, S355 / JIS G3101 SS400",
+            designation: "8mm To 10mm"
+        },
+        {
+            title: "ROUND BARS",
+            icon: <CircleCheckIcon className="w-10 h-10 text-primary" />,
+            grades: "ASTM A36 / EN10025 S275, S355 / JIS G3101 SS400",
+            designation: "6mm To 100mm"
+        },
+        {
+            title: "FLAT BARS",
+            icon: <FileTextIcon className="w-10 h-10 text-primary" />,
+            grades: "S275 JR, ASTM A36, SS400",
+            designation: "13 x 13mm To 300 x 400mm"
+        }
+    ];
 
+    return (
+        <div className="min-h-screen bg-background">
+            <motion.section
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                className="px-6 py-16 md:px-12 md:py-24"
+            >
+                {/* Header Section */}
+                <motion.div variants={itemVariants} className="mb-16">
+                    <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+                        More Information
+                    </h1>
+                    <p className="text-muted-foreground text-lg uppercase tracking-wider">
+                        FLAT, SQUARE AND ROUND BARS
+                    </p>
+                </motion.div>
 
-
-				<motion.div
-					variants={containerVariants}
-					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true, amount: 0.2 }}
-					className="grid md:grid-cols-2 gap-8"
-				>
-					<motion.div
-						variants={cardVariants}
-						whileHover="hover"
-						className="bg-card border border-border rounded-2xl p-8 md:p-10 cursor-default"
-					>
-						<motion.div
-							whileHover={{ rotate: 15, scale: 1.15 }}
-							transition={{ duration: 0.3 }}
-							className="mb-6"
-						>
-							<FileTextIcon className="w-10 h-10 text-primary" />
-						</motion.div>
-						<p className="text-muted-foreground text-sm leading-relaxed">High-quality materials engineered for demanding industrial applications. Our products meet international standards and offer superior performance across various industries.</p>
-						<p className="text-muted-foreground text-sm leading-relaxed">We maintain strict quality control throughout the manufacturing process to ensure consistency and reliability. Each product undergoes rigorous testing to meet or exceed industry specifications.</p>
-						<p className="text-muted-foreground text-sm leading-relaxed">Our extensive inventory and fast processing capabilities ensure quick delivery times for your projects. Contact us for detailed specifications and custom requirements.</p>
-					</motion.div>
-
-					<motion.div
-						variants={cardVariants}
-						whileHover="hover"
-						className="bg-card border border-border rounded-2xl p-8 md:p-10 cursor-default"
-					>
-						<motion.div
-							whileHover={{ rotate: 15, scale: 1.15 }}
-							transition={{ duration: 0.3 }}
-							className="mb-6"
-						>
-							<LayersIcon className="w-10 h-10 text-primary" />
-						</motion.div>
-						<p className="text-muted-foreground text-sm leading-relaxed">
-							IKT stocks large-format materials ensuring optimal utilization and minimal waste during custom processing. By leveraging our high-definition plasma cutting technology, we deliver cost-effective, precision-cut components that save clients both time and expense. Additionally, our large plate sizes allow for full-scale fabrications, helping customers reduce costs by minimizing the need for extensive welding.
-						</p>
-					</motion.div>
-				</motion.div>
-			</motion.section>
-		</div>
-	);
+                {/* Bars Grid Section */}
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    {barData.map((bar, index) => (
+                        <motion.div
+                            key={index}
+                            variants={cardVariants}
+                            whileHover="hover"
+                            className="bg-card border border-border rounded-2xl p-8 cursor-default flex flex-col"
+                        >
+                            <motion.div
+                                whileHover={{ rotate: 15, scale: 1.1 }}
+                                transition={{ duration: 0.3 }}
+                                className="mb-6"
+                            >
+                                {bar.icon}
+                            </motion.div>
+                            
+                            <h3 className="text-2xl font-bold text-foreground mb-6">{bar.title}</h3>
+                            
+                            <div className="space-y-6 mt-auto">
+                                <div>
+                                    <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Grades</p>
+                                    <p className="text-muted-foreground text-sm leading-relaxed">
+                                        {bar.grades}
+                                    </p>
+                                </div>
+                                
+                                <div className="pt-4 border-t border-border/50">
+                                    <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Designation</p>
+                                    <p className="text-lg font-semibold text-foreground">
+                                        {bar.designation}
+                                    </p>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </motion.div>
+            </motion.section>
+        </div>
+    );
 }
 
 export default InfoSection;

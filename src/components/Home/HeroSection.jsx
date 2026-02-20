@@ -2,32 +2,34 @@
 import { motion } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { useState } from "react";
+import slide2 from "../../assets/banner6.png"
 import slide1 from "../../assets/slide1.jpg"
-import slide2 from "../../assets/slide2.jpg"
 import slide3 from "../../assets/slide3.jpg"
-// import slide1 from "../../assets/slide1.jpg"
 
 const slides = [
 	{
 		id: 1,
-		title: "Our services",
+		title: "Welcome to Our Steel World",
 		description:
-			"Since its beginnings as a simple contributor in the field of steel plates. We have expanded our range of services to the point where we not only offer a wide range of the assemble and prepare complex finished parts ready for assembly.",
-		image:slide1,
+			"Discover premium quality steel products and exceptional services tailored for your industrial needs. Experience innovation and reliability like never before.",
+		image: slide2,
+		isVideo: false,
 	},
 	{
 		id: 2,
-		title: "Quality Products",
+		title: "Our services",
 		description:
-			"We provide the highest quality steel products with precision engineering and superior craftsmanship for all industrial applications.",
-		image: slide2,
+			"Since its beginnings as a simple contributor in the field of steel plates. We have expanded our range of services to the point where we not only offer a wide range of the assemble and prepare complex finished parts ready for assembly.",
+		image: slide1,
+		isVideo: false,
 	},
 	{
 		id: 3,
-		title: "Global Delivery",
+		title: "Quality Products",
 		description:
-			"With our extensive network, we deliver steel products worldwide with guaranteed timelines and competitive pricing.",
-		image:slide3,
+			"We provide the highest quality steel products with precision engineering and superior craftsmanship for all industrial applications.",
+		image: slide3,
+		isVideo: false,
 	},
 ];
 
@@ -44,7 +46,7 @@ const HeroSection = () => {
 
 	return (
 		<section className="relative h-[600px] lg:h-[700px] overflow-hidden">
-			{/* Background Images */}
+			{/* Background Images and Video */}
 			{slides.map((slide, index) => (
 				<motion.div
 					key={slide.id}
@@ -53,12 +55,26 @@ const HeroSection = () => {
 					transition={{ duration: 0.8 }}
 					className="absolute inset-0"
 				>
-					<div
-						className="absolute inset-0 bg-cover bg-center"
-						style={{ backgroundImage: `url(${slide.image})` }}
-					>
-						<div className="absolute inset-0 bg-linear-to-r from-slate-900/70 via-slate-800/60 to-slate-900/50" />
-					</div>
+					{slide.isVideo ? (
+						<>
+							<video
+								className="absolute inset-0 w-full h-full object-cover"
+								src={slide.video}
+								autoPlay
+								muted
+								loop
+								playsInline
+							/>
+							<div className="absolute inset-0 bg-linear-to-r from-slate-900/10 via-slate-800/10 to-slate-900/10" />
+						</>
+					) : (
+						<div
+							className="absolute inset-0 bg-cover bg-center"
+							style={{ backgroundImage: `url(${slide.image})` }}
+						>
+							<div className="absolute inset-0 bg-linear-to-r from-slate-900/10 via-slate-800/30 to-slate-900/20" />
+						</div>
+					)}
 				</motion.div>
 			))}
 
@@ -130,8 +146,8 @@ const HeroSection = () => {
 							key={index}
 							onClick={() => setCurrentSlide(index)}
 							className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index
-									? "bg-primary w-8"
-									: "bg-white/50 hover:bg-white/70"
+								? "bg-primary w-8"
+								: "bg-white/50 hover:bg-white/70"
 								}`}
 							whileHover={{ scale: 1.2 }}
 							whileTap={{ scale: 0.9 }}

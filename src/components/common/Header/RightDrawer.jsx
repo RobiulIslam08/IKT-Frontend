@@ -69,7 +69,7 @@ const RightDrawer = ({ isOpen, onClose }) => {
 								transition={{ delay: 0.1 }}
 								className="mb-6"
 							>
-								<img src="/logo2.jpeg" className="h-12 w-12" alt="" srcset="" />
+								<img src="/logo4.png" className="h-12 w-50" alt="" srcset="" />
 							</motion.div>
 
 							{/* Divider */}

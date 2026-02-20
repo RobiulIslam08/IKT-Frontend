@@ -110,7 +110,7 @@ export default function RequestBrochure() {
 											name="name"
 											value={formData.name}
 											onChange={handleChange}
-											placeholder="Enter your name"
+											placeholder="Enter your full name"
 											required
 											className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 bg-white"
 										/>
@@ -127,7 +127,7 @@ export default function RequestBrochure() {
 											name="email"
 											value={formData.email}
 											onChange={handleChange}
-											placeholder="Enter your email"
+											placeholder="Enter your full email"
 											required
 											className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 bg-white"
 										/>

@@ -134,7 +134,7 @@ export function InfoSection() {
               <LayersIcon className="w-10 h-10 text-primary" />
             </motion.div>
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Brown McFarlane and S690QL plate
+              IKT and S690QL plate
             </h3>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg mb-2">
         IKT maintains a robust inventory of S690QL steel plates, ensuring immediate availability for high-demand projects. Beyond supplying full-sized plates, we utilize advanced computer-controlled (CNC) cutting machines to deliver precision-engineered components, cut exactly to your specified sizes and complex shapes.

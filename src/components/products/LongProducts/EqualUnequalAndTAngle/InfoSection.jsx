@@ -5,112 +5,138 @@ import { motion } from 'framer-motion';
 import { LayersIcon, FileTextIcon, CircleCheckIcon } from 'lucide-react';
 
 export function InfoSection() {
-	const containerVariants = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				staggerChildren: 0.1,
-				delayChildren: 0.3,
-			},
-		},
-	};
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.3,
+            },
+        },
+    };
 
-	const itemVariants = {
-		hidden: { opacity: 0, y: 20 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				duration: 0.5,
-				ease: 'easeOut',
-			},
-		},
-	};
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                ease: 'easeOut',
+            },
+        },
+    };
 
-	const cardVariants = {
-		hidden: { opacity: 0, y: 30 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				duration: 0.6,
-				ease: 'easeOut',
-			},
-		},
-		hover: {
-			y: -8,
-			boxShadow: '0 20px 25px -5px rgba(6, 175, 207, 0.15)',
-			transition: {
-				duration: 0.3,
-			},
-		},
-	};
+    const cardVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: 'easeOut',
+            },
+        },
+        hover: {
+            y: -8,
+            boxShadow: '0 20px 25px -5px rgba(6, 175, 207, 0.15)',
+            transition: {
+                duration: 0.3,
+            },
+        },
+    };
 
-	return (
-		<div className="min-h-screen bg-background">
-			<motion.section
-				variants={containerVariants}
-				initial="hidden"
-				whileInView="visible"
-				viewport={{ once: true, amount: 0.3 }}
-				className="px-6 py-16 md:px-12 md:py-24"
-			>
-				<motion.div variants={itemVariants} className="mb-16">
-					<h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-						More Information
-					</h1>
-					<p className="text-muted-foreground text-lg">
-						EQUAL, UNEQUAL & T-ANGLE
-					</p>
-				</motion.div>
+    const equalWidths = ['20 mm', '25 mm', '30 mm', '40 mm', '45 mm', '50 mm', '60 mm', '70 mm', '75 mm', '80 mm', '100 mm', '120 mm', '150 mm'];
 
+    return (
+        <div className="min-h-screen bg-background">
+            <motion.section
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                className="px-6 py-16 md:px-12 md:py-24"
+            >
+                {/* Header Section */}
+                <motion.div variants={itemVariants} className="mb-16">
+                    <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+                        More Information
+                    </h1>
+                    <p className="text-muted-foreground text-lg uppercase tracking-wider">
+                        EQUAL, UNEQUAL AND T- ANGLE
+                    </p>
+                </motion.div>
 
+                <div className="grid gap-12">
+                    {/* Equal Angle Section */}
+                    <motion.div
+                        variants={cardVariants}
+                        whileHover="hover"
+                        className="bg-card border border-border rounded-2xl p-8 md:p-10 cursor-default"
+                    >
+                        <div className="flex items-center gap-4 mb-6">
+                            <LayersIcon className="w-8 h-8 text-primary" />
+                            <h3 className="text-2xl font-bold text-foreground uppercase tracking-tight">Equal Angle</h3>
+                        </div>
+                        
+                        <div className="space-y-6">
+                            <div>
+                                <h4 className="text-lg font-semibold text-foreground mb-2 italic">What is hot rolled mild steel equal angle and what is it used for?</h4>
+                                <p className="text-muted-foreground text-base leading-relaxed">
+                                    Equal angle sections are widely used for general fabrication work, frame making, automotive applications, and in the construction industries. 
+                                    Equal angle has a 90° angle in the centre of the profile and both sides having equal width.
+                                </p>
+                            </div>
 
-				<motion.div
-					variants={containerVariants}
-					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true, amount: 0.2 }}
-					className="grid md:grid-cols-2 gap-8"
-				>
-					<motion.div
-						variants={cardVariants}
-						whileHover="hover"
-						className="bg-card border border-border rounded-2xl p-8 md:p-10 cursor-default"
-					>
-						<motion.div
-							whileHover={{ rotate: 15, scale: 1.15 }}
-							transition={{ duration: 0.3 }}
-							className="mb-6"
-						>
-							<FileTextIcon className="w-10 h-10 text-primary" />
-						</motion.div>
-						<p className="text-muted-foreground text-sm leading-relaxed">High-quality materials engineered for demanding industrial applications. Our products meet international standards and offer superior performance across various industries.</p>
-						<p className="text-muted-foreground text-sm leading-relaxed">We maintain strict quality control throughout the manufacturing process to ensure consistency and reliability. Each product undergoes rigorous testing to meet or exceed industry specifications.</p>
-						<p className="text-muted-foreground text-sm leading-relaxed">Our extensive inventory and fast processing capabilities ensure quick delivery times for your projects. Contact us for detailed specifications and custom requirements.</p>
-					</motion.div>
+                            <div>
+                                <p className="text-sm font-semibold text-primary uppercase mb-3">Available Widths</p>
+                                <div className="flex flex-wrap gap-2">
+                                    {equalWidths.map((w) => (
+                                        <span key={w} className="bg-background border border-border px-3 py-1 rounded text-sm text-foreground">{w}</span>
+                                    ))}
+                                </div>
+                            </div>
 
-					<motion.div
-						variants={cardVariants}
-						whileHover="hover"
-						className="bg-card border border-border rounded-2xl p-8 md:p-10 cursor-default"
-					>
-						<motion.div
-							whileHover={{ rotate: 15, scale: 1.15 }}
-							transition={{ duration: 0.3 }}
-							className="mb-6"
-						>
-							<LayersIcon className="w-10 h-10 text-primary" />
-						</motion.div>
-						<p className="text-muted-foreground text-sm leading-relaxed">
-							IKT stocks large-format materials ensuring optimal utilization and minimal waste during custom processing. By leveraging our high-definition plasma cutting technology, we deliver cost-effective, precision-cut components that save clients both time and expense. Additionally, our large plate sizes allow for full-scale fabrications, helping customers reduce costs by minimizing the need for extensive welding.
-						</p>
-					</motion.div>
-				</motion.div>
-			</motion.section>
-		</div>
-	);
+                            <div className="grid md:grid-cols-2 gap-6 bg-background/50 p-6 rounded-xl border border-border/50">
+                                <div>
+                                    <p className="text-sm font-bold text-primary uppercase mb-2">Grades</p>
+                                    <p className="text-foreground font-medium">S275JR and S355JR (Mill Finish)</p>
+                                </div>
+                                <div>
+                                    <p className="text-sm font-bold text-primary uppercase mb-2">Properties</p>
+                                    <p className="text-muted-foreground text-sm">Excellent weldability and machining properties.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Unequal Angle Section */}
+                    <motion.div
+                        variants={cardVariants}
+                        whileHover="hover"
+                        className="bg-card border border-border rounded-2xl p-8 md:p-10 cursor-default"
+                    >
+                        <div className="flex items-center gap-4 mb-6">
+                            <FileTextIcon className="w-8 h-8 text-primary" />
+                            <h3 className="text-2xl font-bold text-foreground uppercase tracking-tight">Unequal Angle</h3>
+                        </div>
+                        
+                        <div className="space-y-4">
+                            <h4 className="text-lg font-semibold text-foreground mb-2 italic">What is hot rolled mild steel unequal angle and what is it used for?</h4>
+                            <p className="text-muted-foreground text-base leading-relaxed">
+                                Unequal angle sections have a 90° angle as with standard equal angle, however, the width of the sides are not the same—the corner does not lay central to the profile, it is essentially an L shape. 
+                                This profile is perfect for use in projects where asymmetrical support or specialized framing is required.
+                            </p>
+                            <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-lg">
+                                <span className="text-primary font-medium text-sm">L-Shape Structural Profile</span>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
+            </motion.section>
+        </div>
+    );
 }
 
 export default InfoSection;
