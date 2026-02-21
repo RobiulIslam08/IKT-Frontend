@@ -65,7 +65,7 @@ export function InfoSection() {
                         CIRCULAR HOLLOW SECTIONS & PIPES
                     </p>
                     <p className="text-muted-foreground text-base leading-relaxed max-w-4xl">
-                        Our circular hollow sections and high-grade pipes are designed for maximum structural performance, 
+                        Our circular hollow sections and high-grade pipes are designed for maximum structural performance,
                         offering durability for mechanical, plumbing, and construction sectors.
                     </p>
                 </motion.div>
@@ -100,7 +100,7 @@ export function InfoSection() {
                                 'ASTM A53 Gr. A/B'
                             ].map((grade) => (
                                 <div key={grade} className="bg-background border border-border rounded-lg px-4 py-3 text-center">
-                                    <span className="text-sm font-medium text-foreground">{grade}</span>
+                                    <span className="text-sm text-foreground">{grade}</span>
                                 </div>
                             ))}
                         </div>
@@ -129,7 +129,7 @@ export function InfoSection() {
                             <FileTextIcon className="w-10 h-10 text-primary" />
                         </motion.div>
                         <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">Mild Steel ERW Pipe</h3>
-                        <div className="space-y-3 text-sm text-muted-foreground">
+                        <div className="space-y-3 text-sm text-foreground">
                             <p><strong className="text-foreground">Class:</strong> A, B, C, A-1 SCH-20, 40</p>
                             <p><strong className="text-foreground">Grade:</strong> ASTM A500 / A53 / GR-A / B / BS 1387</p>
                             <p><strong className="text-foreground">Size:</strong> 1/2" TO 24"</p>
@@ -150,7 +150,7 @@ export function InfoSection() {
                             <CircleCheckIcon className="w-10 h-10 text-primary" />
                         </motion.div>
                         <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">Galvanized ERW Pipes</h3>
-                        <div className="space-y-3 text-sm text-muted-foreground">
+                        <div className="space-y-3 text-sm text-foreground">
                             <p><strong className="text-foreground">Class:</strong> A, B, A-1, SCH-40, 80</p>
                             <p><strong className="text-foreground">Grade:</strong> ASTM A500 / 53 GR-A / B BS 1387</p>
                             <p><strong className="text-foreground">Size:</strong> 1/2" TO 24"</p>
@@ -181,16 +181,16 @@ export function InfoSection() {
                             <div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Seamless Pipe</h3>
                                 <div className="grid md:grid-cols-3 gap-6">
-                                    <p className="text-sm text-muted-foreground">
-                                        <strong className="text-foreground block mb-1">Class:</strong> 
+                                    <p className="text-sm text-foreground">
+                                        <strong className="text-foreground block mb-1">Class:</strong>
                                         A, B, C, A-1 SCH-20, 40, XS, 80, 100, 120, 160
                                     </p>
-                                    <p className="text-sm text-muted-foreground">
-                                        <strong className="text-foreground block mb-1">Grade:</strong> 
+                                    <p className="text-sm text-foreground">
+                                        <strong className="text-foreground block mb-1">Grade:</strong>
                                         API 5L / ASTM A53 / 106 / GR-A / B
                                     </p>
-                                    <p className="text-sm text-muted-foreground">
-                                        <strong className="text-foreground block mb-1">Size:</strong> 
+                                    <p className="text-sm text-foreground">
+                                        <strong className="text-foreground block mb-1">Size:</strong>
                                         1/2" TO 36"
                                     </p>
                                 </div>

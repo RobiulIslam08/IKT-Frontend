@@ -49,7 +49,7 @@ export function InfoSection() {
                     <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 ">
                         More Information
                     </h1>
-                    
+
                     <p className="text-primary font-bold text-lg tracking-wider uppercase">
                         COLD ROLLED SHEET & COIL
                     </p>
@@ -97,7 +97,7 @@ export function InfoSection() {
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <h4 className="text-sm font-bold text-primary uppercase mb-4 tracking-widest">Dimensions</h4>
-                                <ul className="space-y-3 text-muted-foreground text-sm">
+                                <ul className="space-y-3 text-foreground text-sm">
                                     <li className="flex items-center gap-2 italic"> 4′ x 8′ (0.5mm to 2.0mm)</li>
                                     <li className="flex items-center gap-2 italic"> 4'X16′ (0.5mm to 1.5mm)</li>
                                     <li className="flex items-center gap-2 italic"> 5'X20′ (0.5mm to 1.5mm)</li>
@@ -107,7 +107,7 @@ export function InfoSection() {
                                 <h4 className="text-sm font-bold text-primary uppercase mb-4 tracking-widest">Available Grades</h4>
                                 <div className="flex flex-wrap gap-2">
                                     {['S235JR', 'S275JR', 'ASTM A36', 'SS400'].map((g) => (
-                                        <span key={g} className="bg-background border border-border px-3 py-1 rounded-md text-xs font-semibold">
+                                        <span key={g} className="bg-background border border-border px-3 py-1 rounded-md text-sm text-foreground">
                                             {g}
                                         </span>
                                     ))}
@@ -127,11 +127,11 @@ export function InfoSection() {
                         <div className="space-y-6">
                             <div className="bg-background p-4 rounded-xl border border-border">
                                 <p className="text-xs text-muted-foreground uppercase font-bold mb-1">Grade</p>
-                                <p className="text-sm font-mono">Gost 1050-88/08KP</p>
+                                <p className="text-sm text-foreground">Gost 1050-88/08KP</p>
                             </div>
                             <div className="bg-background p-4 rounded-xl border border-border">
                                 <p className="text-xs text-muted-foreground uppercase font-bold mb-1">Thickness Range</p>
-                                <p className="text-sm font-mono">0.6MM TO 2MM</p>
+                                <p className="text-sm text-foreground">0.6MM TO 2MM</p>
                             </div>
                         </div>
                     </motion.div>
@@ -161,9 +161,9 @@ export function InfoSection() {
                                     { size: '1219 X 2438MM', thickness: '0.5MM TO 2MM', grade: 'KP08/ST12.03' },
                                 ].map((row, idx) => (
                                     <tr key={idx} className="hover:bg-primary/5 transition-colors">
-                                        <td className="py-5 px-8 text-muted-foreground font-mono text-sm">{row.size}</td>
-                                        <td className="py-5 px-8 text-muted-foreground text-sm">{row.thickness}</td>
-                                        <td className="py-5 px-8 text-primary font-bold text-sm">{row.grade}</td>
+                                        <td className="py-5 px-8 text-foreground text-sm">{row.size}</td>
+                                        <td className="py-5 px-8 text-foreground text-sm">{row.thickness}</td>
+                                        <td className="py-5 px-8 text-foreground  text-sm">{row.grade}</td>
                                     </tr>
                                 ))}
                             </tbody>

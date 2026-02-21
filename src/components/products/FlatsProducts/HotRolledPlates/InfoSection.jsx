@@ -59,7 +59,7 @@ export function InfoSection() {
                             <h4 className="font-bold text-lg mb-3">{grade.title}</h4>
                             <div className="flex flex-wrap gap-2">
                                 {grade.items.map((item) => (
-                                    <span key={item} className="text-xs bg-background px-2 py-1 rounded border border-border text-muted-foreground">{item}</span>
+                                    <span key={item} className="text-sm bg-background px-2 py-1 rounded border border-border text-foreground">{item}</span>
                                 ))}
                             </div>
                         </motion.div>
@@ -73,20 +73,20 @@ export function InfoSection() {
                         <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                             <BoxIcon className="w-6 h-6 text-primary" /> Available Sizes
                         </h3>
-                        <div className="space-y-4 text-sm text-muted-foreground">
-                            <p className="flex justify-between border-b border-border pb-2"><span>4’ x 8’</span> <span className="text-foreground font-mono">16mm to 250mm</span></p>
-                            <p className="flex justify-between border-b border-border pb-2"><span>1.5m x 6m</span> <span className="text-foreground font-mono">16mm to 50mm</span></p>
-                            <p className="flex justify-between border-b border-border pb-2"><span>2m x 6m/12m</span> <span className="text-foreground font-mono">5mm to 100mm</span></p>
-                            <p className="flex justify-between border-b border-border pb-2"><span>2.5m x 8m/12m</span> <span className="text-foreground font-mono">6mm to 50mm</span></p>
-                            <p className="flex justify-between border-b border-border pb-2"><span>3.05m x 12m</span> <span className="text-foreground font-mono">6mm to 50mm</span></p>
+                        <div className="space-y-4 text-sm text-foreground">
+                            <p className="flex justify-between border-b border-border pb-2"><span>4’ x 8’</span> <span className="text-foreground">16mm to 250mm</span></p>
+                            <p className="flex justify-between border-b border-border pb-2"><span>1.5m x 6m</span> <span className="text-foreground">16mm to 50mm</span></p>
+                            <p className="flex justify-between border-b border-border pb-2"><span>2m x 6m/12m</span> <span className="text-foreground">5mm to 100mm</span></p>
+                            <p className="flex justify-between border-b border-border pb-2"><span>2.5m x 8m/12m</span> <span className="text-foreground">6mm to 50mm</span></p>
+                            <p className="flex justify-between border-b border-border pb-2"><span>3.05m x 12m</span> <span className="text-foreground">6mm to 50mm</span></p>
                         </div>
                     </motion.div>
 
                     {/* Standard/Grade Table */}
                     <motion.div variants={cardVariants} className="bg-card border border-border rounded-2xl p-8 lg:col-span-2 overflow-x-auto">
-                        <h3 className="text-xl font-bold mb-6 italic">Standards & Heat Treatment</h3>
+                        <h3 className="text-xl font-bold mb-6 ">Standards & Heat Treatment</h3>
                         <table className="w-full text-left text-xs md:text-sm">
-                            <thead className="text-muted-foreground uppercase border-b border-border">
+                            <thead className="text-foreground uppercase border-b border-border">
                                 <tr>
                                     <th className="pb-3 px-2">Standard</th>
                                     <th className="pb-3 px-2">Grade</th>
@@ -94,10 +94,10 @@ export function InfoSection() {
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-border">
-                                <tr><td className="py-3 px-2 font-bold">EN10025</td><td className="py-3 px-2">S235JR / S275JR / S355JR</td><td className="py-3 px-2 font-mono">AR / N / TMCP</td></tr>
-                                <tr><td className="py-3 px-2 font-bold">ASTM</td><td className="py-3 px-2">A36 / A283 GRC / A572 GR-C</td><td className="py-3 px-2 font-mono">AR / N / TMCP</td></tr>
-                                <tr><td className="py-3 px-2 font-bold">ASTM A131</td><td className="py-3 px-2">Ordinary & Higher Strength (AH, DH, EH)</td><td className="py-3 px-2 font-mono">3.2 Class Approved</td></tr>
-                                <tr><td className="py-3 px-2 font-bold">JIS G3101</td><td className="py-3 px-2">SS330 / SS400 / SS490</td><td className="py-3 px-2 font-mono">AR</td></tr>
+                                <tr><td className="py-3 px-2">EN10025</td><td className="py-3 px-2">S235JR / S275JR / S355JR</td><td className="py-3 px-2">AR / N / TMCP</td></tr>
+                                <tr><td className="py-3 px-2">ASTM</td><td className="py-3 px-2">A36 / A283 GRC / A572 GR-C</td><td className="py-3 px-2">AR / N / TMCP</td></tr>
+                                <tr><td className="py-3 px-2">ASTM A131</td><td className="py-3 px-2">Ordinary & Higher Strength (AH, DH, EH)</td><td className="py-3 px-2">3.2 Class Approved</td></tr>
+                                <tr><td className="py-3 px-2">JIS G3101</td><td className="py-3 px-2">SS330 / SS400 / SS490</td><td className="py-3 px-2">AR</td></tr>
                             </tbody>
                         </table>
                     </motion.div>

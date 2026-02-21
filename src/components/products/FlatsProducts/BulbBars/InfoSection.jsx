@@ -95,7 +95,7 @@ export function InfoSection() {
 						<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
 							{['GRADE A', 'GRADE D', 'GRADE AH 32', 'GRADE AH 40', 'GRADE DH 36', 'GRADE EH 32', 'Gost A 40S', 'FH3', 'EH40'].map((grade) => (
 								<div key={grade} className="bg-background border border-border rounded-lg px-4 py-3 text-center">
-									<span className="text-sm font-medium text-foreground">{grade}</span>
+									<span className="text-sm text-foreground">{grade}</span>
 								</div>
 							))}
 						</div>
@@ -129,7 +129,7 @@ export function InfoSection() {
 						<div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-4">
 							{['ABS', 'Lloyds Register', 'DNV-GL', 'BV', 'Class NK', 'RMRS', 'KR', 'Rina'].map((cert) => (
 								<div key={cert} className="bg-background border border-border rounded-lg px-4 py-3 text-center">
-									<span className="text-sm font-medium text-foreground">{cert}</span>
+									<span className="text-sm text-foreground">{cert}</span>
 								</div>
 							))}
 						</div>

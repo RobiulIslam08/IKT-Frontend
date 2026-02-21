@@ -95,7 +95,7 @@ export function InfoSection() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                             {sectors.map((sector) => (
                                 <div key={sector} className="bg-background border border-border rounded-lg px-4 py-3 text-center">
-                                    <span className="text-sm font-medium text-foreground">{sector}</span>
+                                    <span className="text-sm text-foreground">{sector}</span>
                                 </div>
                             ))}
                         </div>

@@ -102,7 +102,7 @@ export function InfoSection() {
                                 'STKR 400'
                             ].map((grade) => (
                                 <div key={grade} className="bg-background border border-border rounded-lg px-4 py-3 text-center">
-                                    <span className="text-sm font-medium text-foreground">{grade}</span>
+                                    <span className="text-sm text-foreground">{grade}</span>
                                 </div>
                             ))}
                         </div>

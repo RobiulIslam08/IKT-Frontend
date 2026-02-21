@@ -63,10 +63,8 @@ export function InfoSection() {
                     <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
                         More Information
                     </h1>
-                    <p className="text-muted-foreground text-lg mb-4 uppercase tracking-wider">
-                        UNIVERSAL BEAMS
-                    </p>
-                    <p className="text-primary font-medium text-base mb-8 italic">
+                   
+                    <p className="text-primary font-medium text-lg mb-8 ">
                         Universal Beams-British Sections
                     </p>
                 </motion.div>
@@ -98,7 +96,7 @@ export function InfoSection() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                             {grades.map((grade) => (
                                 <div key={grade} className="bg-background border border-border rounded-lg px-4 py-3 text-center flex items-center justify-center">
-                                    <span className="text-sm font-medium text-foreground">{grade}</span>
+                                    <span className="text-sm text-foreground">{grade}</span>
                                 </div>
                             ))}
                         </div>

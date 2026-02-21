@@ -95,7 +95,7 @@ export function InfoSection() {
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                             {sectors.map((sector) => (
                                 <div key={sector} className="bg-background border border-border rounded-lg px-4 py-3 text-center">
-                                    <span className="text-sm font-medium text-foreground">{sector}</span>
+                                    <span className="text-sm text-foreground">{sector}</span>
                                 </div>
                             ))}
                         </div>
@@ -161,7 +161,7 @@ export function InfoSection() {
                     >
                         <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Stock & Processing</h3>
                         <p className="text-muted-foreground text-base leading-relaxed mb-6">
-                            Our stainless steel stock is made up of large area plate sizes (up to <strong className="text-foreground">12,000 mm x 3,000 mm</strong>). 
+                            Our stainless steel stock is made up of large area plate sizes (up to <strong className="text-foreground">12,000 mm x 3,000 mm</strong>).
                             This allows for the best possible plate utilization and minimizes scrap for our customers.
                         </p>
                         <div className="bg-background border border-primary/20 rounded-xl p-6">

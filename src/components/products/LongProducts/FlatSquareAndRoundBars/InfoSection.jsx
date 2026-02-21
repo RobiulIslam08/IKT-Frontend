@@ -109,20 +109,20 @@ export function InfoSection() {
                             >
                                 {bar.icon}
                             </motion.div>
-                            
+
                             <h3 className="text-2xl font-bold text-foreground mb-6">{bar.title}</h3>
-                            
+
                             <div className="space-y-6 mt-auto">
                                 <div>
                                     <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Grades</p>
-                                    <p className="text-muted-foreground text-sm leading-relaxed">
+                                    <p className="text-sm text-foreground leading-relaxed">
                                         {bar.grades}
                                     </p>
                                 </div>
-                                
+
                                 <div className="pt-4 border-t border-border/50">
                                     <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Designation</p>
-                                    <p className="text-lg font-semibold text-foreground">
+                                    <p className="text-sm text-foreground">
                                         {bar.designation}
                                     </p>
                                 </div>

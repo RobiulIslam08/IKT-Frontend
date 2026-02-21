@@ -67,7 +67,7 @@ export function InfoSection() {
                         AMERICAN WIDE FLANGE BEAM
                     </p>
                     <p className="text-muted-foreground text-base leading-relaxed max-w-4xl">
-                        Our American Wide Flange Beams are engineered for structural integrity and versatility, 
+                        Our American Wide Flange Beams are engineered for structural integrity and versatility,
                         meeting the highest industry standards for construction and industrial infrastructure.
                     </p>
                 </motion.div>
@@ -99,7 +99,7 @@ export function InfoSection() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                             {grades.map((grade) => (
                                 <div key={grade} className="bg-background border border-border rounded-lg px-4 py-3 text-center flex items-center justify-center">
-                                    <span className="text-sm font-medium text-foreground">{grade}</span>
+                                    <span className="text-sm text-foreground">{grade}</span>
                                 </div>
                             ))}
                         </div>

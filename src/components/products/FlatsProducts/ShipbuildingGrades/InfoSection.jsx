@@ -95,7 +95,7 @@ export function InfoSection() {
 						<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
 							{['GR-A', 'GR-B', 'GR-D', 'GR-AH36', 'GR-DH36', 'GR-EH36'].map((grade) => (
 								<div key={grade} className="bg-background border border-border rounded-lg px-4 py-3 text-center">
-									<span className="text-sm font-medium text-foreground">{grade}</span>
+									<span className="text-sm text-foreground">{grade}</span>
 								</div>
 							))}
 						</div>
@@ -140,8 +140,8 @@ export function InfoSection() {
 										{ size: '3050MM × 12000MM', thickness: '6MM till 100MM' },
 									].map((spec, index) => (
 										<tr key={index} className="border-b border-border hover:bg-background/50 transition-colors">
-											<td className="py-4 px-6 text-muted-foreground font-medium">{spec.size}</td>
-											<td className="py-4 px-6 text-muted-foreground">{spec.thickness}</td>
+											<td className="py-4 px-6 text-foreground">{spec.size}</td>
+											<td className="py-4 px-6 text-foreground">{spec.thickness}</td>
 										</tr>
 									))}
 								</tbody>

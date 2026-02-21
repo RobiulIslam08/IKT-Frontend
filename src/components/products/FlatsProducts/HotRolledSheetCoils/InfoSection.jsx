@@ -60,7 +60,7 @@ export function InfoSection() {
                     <h1 className="text-4xl md:text-5xl font-bold mb-4 ">
                         More Information
                     </h1>
-                    
+
                 </motion.div>
 
                 {/* Specifications Section */}
@@ -84,23 +84,23 @@ export function InfoSection() {
                             <LayersIcon className="w-10 h-10 text-primary" />
                         </motion.div>
                         <h3 className="text-2xl md:text-3xl font-bold mb-6">Specifications</h3>
-                        
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
                                 <p className="text-sm font-bold text-primary">JIS G 310/ G 3131 & JIS 3141 SPCC</p>
-                                <p className="text-muted-foreground">SS330, SS400, SS490, SS540</p>
+                                <p className="text-sm text-foreground">SS330, SS400, SS490, SS540</p>
                             </div>
                             <div className="space-y-2">
                                 <p className="text-sm font-bold text-primary">ASTM</p>
-                                <p className="text-muted-foreground">ASTM A36 / A572 Gr. 42 / A572 Gr. 50</p>
+                                <p className="text-sm text-foreground">ASTM A36 / A572 Gr. 42 / A572 Gr. 50</p>
                             </div>
                             <div className="space-y-2">
                                 <p className="text-sm font-bold text-primary">DIN 17100</p>
-                                <p className="text-muted-foreground">DIN St 32 / St 37-2 / St 44-2 / St 50-2 / St 52-3</p>
+                                <p className="text-sm text-foreground">DIN St 32 / St 37-2 / St 44-2 / St 50-2 / St 52-3</p>
                             </div>
                             <div className="space-y-2">
                                 <p className="text-sm font-bold text-primary">EN 10025</p>
-                                <p className="text-muted-foreground">S235 JR / S275 JR / S355 JR / SS400 / ST37-2 / ST52-2</p>
+                                <p className="text-sm text-foreground">S235 JR / S275 JR / S355 JR / SS400 / ST37-2 / ST52-2</p>
                             </div>
                         </div>
                     </motion.div>
@@ -121,11 +121,11 @@ export function InfoSection() {
                         <div className="space-y-4">
                             <div className="bg-background p-3 rounded-lg border border-border text-center">
                                 <p className="text-xs text-muted-foreground uppercase">Up to 2000mm</p>
-                                <p className="text-lg font-mono font-bold">-0 / +20mm</p>
+                                <p className="text-sm text-foreground">-0 / +20mm</p>
                             </div>
                             <div className="bg-background p-3 rounded-lg border border-border text-center">
                                 <p className="text-xs text-muted-foreground uppercase">Width {`>=`} 1500m</p>
-                                <p className="text-lg font-mono font-bold">-0 / +25mm</p>
+                                <p className="text-sm text-foreground">-0 / +25mm</p>
                             </div>
                         </div>
                     </motion.div>
@@ -141,7 +141,7 @@ export function InfoSection() {
                         </div>
                         <h3 className="text-xl font-bold mb-4">Offered Rolled Metal</h3>
                         <table className="w-full text-left text-sm">
-                            <thead className="text-muted-foreground uppercase text-xs border-b border-border">
+                            <thead className="text-foreground uppercase text-xs border-b border-border">
                                 <tr>
                                     <th className="pb-3 px-2">Thickness (mm)</th>
                                     <th className="pb-3 px-2">Width (mm)</th>
@@ -153,20 +153,20 @@ export function InfoSection() {
                                 <tr>
                                     <td className="py-3 px-2">1.00 - 20.00</td>
                                     <td className="py-3 px-2">1000 - 2000</td>
-                                    <td className="py-3 px-2 font-medium">COIL FORM</td>
+                                    <td className="py-3 px-2">COIL FORM</td>
                                     <td className="py-3 px-2">MILL EDGE</td>
                                 </tr>
                                 <tr>
                                     <td className="py-3 px-2">1.00 - 20.00</td>
                                     <td className="py-3 px-2">650 - 2000</td>
-                                    <td className="py-3 px-2 font-medium">COIL FORM</td>
+                                    <td className="py-3 px-2">COIL FORM</td>
                                     <td className="py-3 px-2">MILL EDGE</td>
                                 </tr>
                                 <tr>
                                     <td className="py-3 px-2">1.00 - 16.00</td>
                                     <td className="py-3 px-2">1200 - 3000</td>
-                                    <td className="py-3 px-2 font-medium italic">SHEET</td>
-                                    <td className="py-3 px-2 whitespace-nowrap text-xs">2400-600 CUT TO LENGTH</td>
+                                    <td className="py-3 px-2">SHEET</td>
+                                    <td className="py-3 px-2">2400-600 CUT TO LENGTH</td>
                                 </tr>
                             </tbody>
                         </table>

@@ -83,7 +83,7 @@ export function InfoSection() {
                         <div className="flex flex-wrap gap-4">
                             {['SS400', 'ASTM A36', 'S275 JR'].map((grade) => (
                                 <div key={grade} className="bg-background border border-border rounded-lg px-6 py-3 shadow-sm">
-                                    <span className="text-sm font-bold text-foreground">{grade}</span>
+                                    <span className="text-sm text-foreground">{grade}</span>
                                 </div>
                             ))}
                         </div>
@@ -104,16 +104,16 @@ export function InfoSection() {
                         </motion.div>
                         <h3 className="text-2xl font-bold mb-6">Designation & Dimensions</h3>
                         <ul className="space-y-4">
-                            <li className="flex items-start gap-3 border-b border-border pb-3 text-sm text-muted-foreground">
-                                <span className="text-foreground font-semibold min-w-[120px]">4FT X 8FT :</span> 
+                            <li className="flex items-start gap-3 border-b border-border pb-3 text-sm text-foreground">
+                                <span className="text-foreground font-semibold min-w-[120px]">4FT X 8FT :</span>
                                 1.5MTR X 6MTR X 1.6MM TO 12MM
                             </li>
-                            <li className="flex items-start gap-3 border-b border-border pb-3 text-sm text-muted-foreground">
-                                <span className="text-foreground font-semibold min-w-[120px]">2M X 6MTR :</span> 
+                            <li className="flex items-start gap-3 border-b border-border pb-3 text-sm text-foreground">
+                                <span className="text-foreground font-semibold min-w-[120px]">2M X 6MTR :</span>
                                 5.0MM TO 12.0MM
                             </li>
-                            <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                                <span className="text-foreground font-semibold min-w-[120px]">O/P Range :</span> 
+                            <li className="flex items-start gap-3 text-sm text-foreground">
+                                <span className="text-foreground font-semibold min-w-[120px]">O/P Range :</span>
                                 2500 X 1250 X 3 O/P TO 2000 X 1000 X 8 O/P
                             </li>
                         </ul>
@@ -121,7 +121,7 @@ export function InfoSection() {
                 </div>
 
                 {/* Optional Stock/Quality Footer */}
-                <motion.div 
+                <motion.div
                     variants={itemVariants}
                     className="mt-16 text-center bg-primary/5 rounded-2xl p-8 border border-primary/10"
                 >

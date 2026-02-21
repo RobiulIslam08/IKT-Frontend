@@ -87,8 +87,8 @@ export function InfoSection() {
 							<FileTextIcon className="w-10 h-10 text-primary" />
 						</motion.div>
 						<p className="text-muted-foreground text-sm leading-relaxed">High-quality materials engineered for demanding industrial applications. Our products meet international standards and offer superior performance across various industries.</p>
-						<p className="text-muted-foreground text-sm leading-relaxed">We maintain strict quality control throughout the manufacturing process to ensure consistency and reliability. Each product undergoes rigorous testing to meet or exceed industry specifications.</p>
-						<p className="text-muted-foreground text-sm leading-relaxed">Our extensive inventory and fast processing capabilities ensure quick delivery times for your projects. Contact us for detailed specifications and custom requirements.</p>
+						<p className="text-muted-foreground text-sm leading-relaxed">We maintain strict quality control throughout the manufacturing process to ensure consistency and reliability. Each product undergoes rigorous testing to meet or exceed industry specifications. Our extensive inventory and fast processing capabilities ensure quick delivery times for your projects. Contact us for detailed specifications and custom requirements.</p>
+					
 					</motion.div>
 
 					<motion.div
@@ -147,10 +147,10 @@ export function InfoSection() {
 										{ thickness: '0.30-4.00', width: '>30', form: 'COIL FORM/SHEET', remarks: 'SLITTED EDGE' },
 									].map((row, idx) => (
 										<tr key={idx} className="border-b border-border hover:bg-background/50 transition-colors">
-											<td className="py-4 px-6 text-muted-foreground font-medium">{row.thickness}</td>
-											<td className="py-4 px-6 text-muted-foreground">{row.width}</td>
-											<td className="py-4 px-6 text-muted-foreground">{row.form}</td>
-											<td className="py-4 px-6 text-muted-foreground">{row.remarks}</td>
+											<td className="py-4 px-6 text-foreground">{row.thickness}</td>
+											<td className="py-4 px-6 text-foreground">{row.width}</td>
+											<td className="py-4 px-6 text-foreground">{row.form}</td>
+											<td className="py-4 px-6 text-foreground">{row.remarks}</td>
 										</tr>
 									))}
 								</tbody>
@@ -183,7 +183,7 @@ export function InfoSection() {
 							<CircleCheckIcon className="w-10 h-10 text-primary" />
 						</motion.div>
 						<h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Specifications</h3>
-						<ul className="list-disc pl-6 text-muted-foreground text-sm leading-relaxed mb-4">
+						<ul className="list-disc pl-6 text-foreground text-sm leading-relaxed mb-4">
 							<li>STM A 653 / A 653 M-07 CS TYPE A, B, C – FS TYPE A, B – DDS TYPE A, B SS GRADE 33, 37, 40, 50, 55, 80-ASTM A653, S S340/GR-50-CLASS1-JIS G3302</li>
 							<li>DIN EN I0327 – 2004 / DIN EN I0346 – 2009 DX5ID, DX52D, DX53D</li>
 							<li>DIN EN I0326 – 2004 / DIN EN I0346 – 2009 S220GD, S250GD, S280GD, S320GD, S350GD, S550GD</li>

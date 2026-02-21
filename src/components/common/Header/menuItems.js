@@ -170,39 +170,39 @@ export const menuItems = [
     hasDropdown: true,
     categories: [
       {
-        name: "Plate Cutting",
+        name: "Plate-Cutting",
         items: [
-          { name: "Laser Cutting", href: "/services/laser-cutting" },
-          { name: "Plasma Cutting", href: "/services/plasma-cutting" },
-          { name: "Oxy Gas Cutting", href: "/services/oxy-gas-cutting" },
+          { name: "Laser-Cutting", href: "/services/laser-cutting" },
+          { name: "Plasma-Cutting", href: "/services/plasma-cutting" },
+          { name: "Oxy-Gas-Cutting", href: "/services/oxy-gas-cutting" },
           {
-            name: "Infinity Plasma Contour Bevelling & Mechanical Bevelling",
+            name: "Infinity-Plasma-Contour-Bevelling-&-Mechanical-Bevelling",
             href: "/services/infinity-plasma-contour-bevelling-mechanical-bevelling",
           },
-          { name: "Waterjet Cutting", href: "/services/waterjet-cutting" },
+          { name: "Waterjet-Cutting", href: "/services/waterjet-cutting" },
         ],
       },
       {
-        name: "Plate Procession",
+        name: "Plate-Procession",
         items: [
-          { name: "Plate Bending", href: "/services/plate-bending" },
-          { name: "Plate Drilling", href: "/services/plate-drilling" },
-          { name: "Plate Machining", href: "/services/plate-machining" },
-          { name: "Plate Pickling", href: "/services/plate-pickling" },
-          { name: "Plate Bevelling", href: "/services/plate-bevelling" },
-          { name: "Plate Forming", href: "/services/plate-forming" },
-          { name: "Plate Rolling", href: "/services/plate-rolling" },
+          { name: "Plate-Bending", href: "/services/plate-bending" },
+          { name: "Plate-Drilling", href: "/services/plate-drilling" },
+          { name: "Plate-Machining", href: "/services/plate-machining" },
+          { name: "Plate-Pickling", href: "/services/plate-pickling" },
+          { name: "Plate-Bevelling", href: "/services/plate-bevelling" },
+          { name: "Plate-Forming", href: "/services/plate-forming" },
+          { name: "Plate-Rolling", href: "/services/plate-rolling" },
         ],
       },
       {
-        name: "Other Services",
+        name: "Other-Services",
         items: [
-          { name: "Project Management", href: "/services/project-management" },
+          { name: "Project-Management", href: "/services/project-management" },
           {
-            name: "Steel Profiling & Weld Preparation",
+            name: "Steel-Profiling-&-Weld-Preparation",
             href: "/services/steel-profiling-weld-preparation",
           },
-          { name: "General Services", href: "/services/general-services" },
+          { name: "General-Services", href: "/services/general-services" },
         ],
       },
     ],
@@ -219,7 +219,7 @@ export const menuItems = [
             name: "Quenched-And-Tempered-Steel",
             subItems: ["EN 10025 S690QL", "EN 10025 S890QL"],
           },
-          
+
           {
             name: "Abraclad-Chromium-Carbide-Wear-Plate",
             items: [],

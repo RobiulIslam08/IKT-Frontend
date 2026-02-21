@@ -77,12 +77,13 @@ export function InfoSection() {
                             <LayersIcon className="w-10 h-10 text-primary" />
                             <h3 className="text-2xl font-bold text-foreground uppercase tracking-tight">European Sections</h3>
                         </div>
-                        
+
                         <div className="space-y-6">
                             <div>
                                 <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Grades</p>
-                                <p className="text-muted-foreground text-sm font-medium">
-                                    S275 JR / S355 JR / J2 / JO / A572 GR-50
+                                <p className="text-sm text-foreground">
+                                    A36/A572 GR-50/A992/S275JR/S235JR/S355JR/J2/JIS G 3101 SS 400/CS350W
+ (Mill Finish)
                                 </p>
                             </div>
 
@@ -90,7 +91,7 @@ export function InfoSection() {
                                 <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">Size Ranges</p>
                                 <ul className="grid grid-cols-1 gap-3">
                                     {['HEA 100 TO 1000', 'HEB 100 TO 1000', 'IPE 100 TO 750', 'IPEAA 80 TO 200', 'IPN 80 TO 400'].map((size) => (
-                                        <li key={size} className="flex items-center gap-3 text-foreground font-medium bg-background/50 p-2 rounded-lg border border-border/40">
+                                        <li key={size} className="flex items-center gap-3 text-foreground bg-background/50 p-2 rounded-lg border border-border/40">
                                             <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                                             {size}
                                         </li>
@@ -110,12 +111,13 @@ export function InfoSection() {
                             <CircleCheckIcon className="w-10 h-10 text-primary" />
                             <h3 className="text-2xl font-bold text-foreground uppercase tracking-tight">Japanese Sections</h3>
                         </div>
-                        
+
                         <div className="space-y-6">
                             <div>
                                 <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Grades</p>
-                                <p className="text-muted-foreground text-sm font-medium">
-                                    JIS G 3101 SS 400 / ASTM A992 / A572 GR-50 / CS350W
+                                <p className="text-sm text-foreground">
+                                    A36/A572 GR-50/A992/S275JR/S235JR/S355JR/J2/JIS G 3101 SS 400/CS350W
+ (Mill Finish)
                                 </p>
                             </div>
 
@@ -124,11 +126,11 @@ export function InfoSection() {
                                 <div className="space-y-4">
                                     <div className="bg-background/50 p-4 rounded-xl border border-border/40">
                                         <p className="text-xs text-primary font-bold uppercase mb-1">I BEAMS</p>
-                                        <p className="text-lg font-semibold text-foreground">100 x 50 to 900 x 300</p>
+                                        <p className="text-sm text-foreground">100 x 50 to 900 x 300</p>
                                     </div>
                                     <div className="bg-background/50 p-4 rounded-xl border border-border/40">
                                         <p className="text-xs text-primary font-bold uppercase mb-1">H BEAMS</p>
-                                        <p className="text-lg font-semibold text-foreground">100 X 400 X 400</p>
+                                        <p className="text-sm text-foreground">100 X 400 X 400</p>
                                     </div>
                                 </div>
                             </div>

@@ -102,7 +102,7 @@ export function InfoSection() {
                                 </li>
                             </ul>
                             <div className="bg-background border border-primary/20 rounded-xl p-6">
-                                <p className="text-sm font-medium text-foreground italic">
+                                <p className="text-sm text-foreground italic">
                                     "We are the only stockist in the KSA to keep this grade in plate form, following our success in major Oil & Gas refinery projects."
                                 </p>
                             </div>

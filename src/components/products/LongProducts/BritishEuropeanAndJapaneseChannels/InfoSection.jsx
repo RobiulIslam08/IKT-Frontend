@@ -82,13 +82,13 @@ export function InfoSection() {
                                 <p className="text-sm font-semibold text-primary uppercase mb-3">Grades</p>
                                 <div className="flex flex-wrap gap-2">
                                     {['EN10025', 'S275JR', 'S355JR', 'JO', 'J2'].map((g) => (
-                                        <span key={g} className="bg-background border border-border px-3 py-1 rounded text-sm">{g}</span>
+                                        <span key={g} className="bg-background border border-border px-3 py-1 rounded text-sm text-foreground">{g}</span>
                                     ))}
                                 </div>
                             </div>
                             <div>
                                 <p className="text-sm font-semibold text-primary uppercase mb-3">Sizes</p>
-                                <p className="text-lg font-medium text-foreground">100 X 50 TO 430 X 100</p>
+                                <p className="text-sm text-foreground">100 X 50 TO 430 X 100</p>
                             </div>
                         </div>
                     </motion.div>
@@ -108,7 +108,7 @@ export function InfoSection() {
                                 <p className="text-sm font-semibold text-primary uppercase mb-3">Grades</p>
                                 <div className="flex flex-wrap gap-2">
                                     {['EN10025', 'S275JR', 'S355JR'].map((g) => (
-                                        <span key={g} className="bg-background border border-border px-3 py-1 rounded text-sm">{g}</span>
+                                        <span key={g} className="bg-background border border-border px-3 py-1 rounded text-sm text-foreground">{g}</span>
                                     ))}
                                 </div>
                             </div>
@@ -135,11 +135,11 @@ export function InfoSection() {
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <p className="text-sm font-semibold text-primary uppercase mb-3">Grades</p>
-                                <span className="bg-background border border-border px-3 py-1 rounded text-sm inline-block">JIS G3101 SS400</span>
+                                <span className="bg-background border border-border px-3 py-1 rounded text-sm text-foreground inline-block">JIS G3101 SS400</span>
                             </div>
                             <div>
                                 <p className="text-sm font-semibold text-primary uppercase mb-3">Sizes</p>
-                                <p className="text-lg font-medium text-foreground">40 X 20 TO 380 X 100</p>
+                                <p className="text-sm text-foreground">40 X 20 TO 380 X 100</p>
                             </div>
                         </div>
                     </motion.div>
