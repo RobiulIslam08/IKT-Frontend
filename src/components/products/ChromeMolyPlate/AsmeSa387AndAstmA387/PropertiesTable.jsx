@@ -32,7 +32,7 @@ export default function PropertiesTable() {
   const tableHeaderStyle = { backgroundColor: brandColor };
 
   return (
-    <motion.div 
+    <motion.div
       className="w-full px-2 py-8 md:px-8 bg-white space-y-10"
       variants={containerVariants}
       initial="hidden"
@@ -61,7 +61,7 @@ export default function PropertiesTable() {
             <tbody className="text-gray-700 font-medium">
               {class1Plates.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-gray-50 transition-colors">
-                  <td className="py-4 border-r border-gray-100 italic bg-gray-50/30">{row.grade}</td>
+                  <td className="py-4 border-r border-gray-100  bg-gray-50/30">{row.grade}</td>
                   <td className="py-4 border-r border-gray-100">{row.tensile}</td>
                   <td className="py-4 border-r border-gray-100">{row.yield}</td>
                   <td className="py-4 border-r border-gray-100">{row.elong}</td>
@@ -92,7 +92,7 @@ export default function PropertiesTable() {
             <tbody className="text-gray-700 font-medium">
               {class2Plates.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-gray-50 transition-colors">
-                  <td className="py-4 border-r border-gray-100 italic bg-gray-50/30">{row.grade}</td>
+                  <td className="py-4 border-r border-gray-100  bg-gray-50/30">{row.grade}</td>
                   <td className="py-4 border-r border-gray-100">{row.tensile}</td>
                   <td className="py-4 border-r border-gray-100">{row.yield}</td>
                   <td className="py-4 border-r border-gray-100">{row.elong}</td>

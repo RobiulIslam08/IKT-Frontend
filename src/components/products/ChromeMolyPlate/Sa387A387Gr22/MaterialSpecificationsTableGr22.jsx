@@ -48,7 +48,7 @@ export default function MaterialSpecificationsTableGr22() {
 					<p className="text-[10px] md:text-sm text-gray-500 font-semibold mt-2 uppercase tracking-wide">
 						Chemical Requirements
 					</p>
-					<p className="text-[9px] md:text-xs text-gray-400 italic">
+					<p className="text-[9px] md:text-xs text-gray-600 ">
 						(cast analysis, % by mass, maximum permitted unless indicated otherwise)
 					</p>
 				</div>
@@ -89,12 +89,12 @@ export default function MaterialSpecificationsTableGr22() {
 								<th className="py-3 px-4 last:border-0">Reduc'n of area</th>
 							</tr>
 						</thead>
-						<tbody className="text-gray-700 font-medium italic">
+						<tbody className="text-gray-700 font-medium ">
 							<tr className="hover:bg-gray-50 transition-colors">
-								<td className="py-6 px-4 border-r border-gray-100 bg-gray-50/30 font-bold">{tensileData.yield}</td>
+								<td className="py-6 px-4 border-r border-gray-100 bg-gray-50/30 ">{tensileData.yield}</td>
 								<td className="py-6 px-4 border-r border-gray-100">{tensileData.tensile}</td>
 								<td className="py-6 px-4 border-r border-gray-100">{tensileData.elongation}</td>
-								<td className="py-6 px-4 last:border-0 font-bold text-primary">{tensileData.reduction}</td>
+								<td className="py-6 px-4 last:border-0 font-medium">{tensileData.reduction}</td>
 							</tr>
 						</tbody>
 					</table>

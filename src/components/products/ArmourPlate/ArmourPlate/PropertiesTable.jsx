@@ -39,7 +39,7 @@ export default function PropertiesTable() {
   };
 
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/20">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-background to-muted/20">
       <motion.div
         variants={containerVariants}
         initial="hidden"

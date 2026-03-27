@@ -234,74 +234,85 @@ const MegaDropdown = ({ categories }) => {
 				)}
 
 				{/* Right Column - Items */}
-				<div className={`${hideLeftColumn ? 'w-64' : 'w-64'} bg-background p-2 relative`}>
-					<div key={activeCategory}>
-						{activeItems.map((item, index) => {
-							// Handle both string items (products), object items (services with href), and nested items (with subItems)
-							const isObject = typeof item === "object" && item !== null;
-							const hasSubItems = isObject && item.subItems && item.subItems.length > 0;
-							const itemKey = isObject ? item.name : item;
-							const itemHref = isObject ? (item.href || "#") : generateProductUrl(item);
-							const itemLabel = isObject ? item.name : item;
+				<div
+					className={`${hideLeftColumn ? 'w-64' : 'w-64'} bg-background relative`}
+					onMouseLeave={() => setActiveSubItem(null)}
+				>
+					{/* Scrollable items list */}
+					<div className="p-2 max-h-[calc(100vh-150px)] overflow-y-auto mega-scrollbar">
+						<div key={activeCategory}>
+							{activeItems.map((item, index) => {
+								// Handle both string items (products), object items (services with href), and nested items (with subItems)
+								const isObject = typeof item === "object" && item !== null;
+								const hasSubItems = isObject && item.subItems && item.subItems.length > 0;
+								const itemKey = isObject ? item.name : item;
+								const itemHref = isObject ? (item.href || "#") : generateProductUrl(item);
+								const itemLabel = isObject ? item.name : item;
 
-							if (hasSubItems) {
+								if (hasSubItems) {
+									return (
+										<div
+											key={itemKey}
+											onMouseEnter={() => setActiveSubItem(item.name)}
+										>
+											<div
+												className={`flex items-center justify-between px-4 py-2 text-[12px] font-medium rounded-md transition-colors duration-150 cursor-pointer ${activeSubItem === item.name
+													? "text-primary bg-primary/5"
+													: "text-foreground hover:text-primary hover:bg-primary/5"
+													}`}
+											>
+												<span>{itemLabel}</span>
+												<ChevronRight className="w-3.5 h-3.5 opacity-60" />
+											</div>
+										</div>
+									);
+								}
+
 								return (
-									<div
+									<Link
 										key={itemKey}
-										className="relative"
-										onMouseEnter={() => setActiveSubItem(item.name)}
-										onMouseLeave={() => setActiveSubItem(null)}
+										to={itemHref}
+										className="block"
 									>
 										<div
-											className={`flex items-center justify-between px-4 py-2 text-[12px] font-medium rounded-md transition-colors duration-150 cursor-pointer ${activeSubItem === item.name
-												? "text-primary bg-primary/5"
-												: "text-foreground hover:text-primary hover:bg-primary/5"
-												}`}
+											className="px-4 py-2 text-[12px] font-medium text-foreground hover:text-primary hover:bg-primary/5 hover:translate-x-1 rounded-md transition-all duration-150"
+											onMouseEnter={() => setActiveSubItem(null)}
 										>
-											<span>{itemLabel}</span>
-											<ChevronRight className="w-3.5 h-3.5 opacity-60" />
+											{itemLabel}
 										</div>
-										{/* 3rd Level Flyout */}
-										{activeSubItem === item.name && (
-											<div className="absolute left-full top-0 w-56 bg-background shadow-xl border border-border rounded-md p-2 z-50 ml-1">
-												{item.subItems.map((subItem) => {
-													const subKey = typeof subItem === "string" ? subItem : subItem.name;
-													const subHref = typeof subItem === "string" ? generateProductUrl(subItem) : subItem.href;
-													const subLabel = typeof subItem === "string" ? subItem : subItem.name;
-													return (
-														<Link
-															key={subKey}
-															to={subHref}
-															className="block"
-														>
-															<div className="px-4 py-2 text-[12px] font-medium text-foreground hover:text-primary hover:bg-primary/5 hover:translate-x-1 rounded-md transition-all duration-150">
-																{subLabel}
-															</div>
-														</Link>
-													);
-												})}
-											</div>
-										)}
-									</div>
+									</Link>
 								);
-							}
-
-							return (
-								<Link
-									key={itemKey}
-									to={itemHref}
-									className="block"
-								>
-									<div
-										className="px-4 py-2 text-[12px] font-medium text-foreground hover:text-primary hover:bg-primary/5 hover:translate-x-1 rounded-md transition-all duration-150"
-										onMouseEnter={() => setActiveSubItem(null)}
-									>
-										{itemLabel}
-									</div>
-								</Link>
-							);
-						})}
+							})}
+						</div>
 					</div>
+
+					{/* 3rd Level Flyout - Rendered outside scrollable area so it won't be clipped */}
+					{activeSubItem && (() => {
+						const activeItem = activeItems.find(
+							(i) => typeof i === "object" && i !== null && i.name === activeSubItem
+						);
+						if (!activeItem || !activeItem.subItems || activeItem.subItems.length === 0) return null;
+						return (
+							<div className="absolute left-full top-0 w-56 bg-background shadow-xl border border-border rounded-md p-2 z-50 min-h-full max-h-[calc(100vh-150px)] overflow-y-auto mega-scrollbar">
+								{activeItem.subItems.map((subItem) => {
+									const subKey = typeof subItem === "string" ? subItem : subItem.name;
+									const subHref = typeof subItem === "string" ? generateProductUrl(subItem) : subItem.href;
+									const subLabel = typeof subItem === "string" ? subItem : subItem.name;
+									return (
+										<Link
+											key={subKey}
+											to={subHref}
+											className="block"
+										>
+											<div className="px-4 py-2 text-[12px] font-medium text-foreground hover:text-primary hover:bg-primary/5 hover:translate-x-1 rounded-md transition-all duration-150">
+												{subLabel}
+											</div>
+										</Link>
+									);
+								})}
+							</div>
+						);
+					})()}
 				</div>
 			</div>
 		</motion.div>

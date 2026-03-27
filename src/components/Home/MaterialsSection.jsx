@@ -88,7 +88,7 @@ export default function MaterialsSection() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="text-gray-700 text-lg italic mb-6 leading-relaxed"
+                className="text-gray-700 text-lg  mb-6 leading-relaxed"
               >
                 "Their commitment to excellence and proactive support ensures we can consistently deliver high-performance solutions to our clients. Partnering with Specialty Metals isn't just a choice; it’s the foundation that enables us to fulfill our operational promises."
               </motion.p>

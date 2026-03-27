@@ -15,8 +15,8 @@ export default function IKTCapabilitiesTable() {
   ];
 
   return (
-    <motion.div 
-      className="w-full px-2 py-8 md:px-8 bg-white"
+    <motion.div
+      className="w-full px-2 py-0 md:px-8 bg-white"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -39,7 +39,7 @@ export default function IKTCapabilitiesTable() {
             {capabilities.map((item, idx) => (
               <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-gray-50 transition-colors">
                 <td className="py-4 border-r border-gray-100 bg-gray-50/30">{item.dimension}</td>
-                <td className="py-4 italic">{item.capability}</td>
+                <td className="py-4 ">{item.capability}</td>
               </tr>
             ))}
           </tbody>

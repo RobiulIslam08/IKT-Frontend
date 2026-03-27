@@ -42,7 +42,7 @@ export default function MaterialSpecificationsTableGr12() {
           <motion.h1 className="text-xl md:text-3xl font-bold text-gray-800 uppercase tracking-tight" variants={itemVariants}>
             Chemical Requirements
           </motion.h1>
-          <p className="text-[9px] md:text-xs text-gray-400 italic mt-2">
+          <p className="text-[9px] md:text-xs text-gray-400  mt-2">
             (cast analysis, % by mass, maximum permitted unless indicated otherwise)
           </p>
         </div>
@@ -89,8 +89,8 @@ export default function MaterialSpecificationsTableGr12() {
               </tr>
             </thead>
             <tbody className="text-gray-700 font-medium">
-              <tr className="hover:bg-gray-50 transition-colors italic">
-                <td className="py-6 px-4 border-r border-gray-100 bg-gray-50/30 font-bold">275 min</td>
+              <tr className="hover:bg-gray-50 transition-colors ">
+                <td className="py-6 px-4 border-r border-gray-100 bg-gray-50/30 font-medium">275 min</td>
                 <td className="py-6 px-4 border-r border-gray-100">450 - 585</td>
                 <td className="py-6 px-4 border-r border-gray-100">22% min</td>
                 <td className="py-6 px-4 last:border-0">-</td>

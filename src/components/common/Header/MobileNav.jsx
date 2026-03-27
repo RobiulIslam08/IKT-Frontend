@@ -97,42 +97,70 @@ const MobileNav = ({ menuItems, isOpen, onClose }) => {
                           >
                             {item.categories.map((category) => (
                               <div key={category.name}>
-                                <button
-                                  onClick={() => toggleCategory(category.name)}
-                                  className="w-full flex items-center justify-between py-2 px-4 text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
-                                >
-                                  {category.name}
-                                  <motion.span
-                                    animate={{
-                                      rotate: expandedCategory === category.name ? 180 : 0,
-                                    }}
-                                    transition={{ duration: 0.2 }}
-                                  >
-                                    <ChevronDown className="w-3 h-3" />
-                                  </motion.span>
-                                </button>
-
-                                <AnimatePresence>
-                                  {expandedCategory === category.name && (
-                                    <motion.div
-                                      initial={{ height: 0, opacity: 0 }}
-                                      animate={{ height: "auto", opacity: 1 }}
-                                      exit={{ height: 0, opacity: 0 }}
-                                      transition={{ duration: 0.15 }}
-                                      className="overflow-hidden"
+                                {category.name === "" ? (
+                                  // Empty category name: render items directly without toggle
+                                  <div className="py-1">
+                                    {category.items.map((subItem) => {
+                                      if (typeof subItem === "object" && subItem.subItems) {
+                                        return (
+                                          <div key={subItem.name}>
+                                            <div className="py-2 px-4 text-xs font-medium text-muted-foreground">{subItem.name}</div>
+                                            {subItem.subItems.map((si) => (
+                                              <a key={si} href="#" className="block py-2 px-6 text-xs text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors">{si}</a>
+                                            ))}
+                                          </div>
+                                        );
+                                      }
+                                      if (typeof subItem === "object" && subItem.href) {
+                                        return (
+                                          <a key={subItem.name} href={subItem.href} className="block py-2 px-4 text-xs text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors">{subItem.name}</a>
+                                        );
+                                      }
+                                      return (
+                                        <a key={subItem} href="#" className="block py-2 px-4 text-xs text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors">{subItem}</a>
+                                      );
+                                    })}
+                                  </div>
+                                ) : (
+                                  <>
+                                    <button
+                                      onClick={() => toggleCategory(category.name)}
+                                      className="w-full flex items-center justify-between py-2 px-4 text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
                                     >
-                                      {category.items.map((subItem) => (
-                                        <a
-                                          key={subItem}
-                                          href="#"
-                                          className="block py-2 px-6 text-xs text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors"
+                                      {category.name}
+                                      <motion.span
+                                        animate={{
+                                          rotate: expandedCategory === category.name ? 180 : 0,
+                                        }}
+                                        transition={{ duration: 0.2 }}
+                                      >
+                                        <ChevronDown className="w-3 h-3" />
+                                      </motion.span>
+                                    </button>
+
+                                    <AnimatePresence>
+                                      {expandedCategory === category.name && (
+                                        <motion.div
+                                          initial={{ height: 0, opacity: 0 }}
+                                          animate={{ height: "auto", opacity: 1 }}
+                                          exit={{ height: 0, opacity: 0 }}
+                                          transition={{ duration: 0.15 }}
+                                          className="overflow-hidden"
                                         >
-                                          {subItem}
-                                        </a>
-                                      ))}
-                                    </motion.div>
-                                  )}
-                                </AnimatePresence>
+                                          {category.items.map((subItem) => (
+                                            <a
+                                              key={typeof subItem === "object" ? subItem.name : subItem}
+                                              href={typeof subItem === "object" ? (subItem.href || "#") : "#"}
+                                              className="block py-2 px-6 text-xs text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors"
+                                            >
+                                              {typeof subItem === "object" ? subItem.name : subItem}
+                                            </a>
+                                          ))}
+                                        </motion.div>
+                                      )}
+                                    </AnimatePresence>
+                                  </>
+                                )}
                               </div>
                             ))}
                           </motion.div>
@@ -142,9 +170,8 @@ const MobileNav = ({ menuItems, isOpen, onClose }) => {
                   ) : (
                     <a
                       href={item.href || "#"}
-                      className={`block py-3 px-2 text-sm font-medium transition-colors hover:text-primary ${
-                        item.isArabic ? "text-primary" : "text-foreground"
-                      }`}
+                      className={`block py-3 px-2 text-sm font-medium transition-colors hover:text-primary ${item.isArabic ? "text-primary" : "text-foreground"
+                        }`}
                     >
                       {item.name}
                     </a>

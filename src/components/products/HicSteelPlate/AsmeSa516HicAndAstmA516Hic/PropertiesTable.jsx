@@ -54,7 +54,7 @@ export default function PropertiesTable() {
                 key={idx} 
                 className="border-b border-gray-50 last:border-0 hover:bg-gray-50 transition-colors group"
               >
-                <td className="py-5 px-2 md:py-8 font-bold text-gray-800 border-r border-gray-50 text-[10px] md:text-base italic">
+                <td className="py-5 px-2 md:py-8  text-gray-800 border-r border-gray-50 text-[10px] md:text-base ">
                   {row.thickness}
                 </td>
                 <td className="py-5 px-2 md:py-8 border-r border-gray-50 text-[10px] md:text-base group-hover:text-primary transition-colors">

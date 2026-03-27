@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 export default function QuenchedProperties() {
   const brandColor = '#06afcf';
 
- 
+
   // Section 3: Size Range Data (image_d00166.png)
   const sizeRange = {
     thickness: '3mm to 250mm',
@@ -22,13 +22,13 @@ export default function QuenchedProperties() {
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="w-full px-2 py-8 md:px-8 bg-white space-y-16"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-   
+
 
       {/* 3. Size Range */}
       <section>
@@ -46,7 +46,7 @@ export default function QuenchedProperties() {
             </thead>
             <tbody className="text-gray-700 font-medium">
               <tr className="bg-gray-50/20">
-                <td className="py-6 border-r border-gray-50 italic">{sizeRange.thickness}</td>
+                <td className="py-6 border-r border-gray-50 ">{sizeRange.thickness}</td>
                 <td className="py-6 border-r border-gray-50">{sizeRange.widths}</td>
                 <td className="py-6">{sizeRange.lengths}</td>
               </tr>

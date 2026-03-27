@@ -48,15 +48,15 @@ export function InfoSection() {
 	};
 
 	return (
-		<div className="min-h-screen bg-background">
+		<div className="bg-background">
 			<motion.section
 				variants={containerVariants}
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true, amount: 0.3 }}
-				className="px-6 py-16 md:px-12 md:py-24"
+				className="px-6 py-5 md:px-12 md:py-10"
 			>
-				<motion.div variants={itemVariants} className="mb-16">
+				<motion.div variants={itemVariants}>
 					<h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
 						More Information
 					</h1>

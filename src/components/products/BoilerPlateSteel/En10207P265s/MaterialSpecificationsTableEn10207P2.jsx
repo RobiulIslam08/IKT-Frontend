@@ -39,7 +39,7 @@ export default function MaterialSpecificationsTableEn10207P2() {
   const itemVariants = { hidden: { opacity: 0 }, visible: { opacity: 1 } };
 
   return (
-    <motion.div 
+    <motion.div
       className="w-full px-2 py-8 md:px-8 bg-white space-y-16"
       variants={containerVariants}
       initial="hidden"
@@ -50,7 +50,7 @@ export default function MaterialSpecificationsTableEn10207P2() {
         <div className="text-center mb-6">
           <motion.h1 className="text-2xl md:text-4xl font-bold text-gray-800" variants={itemVariants}>Properties</motion.h1>
           <p className="text-[10px] md:text-sm text-gray-500 font-semibold mt-2 uppercase">Chemical Requirements</p>
-          <p className="text-[9px] md:text-xs text-gray-400 italic">(cast analysis, % by mass, maximum permitted unless indicated otherwise)</p>
+          <p className="text-[9px] md:text-xs text-gray-400 ">(cast analysis, % by mass, maximum permitted unless indicated otherwise)</p>
         </div>
         <div className="overflow-x-auto border border-gray-100 rounded-lg shadow-sm">
           <table className="w-full min-w-[600px] text-center text-[10px] md:text-sm">
@@ -64,7 +64,7 @@ export default function MaterialSpecificationsTableEn10207P2() {
             <tbody className="text-gray-700 font-medium">
               <tr>
                 {chemicalData.values.map((v, i) => (
-                  <td key={i} className="py-4 border-r border-gray-50 last:border-0">{v}</td>
+                  <td key={i} className="py-4 border-r border-gray-50 last:border-0 text-gray-700 font-medium">{v}</td>
                 ))}
               </tr>
             </tbody>
@@ -87,13 +87,13 @@ export default function MaterialSpecificationsTableEn10207P2() {
                 <th className="py-3 px-2 last:border-0">Elongation A%</th>
               </tr>
             </thead>
-            <tbody className="text-gray-700 italic">
+            <tbody className="text-gray-700 ">
               {tensileData.map((row, idx) => (
-                <tr key={idx} className="border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors">
-                  <td className="py-4 px-2 border-r border-gray-100">{row.thickness}</td>
-                  <td className="py-4 px-2 border-r border-gray-100 font-medium">{row.yield}</td>
-                  <td className="py-4 px-2 border-r border-gray-100 font-medium">{row.tensile}</td>
-                  <td className="py-4 px-2 last:border-0">{row.elongation}</td>
+                <tr key={idx} className="border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors text-gray-700 font-medium">
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.thickness}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.yield}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.tensile}</td>
+                  <td className="py-4 px-2 last:border-0 text-gray-700 font-medium">{row.elongation}</td>
                 </tr>
               ))}
             </tbody>
@@ -119,8 +119,8 @@ export default function MaterialSpecificationsTableEn10207P2() {
             <tbody className="text-gray-700">
               {impactData.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-100 last:border-0">
-                  <td className="py-4 px-4 border-r border-gray-100 bg-gray-50/50 font-bold">{row.direction}</td>
-                  <td className="py-4 px-4 last:border-0 font-medium">{row.minus20}</td>
+                  <td className="py-4 px-4 border-r border-gray-100 bg-gray-50/50 text-gray-700 font-medium">{row.direction}</td>
+                  <td className="py-4 px-4 last:border-0 text-gray-700 font-medium">{row.minus20}</td>
                 </tr>
               ))}
             </tbody>
@@ -150,11 +150,11 @@ export default function MaterialSpecificationsTableEn10207P2() {
             <tbody>
               {proofStrengthData.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-100 last:border-0 hover:bg-gray-50">
-                  <td className="py-4 px-2 border-r border-gray-100 font-bold bg-gray-50/30">{row.thickness}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.t100}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.t150}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.t200}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.t250}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium bg-gray-50/30">{row.thickness}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.t100}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.t150}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.t200}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.t250}</td>
                   <td className="py-4 px-2 last:border-0">{row.t300}</td>
                 </tr>
               ))}

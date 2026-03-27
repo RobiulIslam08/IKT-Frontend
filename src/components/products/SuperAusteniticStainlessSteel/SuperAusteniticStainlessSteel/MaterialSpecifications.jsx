@@ -35,7 +35,7 @@ export default function MaterialSpecifications() {
           <motion.h1 className="text-3xl md:text-5xl font-bold  mb-4" variants={itemVariants}>
             Properties
           </motion.h1>
-          <motion.p className="text-gray-500 text-sm italic" variants={itemVariants}>
+          <motion.p className="text-gray-500 text-sm " variants={itemVariants}>
             Chemical analysis
           </motion.p>
         </div>
@@ -66,7 +66,7 @@ export default function MaterialSpecifications() {
 
       {/* 2. Mechanical Properties (UNS S31254) */}
       <section>
-        <motion.p className="text-center text-gray-500 text-sm italic mb-8" variants={itemVariants}>
+        <motion.p className="text-center text-gray-500 text-sm  mb-8" variants={itemVariants}>
           Mechanical properties
         </motion.p>
         <div className="relative overflow-x-auto border border-gray-100 rounded-lg shadow-sm max-w-7xl mx-auto">
@@ -91,7 +91,7 @@ export default function MaterialSpecifications() {
       </section>
 
       {/* 3. Composition Details (Thickness Based) */}
-     
+
 
       {/* Mobile Indicator */}
       <div className="flex justify-center gap-4 text-gray-400 md:hidden animate-pulse text-xs">

@@ -72,13 +72,7 @@ const RightDrawer = ({ isOpen, onClose }) => {
 								<img src="/logo4.png" className="h-12 w-50" alt="" srcset="" />
 							</motion.div>
 
-							{/* Divider */}
-							<motion.div
-								initial={{ scaleX: 0 }}
-								animate={{ scaleX: 1 }}
-								transition={{ delay: 0.15, duration: 0.4 }}
-								className="h-px bg-primary-foreground/20 mb-4"
-							/>
+
 
 							{/* Navigation Menu */}
 							<motion.nav
@@ -125,131 +119,181 @@ const RightDrawer = ({ isOpen, onClose }) => {
 															<div className="pl-4 border-l-2 border-primary-foreground/20 ml-2">
 																{item.categories.map((cat, catIndex) => (
 																	<motion.div
-																		key={cat.name}
+																		key={cat.name || `cat-${catIndex}`}
 																		initial={{ opacity: 0, x: 10 }}
 																		animate={{ opacity: 1, x: 0 }}
 																		transition={{ delay: catIndex * 0.03 }}
 																	>
-																		<button
-																			onClick={() => {
-																				if (cat.items && cat.items.length > 0) {
-																					setExpandedSubMenu(expandedSubMenu === cat.name ? null : cat.name);
-																				} else if (cat.href) {
-																					navigate(cat.href);
-																					onClose();
-																				}
-																			}}
-																			className="w-full flex items-center justify-between py-2 text-primary-foreground/70 font-semibold text-sm transition-colors"
-																		>
-																			<span>{cat.name}</span>
-																			{cat.items && cat.items.length > 0 && (
-																				<motion.span
-																					animate={{ rotate: expandedSubMenu === cat.name ? 90 : 0 }}
-																					transition={{ duration: 0.2 }}
-																				>
-																					<ChevronRight className="w-3 h-3" />
-																				</motion.span>
-																			)}
-																		</button>
-																		<AnimatePresence>
-																			{cat.items && expandedSubMenu === cat.name && (
-																				<motion.div
-																					initial={{ height: 0, opacity: 0 }}
-																					animate={{ height: "auto", opacity: 1 }}
-																					exit={{ height: 0, opacity: 0 }}
-																					transition={{ duration: 0.2 }}
-																					className="overflow-hidden"
-																				>
-																					<div className="pl-3 py-1">
-																						{cat.items.map((leaf, leafIndex) => {
-																							const isLeafObject = typeof leaf === "object" && leaf !== null;
-																							const hasSubItems = isLeafObject && leaf.subItems && leaf.subItems.length > 0;
-																							const leafKey = isLeafObject ? leaf.name : leaf;
-																							const leafHref = isLeafObject ? (leaf.href || "#") : generateProductUrl(leaf);
-																							const leafLabel = isLeafObject ? leaf.name : leaf;
+																		{cat.name !== "" && (
+																			<button
+																				onClick={() => {
+																					if (cat.items && cat.items.length > 0) {
+																						setExpandedSubMenu(expandedSubMenu === cat.name ? null : cat.name);
+																					} else if (cat.href) {
+																						navigate(cat.href);
+																						onClose();
+																					}
+																				}}
+																				className="w-full flex items-center justify-between py-2 text-primary-foreground/70 font-semibold text-sm transition-colors"
+																			>
+																				<span>{cat.name}</span>
+																				{cat.items && cat.items.length > 0 && (
+																					<motion.span
+																						animate={{ rotate: expandedSubMenu === cat.name ? 90 : 0 }}
+																						transition={{ duration: 0.2 }}
+																					>
+																						<ChevronRight className="w-3 h-3" />
+																					</motion.span>
+																				)}
+																			</button>
+																		)}
+																		{cat.name === "" ? (
+																			// Empty category name: render items directly without toggle
+																			<div className="pl-3 py-1">
+																				{cat.items && cat.items.map((leaf, leafIndex) => {
+																					const isLeafObject = typeof leaf === "object" && leaf !== null;
+																					const hasSubItems = isLeafObject && leaf.subItems && leaf.subItems.length > 0;
+																					const leafKey = isLeafObject ? leaf.name : leaf;
+																					const leafHref = isLeafObject ? (leaf.href || "#") : generateProductUrl(leaf);
+																					const leafLabel = isLeafObject ? leaf.name : leaf;
 
-																							if (hasSubItems) {
-																								return (
-																									<motion.div
-																										key={leafKey}
-																										initial={{ opacity: 0 }}
-																										animate={{ opacity: 1 }}
-																										transition={{ delay: leafIndex * 0.02 }}
-																									>
-																										<button
-																											onClick={() => toggleNestedMenu(leafKey)}
-																											className="w-full flex items-center justify-between py-1.5 text-xs text-primary-foreground/60 hover:text-primary-foreground transition-colors"
-																										>
-																											<span>{leafLabel}</span>
-																											<motion.span
-																												animate={{ rotate: expandedNestedMenu === leafKey ? 90 : 0 }}
-																												transition={{ duration: 0.2 }}
-																											>
-																												<ChevronRight className="w-3 h-3" />
-																											</motion.span>
-																										</button>
-																										<AnimatePresence>
-																											{expandedNestedMenu === leafKey && (
-																												<motion.div
-																													initial={{ height: 0, opacity: 0 }}
-																													animate={{ height: "auto", opacity: 1 }}
-																													exit={{ height: 0, opacity: 0 }}
-																													transition={{ duration: 0.2 }}
-																													className="overflow-hidden"
-																												>
-																													<div className="pl-3 py-1 border-l border-primary-foreground/10 ml-1">
-																														{leaf.subItems.map((subLeaf, subLeafIndex) => {
-																															const subLeafKey = typeof subLeaf === "string" ? subLeaf : subLeaf.name;
-																															const subLeafHref = typeof subLeaf === "string" ? generateProductUrl(subLeaf) : subLeaf.href;
-																															const subLeafLabel = typeof subLeaf === "string" ? subLeaf : subLeaf.name;
-																															return (
-																																<Link
-																																	key={subLeafKey}
-																																	to={subLeafHref}
-																																	onClick={onClose}
-																																	className="block"
-																																>
-																																	<motion.div
-																																		initial={{ opacity: 0 }}
-																																		animate={{ opacity: 1 }}
-																																		transition={{ delay: subLeafIndex * 0.02 }}
-																																		className="py-1.5 text-xs text-primary-foreground/50 hover:text-primary-foreground transition-colors"
-																																	>
-																																		{subLeafLabel}
-																																	</motion.div>
-																																</Link>
-																															);
-																														})}
-																													</div>
-																												</motion.div>
-																											)}
-																										</AnimatePresence>
-																									</motion.div>
-																								);
-																							}
-
-																							return (
-																								<Link
-																									key={leafKey}
-																									to={leafHref}
-																									onClick={onClose}
-																									className="block"
+																					if (hasSubItems) {
+																						return (
+																							<motion.div
+																								key={leafKey}
+																								initial={{ opacity: 0 }}
+																								animate={{ opacity: 1 }}
+																								transition={{ delay: leafIndex * 0.02 }}
+																							>
+																								<button
+																									onClick={() => toggleNestedMenu(leafKey)}
+																									className="w-full flex items-center justify-between py-1.5 text-xs text-primary-foreground/60 hover:text-primary-foreground transition-colors"
 																								>
-																									<motion.div
-																										initial={{ opacity: 0 }}
-																										animate={{ opacity: 1 }}
-																										transition={{ delay: leafIndex * 0.02 }}
-																										className="py-1.5 text-xs text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+																									<span>{leafLabel}</span>
+																									<motion.span
+																										animate={{ rotate: expandedNestedMenu === leafKey ? 90 : 0 }}
+																										transition={{ duration: 0.2 }}
 																									>
-																										{leafLabel}
-																									</motion.div>
-																								</Link>
-																							);
-																						})}
-																					</div>
-																				</motion.div>
-																			)}
-																		</AnimatePresence>
+																										<ChevronRight className="w-3 h-3" />
+																									</motion.span>
+																								</button>
+																								<AnimatePresence>
+																									{expandedNestedMenu === leafKey && (
+																										<motion.div
+																											initial={{ height: 0, opacity: 0 }}
+																											animate={{ height: "auto", opacity: 1 }}
+																											exit={{ height: 0, opacity: 0 }}
+																											transition={{ duration: 0.2 }}
+																											className="overflow-hidden"
+																										>
+																											<div className="pl-3 py-1 border-l border-primary-foreground/10 ml-1">
+																												{leaf.subItems.map((subLeaf, subLeafIndex) => {
+																													const subLeafKey = typeof subLeaf === "string" ? subLeaf : subLeaf.name;
+																													const subLeafHref = typeof subLeaf === "string" ? generateProductUrl(subLeaf) : subLeaf.href;
+																													const subLeafLabel = typeof subLeaf === "string" ? subLeaf : subLeaf.name;
+																													return (
+																														<Link
+																															key={subLeafKey}
+																															to={subLeafHref}
+																															onClick={onClose}
+																															className="block"
+																														>
+																															<motion.div
+																																initial={{ opacity: 0 }}
+																																animate={{ opacity: 1 }}
+																																transition={{ delay: subLeafIndex * 0.02 }}
+																																className="py-1.5 text-xs text-primary-foreground/50 hover:text-primary-foreground transition-colors"
+																															>
+																																{subLeafLabel}
+																															</motion.div>
+																														</Link>
+																													);
+																												})}
+																											</div>
+																										</motion.div>
+																									)}
+																								</AnimatePresence>
+																							</motion.div>
+																						);
+																					}
+
+																					return (
+																						<Link
+																							key={leafKey}
+																							to={leafHref}
+																							onClick={onClose}
+																							className="block"
+																						>
+																							<motion.div
+																								initial={{ opacity: 0 }}
+																								animate={{ opacity: 1 }}
+																								transition={{ delay: leafIndex * 0.02 }}
+																								className="py-1.5 text-xs text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+																							>
+																								{leafLabel}
+																							</motion.div>
+																						</Link>
+																					);
+																				})}
+																			</div>
+																		) : (
+																			<AnimatePresence>
+																				{cat.items && cat.items.length > 0 && expandedSubMenu === cat.name && (
+																					<motion.div
+																						initial={{ height: 0, opacity: 0 }}
+																						animate={{ height: "auto", opacity: 1 }}
+																						exit={{ height: 0, opacity: 0 }}
+																						transition={{ duration: 0.2 }}
+																						className="overflow-hidden"
+																					>
+																						<div className="pl-3 py-1">
+																							{cat.items.map((leaf, leafIndex) => {
+																								const isLeafObject = typeof leaf === "object" && leaf !== null;
+																								const hasSubItems = isLeafObject && leaf.subItems && leaf.subItems.length > 0;
+																								const leafKey = isLeafObject ? leaf.name : leaf;
+																								const leafHref = isLeafObject ? (leaf.href || "#") : generateProductUrl(leaf);
+																								const leafLabel = isLeafObject ? leaf.name : leaf;
+																								if (hasSubItems) {
+																									return (
+																										<motion.div key={leafKey} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: leafIndex * 0.02 }}>
+																											<button onClick={() => toggleNestedMenu(leafKey)} className="w-full flex items-center justify-between py-1.5 text-xs text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+																												<span>{leafLabel}</span>
+																												<motion.span animate={{ rotate: expandedNestedMenu === leafKey ? 90 : 0 }} transition={{ duration: 0.2 }}>
+																													<ChevronRight className="w-3 h-3" />
+																												</motion.span>
+																											</button>
+																											<AnimatePresence>
+																												{expandedNestedMenu === leafKey && (
+																													<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }} className="overflow-hidden">
+																														<div className="pl-3 py-1 border-l border-primary-foreground/10 ml-1">
+																															{leaf.subItems.map((subLeaf, subLeafIndex) => {
+																																const subLeafKey = typeof subLeaf === "string" ? subLeaf : subLeaf.name;
+																																const subLeafHref = typeof subLeaf === "string" ? generateProductUrl(subLeaf) : subLeaf.href;
+																																const subLeafLabel = typeof subLeaf === "string" ? subLeaf : subLeaf.name;
+																																return (
+																																	<Link key={subLeafKey} to={subLeafHref} onClick={onClose} className="block">
+																																		<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: subLeafIndex * 0.02 }} className="py-1.5 text-xs text-primary-foreground/50 hover:text-primary-foreground transition-colors">{subLeafLabel}</motion.div>
+																																	</Link>
+																																);
+																															})}
+																														</div>
+																													</motion.div>
+																												)}
+																											</AnimatePresence>
+																										</motion.div>
+																									);
+																								}
+																								return (
+																									<Link key={leafKey} to={leafHref} onClick={onClose} className="block">
+																										<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: leafIndex * 0.02 }} className="py-1.5 text-xs text-primary-foreground/60 hover:text-primary-foreground transition-colors">{leafLabel}</motion.div>
+																									</Link>
+																								);
+																							})}
+																						</div>
+																					</motion.div>
+																				)}
+																			</AnimatePresence>
+																		)}
 																	</motion.div>
 																))}
 															</div>

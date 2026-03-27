@@ -44,7 +44,7 @@ export default function MaterialSpecificationsEn100282() {
         <div className="text-center mb-6">
           <h1 className="text-2xl md:text-4xl font-bold text-gray-800">Properties</h1>
           <p className="text-[10px] md:text-sm text-gray-500 font-bold mt-2 uppercase">Chemical Requirements</p>
-          <p className="text-[9px] md:text-xs text-gray-400 italic">(ladle analysis, % maximum permitted unless indicated otherwise)</p>
+          <p className="text-[9px] md:text-xs text-gray-400 ">(ladle analysis, % maximum permitted unless indicated otherwise)</p>
         </div>
         <div className="overflow-x-auto border border-gray-100 rounded-lg shadow-sm">
           <table className="w-full min-w-[1000px] text-center text-[10px] md:text-sm">
@@ -56,10 +56,10 @@ export default function MaterialSpecificationsEn100282() {
                 ))}
               </tr>
             </thead>
-            <tbody className="text-gray-700">
+            <tbody className="text-gray-700 font-medium">
               {chemicalData.elements.map((el, rowIndex) => (
                 <tr key={rowIndex} className="border-b border-gray-50 hover:bg-gray-50">
-                  <td className="py-3 border-r border-gray-100 font-bold bg-gray-50/30">{el}</td>
+                  <td className="py-3 border-r border-gray-100  bg-gray-50/30">{el}</td>
                   {chemicalData.grades.map((g, colIndex) => (
                     <td key={colIndex} className="py-3 border-r border-gray-100 last:border-0">
                       {g.vals[rowIndex]}
@@ -76,7 +76,7 @@ export default function MaterialSpecificationsEn100282() {
       <section>
         <div className="text-center mb-6">
           <h2 className="text-xl md:text-3xl font-bold text-gray-800 uppercase tracking-tight">Mechanical Properties</h2>
-          <p className="text-[9px] md:text-xs text-gray-400 italic mt-1">(for thicknesses {"<"} 16 mm up to 40 mm, transverse direction)</p>
+          <p className="text-[9px] md:text-xs text-gray-400  mt-1">(for thicknesses {"<"} 16 mm up to 40 mm, transverse direction)</p>
         </div>
         <div className="overflow-x-auto border border-gray-100 rounded-lg shadow-sm max-w-7xl mx-auto">
           <table className="w-full min-w-[700px] text-center text-[10px] md:text-sm">
@@ -89,14 +89,14 @@ export default function MaterialSpecificationsEn100282() {
                 <th className="py-3 px-4 last:border-0">Impact (J) min</th>
               </tr>
             </thead>
-            <tbody className="text-gray-700 font-medium italic">
+            <tbody className="text-gray-700 font-medium ">
               {mechanicalData.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-gray-50">
-                  <td className="py-4 px-4 border-r border-gray-100 font-bold bg-gray-50/20">{row.grade}</td>
+                  <td className="py-4 px-4 border-r border-gray-100  bg-gray-50/20">{row.grade}</td>
                   <td className="py-4 px-4 border-r border-gray-100">{row.yield}</td>
                   <td className="py-4 px-4 border-r border-gray-100">{row.tensile}</td>
                   <td className="py-4 px-4 border-r border-gray-100">{row.elong}</td>
-                  <td className="py-4 px-4 last:border-0 font-bold text-primary">{row.impact}</td>
+                  <td className="py-4 px-4 last:border-0 ">{row.impact}</td>
                 </tr>
               ))}
             </tbody>

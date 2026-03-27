@@ -54,7 +54,7 @@ export default function P355Specifications() {
       <section>
         <motion.div variants={itemVariants} className="text-center mb-6">
           <h2 className="text-xl md:text-3xl font-bold text-gray-800">Properties</h2>
-          <p className="text-[10px] md:text-sm text-gray-500 italic">Chemical analysis (cast analysis, % by mass)</p>
+          <p className="text-[10px] md:text-sm text-gray-500 ">Chemical analysis (cast analysis, % by mass)</p>
         </motion.div>
         <div className="overflow-x-auto border border-gray-100 rounded-lg shadow-sm">
           <table className="w-full min-w-[1000px] text-center text-[9px] md:text-[11px]">
@@ -109,7 +109,7 @@ export default function P355Specifications() {
             <tbody className="text-gray-700">
               {tensileData.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-gray-50">
-                  <td className="py-4 px-4 border-r border-gray-50 italic">{row.thickness}</td>
+                  <td className="py-4 px-4 border-r border-gray-50 font-medium">{row.thickness}</td>
                   <td className="py-4 px-4 border-r border-gray-50 font-medium">{row.yield}</td>
                   <td className="py-4 px-4 border-r border-gray-50 font-medium">{row.tensile}</td>
                   <td className="py-4 px-4 last:border-0 font-medium">{row.elongation}</td>
@@ -141,13 +141,13 @@ export default function P355Specifications() {
             <tbody className="text-gray-700">
               {impactData.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-100 last:border-0 hover:bg-gray-50">
-                  <td className="py-4 px-2 border-r border-gray-100 font-bold">{row.grade}</td>
-                  <td className="py-4 px-2 border-r border-gray-100 italic">{row.direction}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.m50}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.m40}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.m20}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.zero}</td>
-                  <td className="py-4 px-2 last:border-0">{row.plus20}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 font-semibold">{row.grade}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 font-semibold  ">{row.direction}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 font-semibold">{row.m50}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 font-semibold">{row.m40}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 font-semibold">{row.m20}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 font-semibold">{row.zero}</td>
+                  <td className="py-4 px-2 last:border-0 font-semibold">{row.plus20}</td>
                 </tr>
               ))}
             </tbody>

@@ -41,7 +41,7 @@ export default function PropertiesTable() {
         <motion.div variants={itemVariants} className="space-y-2">
           <p className="text-gray-600 font-bold text-sm md:text-lg uppercase tracking-wider">Grades</p>
           <p className="text-primary font-extrabold text-base md:text-2xl">ASME/ASTM SA/A 516 Grades 60/65/70</p>
-          <p className="text-gray-400 text-[10px] md:text-sm italic">See table below for sizes.....</p>
+          <p className="text-gray-400 text-[10px] md:text-sm ">See table below for sizes.....</p>
         </motion.div>
       </div>
 
@@ -61,13 +61,13 @@ export default function PropertiesTable() {
                 key={idx} 
                 className="border-b border-gray-50 last:border-0 hover:bg-gray-50 transition-colors group"
               >
-                <td className="py-5 px-2 md:py-8 font-bold text-gray-800 border-r border-gray-50 text-[10px] md:text-base">
+                <td className="py-5 px-2 md:py-8 font-medium text-gray-700 border-r border-gray-50 text-[10px] md:text-base">
                   {row.thickness}
                 </td>
-                <td className="py-5 px-2 md:py-8 text-gray-600 border-r border-gray-50 text-[10px] md:text-base group-hover:text-primary transition-colors">
+                <td className="py-5 px-2 md:py-8 text-gray-700 font-medium border-r border-gray-50 text-[10px] md:text-base group-hover:text-primary transition-colors">
                   {row.length}
                 </td>
-                <td className="py-5 px-2 md:py-8 text-gray-600 text-[10px] md:text-base group-hover:text-primary transition-colors">
+                <td className="py-5 px-2 md:py-8 text-gray-700 font-medium text-[10px] md:text-base group-hover:text-primary transition-colors">
                   {row.width}
                 </td>
               </tr>

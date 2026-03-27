@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion'
 import { ChevronRight } from 'lucide-react'
-import image from "../../../../assets/application.jpg"
+import image from "../../../../assets/images/LongProducts/REBAR/EPOXY COATED REBAR/C.png"
 
 export default function Applications() {
 	const applications = [

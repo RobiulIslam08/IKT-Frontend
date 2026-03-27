@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion'
 import { ChevronRight } from 'lucide-react'
-import image from "../../../../assets/flatsproducts/hotrolledplate/hotrolledsheetC.jpg"
+import image from "../../../../assets/images/FlatsProducts/HOT ROLLED PLATES/C.png"
 
 export default function Applications() {
 	const applications = [

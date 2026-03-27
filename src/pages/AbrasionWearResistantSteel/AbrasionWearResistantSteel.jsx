@@ -13,7 +13,7 @@ const AbrasionWearResistantSteel = () => {
 			<Banner />
 			<InfoSection />
 			<Applications />
-			{/* <PropertiesTable /> */}
+			<PropertiesTable />
 			<RequestBrochure />
 			<GetInTouch />
 		</div>

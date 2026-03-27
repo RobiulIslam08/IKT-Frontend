@@ -29,7 +29,7 @@ export default function MaterialSpecificationsTableEn690ql() {
   const itemVariants = { hidden: { opacity: 0 }, visible: { opacity: 1 } };
 
   return (
-    <motion.div 
+    <motion.div
       className="w-full px-2 py-8 md:px-8 bg-white space-y-16"
       variants={containerVariants}
       initial="hidden"
@@ -45,7 +45,7 @@ export default function MaterialSpecificationsTableEn690ql() {
             <p className="text-gray-700 text-[10px] md:text-base font-semibold uppercase tracking-wider">
               Chemical Composition – EN10025 S690QL
             </p>
-            <p className="text-gray-500 text-[9px] md:text-sm italic">
+            <p className="text-gray-500 text-[9px] md:text-sm ">
               Content % (ladle analysis), maximum
             </p>
           </motion.div>
@@ -97,7 +97,7 @@ export default function MaterialSpecificationsTableEn690ql() {
                   <th className="py-4 px-2 text-white font-bold text-[11px] md:text-base">Impact strength J, minimum</th>
                 </tr>
               </thead>
-              <tbody className="text-gray-700 font-medium italic">
+              <tbody className="text-gray-700 font-medium ">
                 {mechanicalData.map((row, idx) => (
                   <tr key={idx} className="border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors">
                     <td className="py-5 px-2 border-r border-gray-100 text-[10px] md:text-sm">{row.thickness}</td>

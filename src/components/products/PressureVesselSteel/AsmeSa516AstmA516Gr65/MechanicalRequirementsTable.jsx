@@ -79,7 +79,7 @@ export default function MechanicalRequirementsTable() {
                 <td className="py-5 px-8 text-gray-700 font-medium border-r border-gray-100">
                   {row.property}
                 </td>
-                <td className="py-5 px-8 text-center text-gray-800 font-semibold">
+                <td className="py-5 px-8 text-center text-gray-700 font-medium">
                   {row.value}
                 </td>
               </motion.tr>

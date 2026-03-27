@@ -51,7 +51,7 @@ export default function MaterialSpecificationsTable460n() {
         <motion.h1 className="text-2xl md:text-4xl font-bold text-gray-800" variants={itemVariants}>
           Properties
         </motion.h1>
-        <p className="text-[10px] md:text-sm text-gray-500 font-semibold mt-2 italic uppercase">
+        <p className="text-[10px] md:text-sm text-gray-500 font-semibold mt-2  uppercase">
           Impact energy values for the normalised condition
         </p>
       </div>
@@ -72,7 +72,7 @@ export default function MaterialSpecificationsTable460n() {
           <tbody>
             {impactData.map((row, idx) => (
               <tr key={idx} className="border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors">
-                <td className="py-4 px-2 font-bold text-gray-800 border-r border-gray-100 text-[10px] md:text-sm bg-gray-50/30 italic">
+                <td className="py-4 px-2 font-bold text-gray-800 border-r border-gray-100 text-[10px] md:text-sm bg-gray-50/30 ">
                   {row.direction}
                 </td>
                 <td className="py-4 px-2 text-gray-600 border-r border-gray-100 text-[10px] md:text-sm">{row.m50}</td>

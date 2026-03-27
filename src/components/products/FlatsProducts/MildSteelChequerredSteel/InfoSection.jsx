@@ -48,15 +48,15 @@ export function InfoSection() {
     };
 
     return (
-        <div className="min-h-screen bg-background text-foreground">
+        <div className="bg-background text-foreground">
             <motion.section
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
-                className="px-6 py-16 md:px-12 md:py-24"
+                className="px-6 py-5 md:px-12 md:py-10"
             >
-                <motion.div variants={itemVariants} className="mb-16 text-left">
+                <motion.div variants={itemVariants} className="text-left">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">
                         More Information
                     </h1>
@@ -125,7 +125,7 @@ export function InfoSection() {
                     variants={itemVariants}
                     className="mt-16 text-center bg-primary/5 rounded-2xl p-8 border border-primary/10"
                 >
-                    <p className="text-muted-foreground italic">
+                    <p className="text-muted-foreground ">
                         All Mild Steel Chequerred products are available for immediate delivery based on customer-specific requirements.
                     </p>
                 </motion.div>

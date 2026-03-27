@@ -57,7 +57,7 @@ export default function MaterialSpecificationsTable460nl() {
                 ))}
               </tr>
             </thead>
-            <tbody className="text-gray-700 font-medium">
+            <tbody className="text-gray-700 font-bold">
               <tr>
                 {chemicalData.values.map((v, i) => (
                   <td key={i} className="py-4 border-r border-gray-50 last:border-0">{v}</td>
@@ -83,12 +83,12 @@ export default function MaterialSpecificationsTable460nl() {
                 <th className="py-3 px-4 last:border-0">Elongation min</th>
               </tr>
             </thead>
-            <tbody className="text-gray-700">
+            <tbody className="text-gray-700 font-medium">
               {tensileData.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-gray-50">
-                  <td className="py-4 px-4 border-r border-gray-100 italic">{row.thickness}</td>
-                  <td className="py-4 px-4 border-r border-gray-100 font-bold">{row.yield}</td>
-                  <td className="py-4 px-4 border-r border-gray-100 font-medium">{row.tensile}</td>
+                  <td className="py-4 px-4 border-r border-gray-100 ">{row.thickness}</td>
+                  <td className="py-4 px-4 border-r border-gray-100 ">{row.yield}</td>
+                  <td className="py-4 px-4 border-r border-gray-100 ">{row.tensile}</td>
                   <td className="py-4 px-4 last:border-0">{row.elong}</td>
                 </tr>
               ))}
@@ -101,7 +101,7 @@ export default function MaterialSpecificationsTable460nl() {
       <section>
         <div className="text-center mb-6">
           <h2 className="text-lg md:text-2xl font-bold text-gray-800">Impact energy values for the normalised condition</h2>
-          <p className="text-[10px] text-gray-400 italic">Longitudinal & Transverse</p>
+          <p className="text-[14px] text-gray-600 ">Longitudinal & Transverse</p>
         </div>
         <div className="overflow-x-auto border border-gray-100 rounded-lg shadow-sm max-w-7xl mx-auto">
           <table className="w-full min-w-[800px] text-center text-[10px] md:text-sm">
@@ -115,13 +115,13 @@ export default function MaterialSpecificationsTable460nl() {
             </thead>
             <tbody className="text-gray-700">
               <tr className="border-b border-gray-50 bg-gray-50/50">
-                <td className="py-4 font-bold border-r border-gray-100 italic uppercase tracking-tighter">Longitudinal</td>
+                <td className="py-4 font-medium border-r border-gray-100  uppercase tracking-tighter">Longitudinal</td>
                 {impactLongitudinal.map((val, i) => (
                   <td key={i} className="py-4 border-r border-gray-50 last:border-0 font-medium">{val}</td>
                 ))}
               </tr>
               <tr>
-                <td className="py-4 font-bold border-r border-gray-100 italic uppercase tracking-tighter">Transverse</td>
+                <td className="py-4 font-medium border-r border-gray-100  uppercase tracking-tighter">Transverse</td>
                 {impactTransverse.map((val, i) => (
                   <td key={i} className="py-4 border-r border-gray-50 last:border-0 font-medium">{val}</td>
                 ))}

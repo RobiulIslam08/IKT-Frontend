@@ -41,7 +41,7 @@ export default function MaterialSpecificationsTableGr11() {
         <div className="text-center mb-6">
           <motion.h1 className="text-2xl md:text-4xl font-bold text-gray-800" variants={itemVariants}>Properties</motion.h1>
           <p className="text-[10px] md:text-sm text-gray-500 font-semibold mt-2 uppercase">Chemical Requirements</p>
-          <p className="text-[9px] md:text-xs text-gray-400 italic">(cast analysis, % by mass, maximum permitted unless indicated otherwise)</p>
+          <p className="text-[9px] md:text-xs text-gray-400 ">(cast analysis, % by mass, maximum permitted unless indicated otherwise)</p>
         </div>
         <div className="overflow-x-auto border border-gray-100 rounded-lg shadow-sm">
           <table className="w-full min-w-[700px] text-center text-[10px] md:text-sm">
@@ -81,8 +81,8 @@ export default function MaterialSpecificationsTableGr11() {
               </tr>
             </thead>
             <tbody className="text-gray-700 font-medium">
-              <tr className="hover:bg-gray-50 transition-colors italic">
-                <td className="py-6 px-4 border-r border-gray-100 bg-gray-50/30 font-bold">{tensileData.yield}</td>
+              <tr className="hover:bg-gray-50 transition-colors ">
+                <td className="py-6 px-4 border-r border-gray-100 bg-gray-50/30 ">{tensileData.yield}</td>
                 <td className="py-6 px-4 border-r border-gray-100">{tensileData.tensile}</td>
                 <td className="py-6 px-4 border-r border-gray-100">{tensileData.elongation}</td>
                 <td className="py-6 px-4 last:border-0">{tensileData.reduction}</td>

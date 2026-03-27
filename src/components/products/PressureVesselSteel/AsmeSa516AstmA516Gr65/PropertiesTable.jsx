@@ -70,13 +70,13 @@ export default function PropertiesTable() {
                 <td className="py-4 px-4 font-bold text-gray-800 border-r border-gray-100">
                   {row.element}
                 </td>
-                <td className="py-4 px-4 text-gray-600 border-r border-gray-100 italic">
+                <td className="py-4 px-4 text-gray-700 font-medium border-r border-gray-100 ">
                   {row.thickness || '—'}
                 </td>
                 <td className="py-4 px-4 text-gray-700 border-r border-gray-100 font-medium">
                   {row.composition}
                 </td>
-                <td className="py-4 px-4 text-gray-500 text-sm font-semibold">
+                <td className="py-4 px-4 text-gray-700 text-sm font-medium">
                   {row.note}
                 </td>
               </motion.tr>

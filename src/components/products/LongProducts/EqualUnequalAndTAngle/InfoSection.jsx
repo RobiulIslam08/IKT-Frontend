@@ -48,18 +48,19 @@ export function InfoSection() {
     };
 
     const equalWidths = ['20 mm', '25 mm', '30 mm', '40 mm', '45 mm', '50 mm', '60 mm', '70 mm', '75 mm', '80 mm', '100 mm', '120 mm', '150 mm','180mm', '200mm','220mm','250mm','300mm'];
+    const unEqualWidths = ['30 mm', '40 mm', '45 mm',  '50 mm', '60 mm','65 mm', '70 mm', '75 mm', '80 mm', '90 mm', '100 mm', '120 mm', '120 mm','1250mm', '130mm','135mm','150mm','200mm'];
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className="bg-background">
             <motion.section
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
-                className="px-6 py-16 md:px-12 md:py-24"
+                className="px-6 py-5 md:px-12 md:py-10"
             >
                 {/* Header Section */}
-                <motion.div variants={itemVariants} className="mb-16">
+                <motion.div variants={itemVariants}>
                     <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
                         More Information
                     </h1>
@@ -129,6 +130,25 @@ export function InfoSection() {
                                 Unequal angle sections have a 90° angle as with standard equal angle, however, the width of the sides are not the same—the corner does not lay central to the profile, it is essentially an L shape.
                                 This profile is perfect for use in projects where asymmetrical support or specialized framing is required.
                             </p>
+                                 <div>
+                                <p className="text-sm font-semibold text-primary uppercase mb-3">Available Widths</p>
+                                <div className="flex flex-wrap gap-2">
+                                    {unEqualWidths.map((w) => (
+                                        <span key={w} className="bg-background border border-border px-3 py-1 rounded text-sm text-foreground">{w}</span>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="grid md:grid-cols-2 gap-6 bg-background/50 p-6 rounded-xl border border-border/50">
+                                <div>
+                                    <p className="text-sm font-bold text-primary uppercase mb-2">Grades</p>
+                                    <p className="text-sm text-foreground">A36/A572 GR-50/A992/S275JR/S235JR/S355JR/J2/JIS G 3101 SS 400/CS350W
+ (Mill Finish)</p>
+                                </div>
+                                <div>
+                                    <p className="text-sm font-bold text-primary uppercase mb-2">Properties</p>
+                                    <p className="text-sm text-foreground">Excellent weldability and machining properties.</p>
+                                </div>
+                            </div>
                             <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-lg">
                                 <span className="text-primary font-medium text-sm">L-Shape Structural Profile</span>
                             </div>

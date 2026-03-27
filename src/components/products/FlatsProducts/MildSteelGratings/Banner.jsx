@@ -4,8 +4,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
-import banner1 from "../../../../assets/flatsproducts/middsteelgrating/midsteelgratingC.jpg";
-import banner2 from "../../../../assets/flatsproducts/middsteelgrating/midsteelgratingB.jpg";
+import banner1 from "../../../../assets/images/FlatsProducts/MILD STEEL GRATINGS/A.png";
+import banner2 from "../../../../assets/images/FlatsProducts/MILD STEEL GRATINGS/B.png";
 
 export default function Banner() {
 	const [activeSlide, setActiveSlide] = useState(0);

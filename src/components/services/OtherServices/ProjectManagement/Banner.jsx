@@ -1,18 +1,11 @@
 /* eslint-disable no-unused-vars */
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { CheckCircle2 } from 'lucide-react';
 import banner1 from "../../../../assets/banner1.jpg";
-import banner2 from "../../../../assets/banner2.jpg";
-
 export default function Banner() {
-	const [activeSlide, setActiveSlide] = useState(0);
-	const [isAutoPlay, setIsAutoPlay] = useState(false);
-
-	const slides = [
-		{
+	const slide = {
 			title: 'Project Management',
 			description:
 				'Core Service Points',
@@ -24,55 +17,12 @@ export default function Banner() {
 			bgColor: 'from-slate-900 via-slate-800 to-slate-900',
 			accentColor: '#06afcf',
 			image: banner1
-		},
-		{
-			title: 'Project Management',
-			description:
-				'Core Service Points',
-			points: [
-				'End-to-End Management: We oversee every phase of the fabrication process, from material sourcing to final quality inspection.',
-				'Strategic Logistics: Integrated supply chain solutions designed to handle oversized and heavy-duty steel components.',
-				'Streamlined Workflow: Our project managers coordinate complex processing schedules to meet aggressive project deadlines.',
-			],
-			bgColor: 'from-blue-950 via-slate-900 to-blue-950',
-			accentColor: '#06afcf',
-			image: banner2
-		},
-	];
-
-	useEffect(() => {
-		if (!isAutoPlay) return;
-		const interval = setInterval(() => {
-			setActiveSlide((prev) => (prev + 1) % slides.length);
-		}, 5000);
-		return () => clearInterval(interval);
-	}, [isAutoPlay, slides.length]);
-
-	const goToSlide = (index) => {
-		setActiveSlide(index);
-		setIsAutoPlay(false);
-	};
-
-	const goToPrevious = () => {
-		setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length);
-		setIsAutoPlay(false);
-	};
-
-	const goToNext = () => {
-		setActiveSlide((prev) => (prev + 1) % slides.length);
-		setIsAutoPlay(false);
-	};
-
-	const slide = slides[activeSlide];
-
+		};
 	return (
 		<div className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
-			<AnimatePresence mode="wait">
-				<motion.div
-					key={activeSlide}
+							<motion.div
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
-					exit={{ opacity: 0 }}
 					transition={{ duration: 0.2 }}
 					className={`absolute inset-0 bg-linear-to-br ${slide.bgColor}`}
 				>
@@ -147,38 +97,7 @@ export default function Banner() {
 						</div>
 					</div>
 
-					<div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4">
-						<button
-							onClick={goToPrevious}
-							className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
-							aria-label="Previous slide"
-						>
-							<ChevronLeft className="w-6 h-6 text-white" />
-						</button>
-
-						<div className="flex gap-2">
-							{slides.map((_, index) => (
-								<button
-									key={index}
-									onClick={() => goToSlide(index)}
-									className={`h-2 rounded-full transition-all duration-300 ${
-										index === activeSlide ? 'w-8 bg-primary' : 'w-2 bg-white/50 hover:bg-white/80'
-									}`}
-									aria-label={`Go to slide ${index + 1}`}
-								/>
-							))}
-						</div>
-
-						<button
-							onClick={goToNext}
-							className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
-							aria-label="Next slide"
-						>
-							<ChevronRight className="w-6 h-6 text-white" />
-						</button>
-					</div>
 				</motion.div>
-			</AnimatePresence>
 		</div>
 	);
 }

@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion'
 import { ChevronRight } from 'lucide-react'
-import image from "../../../../assets/application.jpg"
+import image from "../../../../assets/images/LongProducts/EQUAL, UNEQUAL & T-ANGLE/C.png"
 
 export default function Applications() {
 	const applications = [

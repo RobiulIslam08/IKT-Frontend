@@ -26,6 +26,7 @@ const Header = () => {
 								className="shrink-0"
 							>
 								<img src="/logo4.png" className="h-8 w-62" alt="" srcset="" />
+								
 							</motion.div>
 
 							{/* Contact Info */}
@@ -84,7 +85,7 @@ const Header = () => {
 				</div>
 
 				{/* Navigation Bar */}
-				<nav className="bg-background border-b border-border">
+				<nav className="bg-background border-b border-border  ">
 					<div className=" mx-auto  ">
 						<div className="flex items-center justify-between">
 							<motion.ul

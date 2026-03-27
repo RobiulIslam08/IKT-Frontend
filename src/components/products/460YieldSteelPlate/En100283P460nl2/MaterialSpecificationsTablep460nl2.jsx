@@ -32,7 +32,7 @@ export default function MaterialSpecificationsTablep460nl2() {
         <motion.div variants={itemVariants} className="text-center mb-6">
           <h2 className="text-xl md:text-3xl font-bold text-gray-800">Properties</h2>
           <p className="text-[10px] md:text-sm text-gray-500 font-semibold mt-2 uppercase">Chemical Requirements</p>
-          <p className="text-[9px] md:text-xs text-gray-400 italic">(cast analysis, % by mass, maximum permitted unless indicated otherwise)</p>
+          <p className="text-[9px] md:text-xs text-gray-400 ">(cast analysis, % by mass, maximum permitted unless indicated otherwise)</p>
         </motion.div>
         <div className="overflow-x-auto border border-gray-100 rounded-lg shadow-sm">
           <table className="w-full min-w-[1000px] text-center text-[10px] md:text-sm">
@@ -43,7 +43,7 @@ export default function MaterialSpecificationsTablep460nl2() {
                 ))}
               </tr>
             </thead>
-            <tbody className="text-gray-700">
+            <tbody className="text-gray-700 font-medium">
               <tr className="border-b border-gray-50">
                 <td className="py-4 border-r border-gray-50">0.20</td>
                 <td className="py-4 border-r border-gray-50">0.60</td>
@@ -89,9 +89,9 @@ export default function MaterialSpecificationsTablep460nl2() {
                 { thick: 'over 60mm to 100mm', yield: '400 min', tensile: '540 - 710', elong: '17 min' }
               ].map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-gray-50 transition-colors">
-                  <td className="py-4 px-4 border-r border-gray-100 italic">{row.thick}</td>
-                  <td className="py-4 px-4 border-r border-gray-100 font-medium">{row.yield}</td>
-                  <td className="py-4 px-4 border-r border-gray-100 font-medium">{row.tensile}</td>
+                  <td className="py-4 px-4 border-r border-gray-100 font-medium text-gray-700">{row.thick}</td>
+                  <td className="py-4 px-4 border-r border-gray-100 font-medium text-gray-700">{row.yield}</td>
+                  <td className="py-4 px-4 border-r border-gray-100 font-medium text-gray-700">{row.tensile}</td>
                   <td className="py-4 px-4 last:border-0 font-medium">{row.elong}</td>
                 </tr>
               ))}
@@ -117,9 +117,9 @@ export default function MaterialSpecificationsTablep460nl2() {
                 <th className="py-3 px-2 last:border-0">+20°C</th>
               </tr>
             </thead>
-            <tbody className="text-gray-700">
+            <tbody className="text-gray-700 font-medium">
               <tr className="border-b border-gray-100 bg-gray-50/30">
-                <td className="py-4 px-2 border-r border-gray-100 font-bold">Transverse</td>
+                <td className="py-4 px-2 border-r border-gray-100 font-medium">Transverse</td>
                 <td className="py-4 px-2 border-r border-gray-100 font-medium">27 J min</td>
                 <td className="py-4 px-2 border-r border-gray-100 font-medium">30 J min</td>
                 <td className="py-4 px-2 border-r border-gray-100 font-medium">40 J min</td>
@@ -127,7 +127,7 @@ export default function MaterialSpecificationsTablep460nl2() {
                 <td className="py-4 px-2 font-medium">70 J min</td>
               </tr>
               <tr className="border-b border-gray-100">
-                <td className="py-4 px-2 border-r border-gray-100 font-bold">Longitudinal</td>
+                <td className="py-4 px-2 border-r border-gray-100 font-medium">Longitudinal</td>
                 <td className="py-4 px-2 border-r border-gray-100 font-medium">40 J min</td>
                 <td className="py-4 px-2 border-r border-gray-100 font-medium">45 J min</td>
                 <td className="py-4 px-2 border-r border-gray-100 font-medium">55 J min</td>

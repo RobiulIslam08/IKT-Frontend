@@ -15,7 +15,7 @@ export default function IKTOxyFuelCapabilities() {
   ];
 
   return (
-    <motion.div 
+    <motion.div
       className="w-full px-2 py-8 md:px-8 bg-white"
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -39,7 +39,7 @@ export default function IKTOxyFuelCapabilities() {
             {oxyFuelCapabilities.map((item, idx) => (
               <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-gray-50 transition-colors">
                 <td className="py-5 border-r border-gray-100 bg-gray-50/30 font-bold">{item.dimension}</td>
-                <td className="py-5 italic text-gray-600">{item.capability}</td>
+                <td className="py-5  text-gray-600">{item.capability}</td>
               </tr>
             ))}
           </tbody>

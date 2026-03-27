@@ -38,15 +38,15 @@ export function InfoSection() {
     ];
 
     return (
-        <div className="min-h-screen bg-background text-foreground">
+        <div className="bg-background text-foreground">
             <motion.section
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.1 }}
-                className="px-6 py-16 md:px-12 md:py-24"
+                className="px-6 py-5 md:px-12 md:py-10"
             >
-                <motion.div variants={cardVariants} className="mb-16">
+                <motion.div variants={cardVariants}>
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">More Information</h1>
                     <p className="text-primary font-bold text-lg tracking-widest uppercase">HOT ROLLED PLATES</p>
                 </motion.div>

@@ -48,13 +48,13 @@ export function InfoSection() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className=" bg-background">
       <motion.section
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className="px-6 py-16 md:px-12 md:py-24"
+        className="px-6 py-8 md:px-12 md:py-10"
       >
         <motion.div variants={itemVariants} className="mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -77,30 +77,30 @@ export function InfoSection() {
               <LayersIcon className="w-8 h-8 text-primary shrink-0 mt-1" />
             </motion.div>
             <div className="flex-1">
-             <div className="space-y-4 text-muted-foreground">
-              <p>
-               At IKT, our plasma cutting operations are powered by advanced CAD integration. Our specialist technical team utilizes high-end software to ensure every component is manufactured with absolute precision, meeting the exact specifications of our clients.
-              </p>
-              <ul className="space-y-2 text-sm">
-                <li className="flex gap-2">
-                  <span className="text-primary font-bold">•</span>
-                  <span>CAD/CNC Support: Seamless conversion of digital designs into physical parts.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-primary font-bold">•</span>
-                  <span>Expert Technicians: Dedicated team ensuring optimized material nesting and accuracy.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-primary font-bold">•</span>
-                  <span>Precision Engineering: High-tolerance cutting for complex industrial requirements.</span>
-                </li>
-              </ul>
-            </div>
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  At IKT, our plasma cutting operations are powered by advanced CAD integration. Our specialist technical team utilizes high-end software to ensure every component is manufactured with absolute precision, meeting the exact specifications of our clients.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex gap-2">
+                    <span className="text-primary font-bold">•</span>
+                    <span>CAD/CNC Support: Seamless conversion of digital designs into physical parts.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary font-bold">•</span>
+                    <span>Expert Technicians: Dedicated team ensuring optimized material nesting and accuracy.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-primary font-bold">•</span>
+                    <span>Precision Engineering: High-tolerance cutting for complex industrial requirements.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </motion.div>
 
-    
+
       </motion.section>
     </div>
   );

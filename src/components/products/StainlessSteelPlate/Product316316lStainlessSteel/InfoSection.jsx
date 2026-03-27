@@ -50,16 +50,16 @@ export function InfoSection() {
     const sectors = ['Brewing', 'Chemical Industry', 'Dairy', 'Food Processing', 'Marine Equipment', 'Petrochemicals', 'Pharmaceuticals'];
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className="bg-background">
             <motion.section
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
-                className="px-6 py-16 md:px-12 md:py-24"
+                className="px-6 py-5 md:px-12 md:py-10"
             >
                 {/* Header Section */}
-                <motion.div variants={itemVariants} className="mb-16">
+                <motion.div variants={itemVariants}>
                     <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
                         More Information
                     </h1>
@@ -165,7 +165,7 @@ export function InfoSection() {
                             This allows for the best possible plate utilization and minimizes scrap for our customers.
                         </p>
                         <div className="bg-background border border-primary/20 rounded-xl p-6">
-                            <p className="text-sm text-muted-foreground italic">
+                            <p className="text-sm text-muted-foreground ">
                                 "Save time and money with our in-house computer controlled high definition plasma cutting. Most customers prefer our ready cut-to-size items for precision and cost-efficiency."
                             </p>
                         </div>

@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion'
 import { ChevronRight } from 'lucide-react'
-import image from "../../../../assets/flatsproducts/middsteelgrating/midsteelgratingA.jpg"
+import image from "../../../../assets/images/FlatsProducts/MILD STEEL GRATINGS/C.png"
 
 export default function Applications() {
 	const applications = [

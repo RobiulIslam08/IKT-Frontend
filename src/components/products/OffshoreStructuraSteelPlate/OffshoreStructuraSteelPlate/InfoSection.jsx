@@ -40,7 +40,7 @@ export function InfoSection() {
     },
     hover: {
       y: -8,
-      boxShadow: '0 20px 25px -5px rgba(6, 175, 207, 0.15)',
+      bosmhadow: '0 20px 25px -5px rgba(6, 175, 207, 0.15)',
       transition: {
         duration: 0.3,
       },
@@ -48,15 +48,15 @@ export function InfoSection() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background">
       <motion.section
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className="px-6 py-16 md:px-12 md:py-24"
+        className="px-6 py-5 md:px-12 md:py-10"
       >
-        <motion.div variants={itemVariants} className="mb-16">
+        <motion.div variants={itemVariants}>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             More Information
           </h1>
@@ -77,13 +77,13 @@ export function InfoSection() {
               <LayersIcon className="w-8 h-8 text-primary shrink-0 mt-1" />
             </motion.div>
             <div className="flex-1">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              <h2 className="text-2xl font-bold text-foreground mb-4">
                 Advanced Structural Solutions: S355K2+N (High-Spec Stock)
               </h2>
-              <p className="text-muted-foreground leading-relaxed text-base md:text-lg mb-2">
+              <p className="text-muted-foreground leading-relaxed text-sm mb-2">
                 For projects with stringent engineering demands, standard S355 is often insufficient. IKT stocks EN 10025 S355K2+N plates specifically sourced with restricted chemistry and a guaranteed low Carbon Equivalent Value (CEV).
               </p>
-              <p className="text-muted-foreground leading-relaxed text-base md:text-lg ">
+              <p className="text-muted-foreground leading-relaxed text-sm ">
                 These plates are engineered for high-integrity applications where superior weldability and exceptional impact toughness are non-negotiable—ensuring you meet the most demanding client material specifications and international safety standards.
               </p>
             </div>
@@ -112,7 +112,7 @@ export function InfoSection() {
             <h3 className="text-2xl font-bold text-foreground mb-4">
               Offshore Engineering Excellence: Grade S355 Steel Plate
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex gap-2">
                 <span className="text-primary font-bold">•</span>
                 <span>As Rolled: For standard structural applications.</span>
@@ -144,7 +144,7 @@ export function InfoSection() {
             <h3 className="text-2xl font-bold text-foreground mb-4">
               High-Integrity Specialized Stock: S355K2+N
             </h3>
-            <div className="space-y-4 text-muted-foreground">
+            <div className="space-y-4 text-sm text-muted-foreground">
               <p>
                For critical applications where standard high-yield steel fails to meet stringent safety or performance thresholds, IKT offers EN 10025 S355K2+N plates. These are engineered for projects requiring:
               </p>

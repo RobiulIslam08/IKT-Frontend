@@ -36,16 +36,16 @@ export function InfoSection() {
     };
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className="bg-background">
             <motion.section
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.1 }}
-                className="px-6 py-16 md:px-12 md:py-24 max-w-7xl mx-auto"
+                className="px-6 py-5 md:px-12 md:py-10 max-w-7xl mx-auto"
             >
                 {/* Header Section */}
-                <motion.div variants={cardVariants} className="mb-16">
+                <motion.div variants={cardVariants}>
                     <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 ">
                         More Information
                     </h1>
@@ -98,9 +98,9 @@ export function InfoSection() {
                             <div>
                                 <h4 className="text-sm font-bold text-primary uppercase mb-4 tracking-widest">Dimensions</h4>
                                 <ul className="space-y-3 text-foreground text-sm">
-                                    <li className="flex items-center gap-2 italic"> 4′ x 8′ (0.5mm to 2.0mm)</li>
-                                    <li className="flex items-center gap-2 italic"> 4'X16′ (0.5mm to 1.5mm)</li>
-                                    <li className="flex items-center gap-2 italic"> 5'X20′ (0.5mm to 1.5mm)</li>
+                                    <li className="flex items-center gap-2 "> 4′ x 8′ (0.5mm to 2.0mm)</li>
+                                    <li className="flex items-center gap-2 "> 4'X16′ (0.5mm to 1.5mm)</li>
+                                    <li className="flex items-center gap-2 "> 5'X20′ (0.5mm to 1.5mm)</li>
                                 </ul>
                             </div>
                             <div>

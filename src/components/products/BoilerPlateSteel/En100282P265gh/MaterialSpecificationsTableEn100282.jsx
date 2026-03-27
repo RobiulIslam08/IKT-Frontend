@@ -51,7 +51,7 @@ export default function MaterialSpecificationsTableEn100282() {
         <div className="text-center mb-6">
           <motion.h1 className="text-2xl md:text-4xl font-bold text-gray-800" variants={itemVariants}>Properties</motion.h1>
           <p className="text-[10px] md:text-sm text-gray-500 font-semibold mt-2">Chemical Requirements</p>
-          <p className="text-[9px] md:text-xs text-gray-400 italic">(cast analysis, % by mass, maximum permitted unless indicated otherwise)</p>
+          <p className="text-[9px] md:text-xs text-gray-400 ">(cast analysis, % by mass, maximum permitted unless indicated otherwise)</p>
         </div>
         <div className="overflow-x-auto border border-gray-100 rounded-lg shadow-sm">
           <table className="w-full min-w-[800px] text-center text-[10px] md:text-sm">
@@ -65,7 +65,7 @@ export default function MaterialSpecificationsTableEn100282() {
             <tbody className="text-gray-700">
               <tr>
                 {chemicalData.values.map((v, i) => (
-                  <td key={i} className="py-4 border-r border-gray-100 last:border-0">{v}</td>
+                  <td key={i} className="py-4 border-r border-gray-100 last:border-0 text-gray-700 font-medium">{v}</td>
                 ))}
               </tr>
             </tbody>
@@ -90,10 +90,10 @@ export default function MaterialSpecificationsTableEn100282() {
             </thead>
             <tbody className="text-gray-700">
               {tensileData.map((row, idx) => (
-                <tr key={idx} className="border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors">
-                  <td className="py-4 px-2 border-r border-gray-100 italic">{row.thickness}</td>
-                  <td className="py-4 px-2 border-r border-gray-100 font-medium">{row.yield}</td>
-                  <td className="py-4 px-2 border-r border-gray-100 font-medium">{row.tensile}</td>
+                <tr key={idx} className="border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors text-gray-700 font-medium">
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.thickness}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium ">{row.yield}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.tensile}</td>
                   <td className="py-4 px-2 last:border-0">{row.elongation}</td>
                 </tr>
               ))}

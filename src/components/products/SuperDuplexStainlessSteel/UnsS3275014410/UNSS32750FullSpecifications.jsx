@@ -72,7 +72,7 @@ export default function UNSS32750FullSpecifications() {
           </motion.h1>
           <motion.div variants={itemVariants} className="space-y-1">
             <p className="text-gray-700 font-semibold">{chemicalData.subtitle}</p>
-            <p className="text-gray-500 text-sm italic">{chemicalData.description}</p>
+            <p className="text-gray-500 text-sm ">{chemicalData.description}</p>
           </motion.div>
         </div>
 
@@ -113,7 +113,7 @@ export default function UNSS32750FullSpecifications() {
                   <th key={i} className="py-4 px-2 text-white font-bold border-r border-white/20 last:border-0">
                     <div className="flex flex-col">
                       <span>{h.label}</span>
-                      <span className="text-[10px] font-normal opacity-90 italic">{h.unit}</span>
+                      <span className="text-[10px] font-normal opacity-90 ">{h.unit}</span>
                     </div>
                   </th>
                 ))}
@@ -122,7 +122,7 @@ export default function UNSS32750FullSpecifications() {
             <tbody>
               <tr className="bg-white">
                 {mechanicalData.values.map((v, i) => (
-                  <td key={i} className="py-8 px-2 text-gray-700 border-r border-gray-100 last:border-0 text-lg">
+                  <td key={i} className="py-8 px-2 text-gray-700 border-r border-gray-100 last:border-0 font-medium">
                     {v}
                   </td>
                 ))}
@@ -152,7 +152,7 @@ export default function UNSS32750FullSpecifications() {
                 <tr key={idx} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                   <td className="py-4 px-4 font-bold text-gray-800 bg-gray-50/50 border-r border-gray-100">{row.thickness}</td>
                   {row.sizes.map((size, sIdx) => (
-                    <td key={sIdx} className="py-4 px-4 text-gray-600 border-r border-gray-100 last:border-0">
+                    <td key={sIdx} className="py-4 px-4 text-gray-700 border-r border-gray-100 last:border-0 font-medium">
                       {size}
                     </td>
                   ))}

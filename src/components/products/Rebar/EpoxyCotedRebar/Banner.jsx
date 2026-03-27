@@ -4,8 +4,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
-import banner1 from "../../../../assets/banner1.jpg";
-import banner2 from "../../../../assets/banner2.jpg";
+import banner1 from "../../../../assets/images/LongProducts/REBAR/EPOXY COATED REBAR/A.png";
+import banner2 from "../../../../assets/images/LongProducts/REBAR/EPOXY COATED REBAR/B.png";
 
 export default function Banner() {
 	const [activeSlide, setActiveSlide] = useState(0);

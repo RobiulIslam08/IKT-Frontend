@@ -20,19 +20,19 @@ export default function MaterialSpecificationsTablep460nl1() {
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="w-full px-2 py-8 md:px-8 bg-white space-y-12"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      
+
       {/* 1. Properties - Chemical Requirements */}
       <section>
         <motion.div variants={itemVariants} className="text-center mb-6">
           <h2 className="text-xl md:text-3xl font-bold text-gray-800">Properties</h2>
           <p className="text-[10px] md:text-sm text-gray-500 font-semibold mt-2 uppercase">Chemical Requirements</p>
-          <p className="text-[9px] md:text-xs text-gray-400 italic">(cast analysis, % by mass, maximum permitted unless indicated otherwise)</p>
+          <p className="text-[9px] md:text-xs text-gray-400 ">(cast analysis, % by mass, maximum permitted unless indicated otherwise)</p>
         </motion.div>
         <div className="overflow-x-auto border border-gray-100 rounded-lg shadow-sm">
           <table className="w-full min-w-[900px] text-center text-[10px] md:text-sm">
@@ -43,7 +43,7 @@ export default function MaterialSpecificationsTablep460nl1() {
                 ))}
               </tr>
             </thead>
-            <tbody className="text-gray-700">
+            <tbody className="text-gray-700 font-medium">
               <tr className="border-b border-gray-50">
                 <td className="py-4 border-r border-gray-50">0.20</td>
                 <td className="py-4 border-r border-gray-50">0.60</td>
@@ -81,7 +81,7 @@ export default function MaterialSpecificationsTablep460nl1() {
                 <th className="py-3 px-4 last:border-0">Elongation A%</th>
               </tr>
             </thead>
-            <tbody className="text-gray-700">
+            <tbody className="text-gray-700 font-medium">
               {[
                 { thick: 'up to 16mm', yield: '460 min', tensile: '570 - 730', elong: '17 min' },
                 { thick: '16mm to 40mm', yield: '445 min', tensile: '570 - 730', elong: '17 min' },
@@ -89,7 +89,7 @@ export default function MaterialSpecificationsTablep460nl1() {
                 { thick: 'over 60mm to 100mm', yield: '400 min', tensile: '540 - 710', elong: '17 min' }
               ].map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-gray-50 transition-colors">
-                  <td className="py-4 px-4 border-r border-gray-100 italic">{row.thick}</td>
+                  <td className="py-4 px-4 border-r border-gray-100 ">{row.thick}</td>
                   <td className="py-4 px-4 border-r border-gray-100 font-medium">{row.yield}</td>
                   <td className="py-4 px-4 border-r border-gray-100 font-medium">{row.tensile}</td>
                   <td className="py-4 px-4 last:border-0 font-medium">{row.elong}</td>
@@ -104,7 +104,7 @@ export default function MaterialSpecificationsTablep460nl1() {
       <section>
         <motion.div variants={itemVariants} className="text-center mb-6">
           <h2 className="text-xl md:text-2xl font-bold text-gray-800 uppercase tracking-tight">Values</h2>
-          <p className="text-[10px] md:text-xs text-gray-400 italic mt-1">Impact energy values for the normalised condition</p>
+          <p className="text-[10px] md:text-xs text-gray-400  mt-1">Impact energy values for the normalised condition</p>
         </motion.div>
         <div className="overflow-x-auto border border-gray-100 rounded-lg shadow-sm max-w-7xl mx-auto">
           <table className="w-full min-w-[700px] text-center text-[10px] md:text-sm">
@@ -118,22 +118,22 @@ export default function MaterialSpecificationsTablep460nl1() {
                 <th className="py-3 px-2 last:border-0">+20°C</th>
               </tr>
             </thead>
-            <tbody className="text-gray-700">
+            <tbody className="text-gray-700 font-medium">
               <tr className="border-b border-gray-100 bg-gray-50/30">
-                <td className="py-4 px-2 border-r border-gray-100 font-bold">Transverse</td>
-                <td className="py-4 px-2 border-r border-gray-100">-</td>
-                <td className="py-4 px-2 border-r border-gray-100 font-medium">27 J min</td>
-                <td className="py-4 px-2 border-r border-gray-100 font-medium">35 J min</td>
-                <td className="py-4 px-2 border-r border-gray-100 font-medium">50 J min</td>
-                <td className="py-4 px-2 font-medium">60 J min</td>
+                <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">Transverse</td>
+                <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">-</td>
+                <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">27 J min</td>
+                <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">35 J min</td>
+                <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">50 J min</td>
+                <td className="py-4 px-2 text-gray-700 font-medium">60 J min</td>
               </tr>
               <tr className="border-b border-gray-100">
-                <td className="py-4 px-2 border-r border-gray-100 font-bold">Longitudinal</td>
-                <td className="py-4 px-2 border-r border-gray-100 font-medium">30 J min</td>
-                <td className="py-4 px-2 border-r border-gray-100 font-medium">40 J min</td>
-                <td className="py-4 px-2 border-r border-gray-100 font-medium">50 J min</td>
-                <td className="py-4 px-2 border-r border-gray-100 font-medium">70 J min</td>
-                <td className="py-4 px-2 font-medium">80 J min</td>
+                <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">Longitudinal</td>
+                <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">30 J min</td>
+                <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">40 J min</td>
+                <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">50 J min</td>
+                <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">70 J min</td>
+                <td className="py-4 px-2 text-gray-700 font-medium">80 J min</td>
               </tr>
             </tbody>
           </table>

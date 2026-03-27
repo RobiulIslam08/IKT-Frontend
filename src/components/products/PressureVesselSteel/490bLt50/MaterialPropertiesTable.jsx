@@ -46,7 +46,7 @@ export default function MaterialPropertiesTable() {
       <section>
         <div className="text-center mb-6">
           <motion.h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4" variants={itemVariants}>Properties</motion.h1>
-          <p className="text-[10px] md:text-sm text-gray-500 italic">Minimum impact values for BS 1501 224 490B LT50</p>
+          <p className="text-[10px] md:text-sm text-gray-500 ">Minimum impact values for BS 1501 224 490B LT50</p>
         </div>
         <div className="flex flex-wrap justify-center gap-2 md:gap-4">
           {impactValues.map((item, idx) => (
@@ -60,7 +60,7 @@ export default function MaterialPropertiesTable() {
 
       {/* 2. Tensile Requirements Table */}
       <section>
-        <p className="text-center text-[10px] md:text-sm text-gray-500 italic mb-6">Please see below table detailing tensile requirements for BS 1501 224 490B LT50</p>
+        <p className="text-center text-[10px] md:text-sm text-gray-500  mb-6">Please see below table detailing tensile requirements for BS 1501 224 490B LT50</p>
         <div className="relative overflow-x-auto border border-gray-100 rounded-lg shadow-sm max-w-7xl mx-auto">
           <table className="w-full min-w-[600px] text-center border-collapse">
             <thead>
@@ -74,7 +74,7 @@ export default function MaterialPropertiesTable() {
             <tbody>
               {tensileRequirements.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                  <td className="py-3 px-2 md:py-4 italic text-gray-600 border-r border-gray-100 text-[10px] md:text-sm">{row.thickness}</td>
+                  <td className="py-3 px-2 md:py-4  text-gray-700 font-medium border-r border-gray-100 text-[10px] md:text-sm">{row.thickness}</td>
                   <td className="py-3 px-2 md:py-4 font-medium text-gray-700 border-r border-gray-100 text-[10px] md:text-sm">{row.tensile}</td>
                   <td className="py-3 px-2 md:py-4 font-medium text-gray-700 border-r border-gray-100 text-[10px] md:text-sm">{row.yield}</td>
                   <td className="py-3 px-2 md:py-4 font-medium text-gray-700 text-[10px] md:text-sm">{row.elong}</td>

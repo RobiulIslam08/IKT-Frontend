@@ -32,17 +32,17 @@ export default function MaterialSpecificationsTableBS() {
   ];
 
   return (
-    <motion.div 
+    <motion.div
       className="w-full px-2 py-8 md:px-8 bg-white space-y-16"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      
+
       {/* 1. Properties - Chemical Composition */}
       <section>
         <div className="text-center mb-6">
           <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">Properties</h1>
-          <p className="text-[10px] md:text-sm text-gray-500 italic">Chemical composition (ladle analysis, %) of 161-430 steel.</p>
+          <p className="text-[10px] md:text-sm text-gray-500 ">Chemical composition (ladle analysis, %) of 161-430 steel.</p>
         </div>
         <div className="overflow-x-auto border border-gray-100 rounded-lg shadow-sm">
           <table className="w-full min-w-[800px] text-center text-[10px] md:text-sm border-collapse">
@@ -56,7 +56,7 @@ export default function MaterialSpecificationsTableBS() {
             <tbody>
               <tr className="bg-white text-gray-700">
                 {chemicalData.values.map((v, i) => (
-                  <td key={i} className="py-4 border-r border-gray-100 last:border-0">{v}</td>
+                  <td key={i} className="py-4 border-r border-gray-100 last:border-0 text-gray-700 font-medium">{v}</td>
                 ))}
               </tr>
             </tbody>
@@ -82,10 +82,10 @@ export default function MaterialSpecificationsTableBS() {
             <tbody>
               {tensileData.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-100 last:border-0 hover:bg-gray-50">
-                  <td className="py-4 px-2 border-r border-gray-100 italic">{row.thickness}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.tensile}</td>
-                  <td className="py-4 px-2 border-r border-gray-100 font-medium">{row.yield}</td>
-                  <td className="py-4 px-2 last:border-0">{row.elongation}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.thickness}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.tensile}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.yield}</td>
+                  <td className="py-4 px-2 last:border-0 text-gray-700 font-medium">{row.elongation}</td>
                 </tr>
               ))}
             </tbody>
@@ -116,12 +116,12 @@ export default function MaterialSpecificationsTableBS() {
             <tbody>
               {proofStrengthData.map((row, idx) => (
                 <tr key={idx} className="border-b border-gray-100 last:border-0 hover:bg-gray-50">
-                  <td className="py-4 px-2 border-r border-gray-100 font-bold bg-gray-50/30 whitespace-nowrap">{row.thickness}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.t150}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.t200}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.t250}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.t300}</td>
-                  <td className="py-4 px-2 border-r border-gray-100">{row.t350}</td>
+                  <td className="py-4 px-2 border-r border-gray-100  bg-gray-50/30 whitespace-nowrap text-gray-700 font-medium">{row.thickness}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.t150}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.t200}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.t250}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.t300}</td>
+                  <td className="py-4 px-2 border-r border-gray-100 text-gray-700 font-medium">{row.t350}</td>
                   <td className="py-4 px-2 last:border-0">{row.t400}</td>
                 </tr>
               ))}

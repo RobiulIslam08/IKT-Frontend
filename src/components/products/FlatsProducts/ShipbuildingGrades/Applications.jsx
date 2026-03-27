@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion'
 import { ChevronRight } from 'lucide-react'
-import image from "../../../../assets/flatsproducts/shiping/shipingC.jpg"
+import image from "../../../../assets/images/FlatsProducts/Ship Building garde/C.png"
 
 export default function Applications() {
 	const applications = [

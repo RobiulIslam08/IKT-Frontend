@@ -2,9 +2,11 @@
 import { motion } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { useState } from "react";
-import slide2 from "../../assets/banner6.png"
+import { useNavigate } from "react-router-dom";
+import video from "../../assets/heroVideo.mp4"
+import slide3 from "../../assets/banner6.png"
+import slide2 from "../../assets/slide3333.png"
 import slide1 from "../../assets/slide1.jpg"
-import slide3 from "../../assets/slide3.jpg"
 
 const slides = [
 	{
@@ -12,8 +14,8 @@ const slides = [
 		title: "Welcome to Our Steel World",
 		description:
 			"Discover premium quality steel products and exceptional services tailored for your industrial needs. Experience innovation and reliability like never before.",
-		image: slide2,
-		isVideo: false,
+		video: video,
+		isVideo: true,
 	},
 	{
 		id: 2,
@@ -35,6 +37,7 @@ const slides = [
 
 const HeroSection = () => {
 	const [currentSlide, setCurrentSlide] = useState(0);
+	const navigate = useNavigate();
 
 	const nextSlide = () => {
 		setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -106,6 +109,7 @@ const HeroSection = () => {
 						</motion.p>
 
 						<motion.button
+							onClick={() => navigate('/menu-data-sheet')}
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5, delay: 0.4 }}

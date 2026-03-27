@@ -53,21 +53,21 @@ export default function MaterialSpecificationsTable() {
         <motion.div variants={itemVariants} className="text-center mb-6">
           <h2 className="text-xl md:text-3xl font-bold text-gray-800">Properties</h2>
           <p className="text-[10px] md:text-sm text-gray-500 font-semibold mt-2">Chemical Requirements</p>
-          <p className="text-[9px] md:text-xs text-gray-400 italic">(cast analysis, % by mass, maximum permitted unless indicated otherwise)</p>
+          <p className="text-[9px] md:text-xs text-gray-400 ">(cast analysis, % by mass, maximum permitted unless indicated otherwise)</p>
         </motion.div>
         <div className="overflow-x-auto border border-gray-100 rounded-lg shadow-sm">
           <table className="w-full min-w-[900px] text-center text-[10px] md:text-sm">
             <thead style={{ backgroundColor: brandColor }}>
               <tr className="text-white">
                 {chemicalData.headers.map((h, i) => (
-                  <th key={i} className="py-3 px-1 border-r border-white/20 last:border-0">{h}</th>
+                  <th key={i} className="py-3 px-1 border-r  border-white/20 last:border-0">{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody className="text-gray-700">
               <tr>
                 {chemicalData.values.map((v, i) => (
-                  <td key={i} className="py-4 border-r border-gray-50 last:border-0">{v}</td>
+                  <td key={i} className="py-4 border-r border-gray-50 text-gray-700 font-medium last:border-0">{v}</td>
                 ))}
               </tr>
             </tbody>
@@ -92,8 +92,8 @@ export default function MaterialSpecificationsTable() {
             </thead>
             <tbody className="text-gray-700">
               {tensileData.map((row, idx) => (
-                <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-gray-50 transition-colors">
-                  <td className="py-4 px-4 border-r border-gray-100 italic">{row.thickness}</td>
+                <tr key={idx} className="border-b border-gray-50 last:border-0 hover:bg-gray-50 transition-colors text-gray-700 font-medium">
+                  <td className="py-4 px-4 border-r border-gray-100 font-medium">{row.thickness}</td>
                   <td className="py-4 px-4 border-r border-gray-100 font-medium">{row.yield}</td>
                   <td className="py-4 px-4 border-r border-gray-100 font-medium">{row.tensile}</td>
                   <td className="py-4 px-4 last:border-0 font-medium">{row.elongation}</td>
@@ -108,7 +108,7 @@ export default function MaterialSpecificationsTable() {
       <section>
         <motion.div variants={itemVariants} className="text-center mb-6">
           <h2 className="text-lg md:text-2xl font-bold text-gray-800 uppercase">VALUES:</h2>
-          <p className="text-[10px] md:text-sm text-gray-500 italic">Impact energy values for the normalised condition.</p>
+          <p className="text-[10px] md:text-sm text-gray-500 ">Impact energy values for the normalised condition.</p>
         </motion.div>
         <div className="overflow-x-auto border border-gray-100 rounded-lg shadow-sm max-w-7xl mx-auto">
           <table className="w-full min-w-[500px] text-center text-[10px] md:text-sm">
