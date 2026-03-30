@@ -5,6 +5,7 @@ import RequestBrochure from '../../components/products/ToolSteel/D2Supreme/Reque
 import GetInTouch from '../../components/products/ToolSteel/D2Supreme/GetInTouch';
 import Banner from '../../components/products/ToolSteel/D2Supreme/Banner';
 import PropertiesTable from '../../components/products/ToolSteel/D2Supreme/PropertiesTable';
+import ToolSteelLinksBox from '../../components/products/ToolSteel/ToolSteelLinksBox';
 
 const D2Supreme = () => {
   return (
@@ -14,6 +15,7 @@ const D2Supreme = () => {
       <Applications />
       <PropertiesTable />
       <RequestBrochure />
+      <ToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

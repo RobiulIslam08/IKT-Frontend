@@ -6,6 +6,7 @@ import RequestBrochure from '../../components/products/HicSteelPlate/CarelsoHicP
 import GetInTouch from '../../components/products/HicSteelPlate/CarelsoHicPremium/GetInTouch';
 import PropertiesTable from '../../components/products/HicSteelPlate/CarelsoHicPremium/PropertiesTable';
 import Banner from '../../components/products/HicSteelPlate/CarelsoHicPremium/Banner';
+import HicSteelPlateLinksBox from '../../components/products/HicSteelPlate/HicSteelPlateLinksBox';
 
 const CarelsoHicPremium = () => {
 	return (
@@ -15,6 +16,7 @@ const CarelsoHicPremium = () => {
 			<Applications />
 			<PropertiesTable />
 			<RequestBrochure />
+			<HicSteelPlateLinksBox />
 			<GetInTouch />
 		</div>
 	);

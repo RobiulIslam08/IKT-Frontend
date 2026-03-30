@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Titanium/TitaniumGrade1/InfoS
 import Applications from '../../components/products/Titanium/TitaniumGrade1/Applications';
 import GetInTouch from '../../components/products/Titanium/TitaniumGrade1/GetInTouch';
 import PropertiesTable from '../../components/products/Titanium/TitaniumGrade1/PropertiesTable';
+import TitaniumLinksBox from '../../components/products/Titanium/TitaniumLinksBox';
 
 const TitaniumGrade1 = () => {
   return (
@@ -12,6 +13,7 @@ const TitaniumGrade1 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <TitaniumLinksBox />
       <GetInTouch />
     </div>
   );

@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/BearingSteelAndGearSteel/5210
 import Applications from '../../components/products/BearingSteelAndGearSteel/52100/Applications';
 import GetInTouch from '../../components/products/BearingSteelAndGearSteel/52100/GetInTouch';
 import PropertiesTable from '../../components/products/BearingSteelAndGearSteel/52100/PropertiesTable';
+import BearingSteelLinksBox from '../../components/products/BearingSteelAndGearSteel/BearingSteelLinksBox';
 
 const Steel52100 = () => {
   return (
@@ -12,6 +13,7 @@ const Steel52100 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <BearingSteelLinksBox />
       <GetInTouch />
     </div>
   );

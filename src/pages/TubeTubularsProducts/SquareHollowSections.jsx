@@ -5,6 +5,7 @@ import Applications from '../../components/products/TubeTubularsProducts/SquareH
 import RequestBrochure from '../../components/products/TubeTubularsProducts/SquareHollowSections/RequestBrochure';
 import GetInTouch from '../../components/products/TubeTubularsProducts/SquareHollowSections/GetInTouch';
 import Banner from '../../components/products/TubeTubularsProducts/SquareHollowSections/Banner';
+import TubeAndTubularsProductsLinksBox from '../../components/products/TubeTubularsProducts/TubeAndTubularsProductsLinksBox';
 
 const SquareHollowSections = () => {
 	return (
@@ -13,6 +14,7 @@ const SquareHollowSections = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<TubeAndTubularsProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

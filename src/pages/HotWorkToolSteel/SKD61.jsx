@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/HotWorkToolSteel/SKD61/InfoSe
 import Applications from '../../components/products/HotWorkToolSteel/SKD61/Applications';
 import GetInTouch from '../../components/products/HotWorkToolSteel/SKD61/GetInTouch';
 import PropertiesTable from '../../components/products/HotWorkToolSteel/SKD61/PropertiesTable';
+import HotWorkToolSteelLinksBox from '../../components/products/HotWorkToolSteel/HotWorkToolSteelLinksBox';
 
 const SKD61 = () => {
   return (
@@ -12,6 +13,7 @@ const SKD61 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <HotWorkToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

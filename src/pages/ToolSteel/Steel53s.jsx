@@ -5,6 +5,7 @@ import RequestBrochure from '../../components/products/ToolSteel/Steel53s/Reques
 import GetInTouch from '../../components/products/ToolSteel/Steel53s/GetInTouch';
 import Banner from '../../components/products/ToolSteel/Steel53s/Banner';
 import PropertiesTable from '../../components/products/ToolSteel/Steel53s/PropertiesTable';
+import ToolSteelLinksBox from '../../components/products/ToolSteel/ToolSteelLinksBox';
 
 const Steel53s = () => {
   return (
@@ -14,6 +15,7 @@ const Steel53s = () => {
       <Applications />
       <PropertiesTable />
       <RequestBrochure />
+      <ToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

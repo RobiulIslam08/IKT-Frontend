@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/HighSpeedSteel/M35/InfoSectio
 import Applications from '../../components/products/HighSpeedSteel/M35/Applications';
 import GetInTouch from '../../components/products/HighSpeedSteel/M35/GetInTouch';
 import PropertiesTable from '../../components/products/HighSpeedSteel/M35/PropertiesTable';
+import HighSpeedSteelLinksBox from '../../components/products/HighSpeedSteel/HighSpeedSteelLinksBox';
 
 const M35 = () => {
   return (
@@ -12,6 +13,7 @@ const M35 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <HighSpeedSteelLinksBox />
       <GetInTouch />
     </div>
   );

@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Materials/CarbonSteelMaterial
 import Applications from '../../components/products/Materials/CarbonSteelMaterial/Applications';
 import GetInTouch from '../../components/products/Materials/CarbonSteelMaterial/GetInTouch';
 import PropertiesTable from '../../components/products/Materials/CarbonSteelMaterial/PropertiesTable';
+import SpecialAlloysLinksBox from '../../components/products/Materials/SpecialAlloysLinksBox';
 
 const CarbonSteelMaterial = () => {
   return (
@@ -12,6 +13,7 @@ const CarbonSteelMaterial = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <SpecialAlloysLinksBox />
       <GetInTouch />
     </div>
   );

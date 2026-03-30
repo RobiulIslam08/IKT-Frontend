@@ -5,6 +5,7 @@ import RequestBrochure from '../../components/products/ToolSteel/H13ToolSteel/Re
 import GetInTouch from '../../components/products/ToolSteel/H13ToolSteel/GetInTouch';
 import Banner from '../../components/products/ToolSteel/H13ToolSteel/Banner';
 import PropertiesTable from '../../components/products/ToolSteel/H13ToolSteel/PropertiesTable';
+import ToolSteelLinksBox from '../../components/products/ToolSteel/ToolSteelLinksBox';
 
 const H13ToolSteel = () => {
   return (
@@ -14,6 +15,7 @@ const H13ToolSteel = () => {
       <Applications />
       <PropertiesTable />
       <RequestBrochure />
+      <ToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

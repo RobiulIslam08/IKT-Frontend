@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/PlasticMouldSteel/OT718/InfoS
 import Applications from '../../components/products/PlasticMouldSteel/OT718/Applications';
 import GetInTouch from '../../components/products/PlasticMouldSteel/OT718/GetInTouch';
 import PropertiesTable from '../../components/products/PlasticMouldSteel/OT718/PropertiesTable';
+import PlasticMouldSteelLinksBox from '../../components/products/PlasticMouldSteel/PlasticMouldSteelLinksBox';
 
 const OT718 = () => {
   return (
@@ -12,6 +13,7 @@ const OT718 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <PlasticMouldSteelLinksBox />
       <GetInTouch />
     </div>
   );

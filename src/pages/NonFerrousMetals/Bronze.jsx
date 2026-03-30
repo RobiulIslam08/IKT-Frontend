@@ -5,6 +5,7 @@ import Applications from '../../components/products/NonFerrousMetals/Bronze/Appl
 import RequestBrochure from '../../components/products/NonFerrousMetals/Bronze/RequestBrochure';
 import GetInTouch from '../../components/products/NonFerrousMetals/Bronze/GetInTouch';
 import Banner from '../../components/products/NonFerrousMetals/Bronze/Banner';
+import NonFerrousMetalsLinksBox from '../../components/products/NonFerrousMetals/NonFerrousMetalsLinksBox';
 
 const Bronze = () => {
 	return (
@@ -13,6 +14,7 @@ const Bronze = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<NonFerrousMetalsLinksBox />
 			<GetInTouch />
 		</div>
 	);

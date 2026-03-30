@@ -5,6 +5,7 @@ import Applications from '../../components/products/Rebar/DeformedWeldedWireMesh
 import RequestBrochure from '../../components/products/Rebar/DeformedWeldedWireMesh/RequestBrochure';
 import GetInTouch from '../../components/products/Rebar/DeformedWeldedWireMesh/GetInTouch';
 import Banner from '../../components/products/Rebar/DeformedWeldedWireMesh/Banner';
+import RebarLinksBox from '../../components/products/Rebar/RebarLinksBox';
 
 const DeformedWeldedWireMesh = () => {
 	return (
@@ -13,6 +14,7 @@ const DeformedWeldedWireMesh = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<RebarLinksBox />
 			<GetInTouch />
 		</div>
 	);

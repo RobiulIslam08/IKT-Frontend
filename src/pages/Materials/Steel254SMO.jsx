@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Materials/254SMO/InfoSection'
 import Applications from '../../components/products/Materials/254SMO/Applications';
 import GetInTouch from '../../components/products/Materials/254SMO/GetInTouch';
 import PropertiesTable from '../../components/products/Materials/254SMO/PropertiesTable';
+import SpecialAlloysLinksBox from '../../components/products/Materials/SpecialAlloysLinksBox';
 
 const Steel254SMO = () => {
   return (
@@ -12,6 +13,7 @@ const Steel254SMO = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <SpecialAlloysLinksBox />
       <GetInTouch />
     </div>
   );

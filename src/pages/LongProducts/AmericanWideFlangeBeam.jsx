@@ -5,6 +5,7 @@ import Applications from '../../components/products/LongProducts/AmericanWideFla
 import RequestBrochure from '../../components/products/LongProducts/AmericanWideFlangeBeam/RequestBrochure';
 import GetInTouch from '../../components/products/LongProducts/AmericanWideFlangeBeam/GetInTouch';
 import Banner from '../../components/products/LongProducts/AmericanWideFlangeBeam/Banner';
+import LongProductsLinksBox from '../../components/products/LongProducts/LongProductsLinksBox';
 
 const AmericanWideFlangeBeam = () => {
 	return (
@@ -13,6 +14,7 @@ const AmericanWideFlangeBeam = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<LongProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

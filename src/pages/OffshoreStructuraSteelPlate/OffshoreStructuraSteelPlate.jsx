@@ -4,8 +4,7 @@ import InfoSection from '../../components/products/OffshoreStructuraSteelPlate/O
 import Applications from '../../components/products/OffshoreStructuraSteelPlate/OffshoreStructuraSteelPlate/Applications';
 import RequestBrochure from '../../components/products/OffshoreStructuraSteelPlate/OffshoreStructuraSteelPlate/RequestBrochure';
 import GetInTouch from '../../components/products/OffshoreStructuraSteelPlate/OffshoreStructuraSteelPlate/GetInTouch';
-import PropertiesTable from '../../components/products/OffshoreStructuraSteelPlate/OffshoreStructuraSteelPlate/PropertiesTable';
-import Banner from '../../components/products/OffshoreStructuraSteelPlate/OffshoreStructuraSteelPlate/Banner';
+import PropertiesTable from '../../components/products/OffshoreStructuraSteelPlate/OffshoreStructuraSteelPlate/PropertiesTable'; import OffshoreStructuralSteelPlateLinksBox from '../../components/products/OffshoreStructuraSteelPlate/OffshoreStructuralSteelPlateLinksBox'; import Banner from '../../components/products/OffshoreStructuraSteelPlate/OffshoreStructuraSteelPlate/Banner';
 
 const OffshoreStructuraSteelPlate = () => {
 	return (
@@ -15,6 +14,7 @@ const OffshoreStructuraSteelPlate = () => {
 			<Applications />
 			<PropertiesTable />
 			<RequestBrochure />
+			<OffshoreStructuralSteelPlateLinksBox />
 			<GetInTouch />
 		</div>
 	);

@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Materials/AlloySteelMaterial/
 import Applications from '../../components/products/Materials/AlloySteelMaterial/Applications';
 import GetInTouch from '../../components/products/Materials/AlloySteelMaterial/GetInTouch';
 import PropertiesTable from '../../components/products/Materials/AlloySteelMaterial/PropertiesTable';
+import SpecialAlloysLinksBox from '../../components/products/Materials/SpecialAlloysLinksBox';
 
 const AlloySteelMaterial = () => {
   return (
@@ -12,6 +13,7 @@ const AlloySteelMaterial = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <SpecialAlloysLinksBox />
       <GetInTouch />
     </div>
   );

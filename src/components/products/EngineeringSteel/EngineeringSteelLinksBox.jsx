@@ -23,7 +23,7 @@ const EngineeringSteelLinksBox = () => {
 
 	return (
 		<section className="px-4 sm:px-6 lg:px-8 py-10 bg-slate-50">
-			<div className="max-w-7xl mx-auto border border-slate-200 rounded-2xl p-6 md:p-8 bg-white shadow-sm">
+			<div className="max-w-7xl mx-auto border border-slate-200 rounded-2xl p-6 md:p-8 bg-white shadow-sm text-center">
 				<div className="mb-5">
 					<h2 className="text-2xl md:text-3xl font-bold text-slate-900">Engineering Steel Pages</h2>
 					<p className="text-sm md:text-base text-slate-600 mt-2">
@@ -31,7 +31,7 @@ const EngineeringSteelLinksBox = () => {
 					</p>
 				</div>
 
-				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 justify-items-center">
 					{engineeringSteelLinks.map((item) => {
 						const isActive = location.pathname === item.href;
 
@@ -39,7 +39,7 @@ const EngineeringSteelLinksBox = () => {
 							<Link
 								key={item.href}
 								to={item.href}
-								className={`rounded-lg border px-4 py-3 text-sm font-medium transition-colors ${isActive
+								className={`w-full rounded-lg border px-4 py-3 text-sm font-medium transition-colors text-center flex items-center justify-center ${isActive
 									? 'border-primary bg-primary/10 text-primary'
 									: 'border-slate-200 bg-white text-slate-700 hover:bg-slate-100'
 									}`}

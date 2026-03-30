@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/HighSpeedSteel/T5/InfoSection
 import Applications from '../../components/products/HighSpeedSteel/T5/Applications';
 import GetInTouch from '../../components/products/HighSpeedSteel/T5/GetInTouch';
 import PropertiesTable from '../../components/products/HighSpeedSteel/T5/PropertiesTable';
+import HighSpeedSteelLinksBox from '../../components/products/HighSpeedSteel/HighSpeedSteelLinksBox';
 
 const T5 = () => {
   return (
@@ -12,6 +13,7 @@ const T5 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <HighSpeedSteelLinksBox />
       <GetInTouch />
     </div>
   );

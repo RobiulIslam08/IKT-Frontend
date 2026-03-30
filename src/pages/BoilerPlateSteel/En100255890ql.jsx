@@ -6,6 +6,7 @@ import RequestBrochure from '../../components/products/BoilerPlateSteel/En100255
 import GetInTouch from '../../components/products/BoilerPlateSteel/En100255890ql/GetInTouch';
 import PropertiesTable from '../../components/products/BoilerPlateSteel/En100255890ql/PropertiesTable';
 import Banner from '../../components/products/BoilerPlateSteel/En100255890ql/Banner';
+import BoilerPlateSteelLinksBox from '../../components/products/BoilerPlateSteel/BoilerPlateSteelLinksBox';
 
 const En100255890ql = () => {
 	return (
@@ -15,6 +16,7 @@ const En100255890ql = () => {
 			<Applications />
 			<PropertiesTable />
 			<RequestBrochure />
+			<BoilerPlateSteelLinksBox />
 			<GetInTouch />
 		</div>
 	);

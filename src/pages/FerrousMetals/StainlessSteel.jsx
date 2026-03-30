@@ -5,6 +5,7 @@ import Applications from '../../components/products/FerrousMetals/StainlessSteel
 import RequestBrochure from '../../components/products/FerrousMetals/StainlessSteel/RequestBrochure';
 import GetInTouch from '../../components/products/FerrousMetals/StainlessSteel/GetInTouch';
 import Banner from '../../components/products/FerrousMetals/StainlessSteel/Banner';
+import FerrousMetalsLinksBox from '../../components/products/FerrousMetals/FerrousMetalsLinksBox';
 
 const StainlessSteel = () => {
 	return (
@@ -13,6 +14,7 @@ const StainlessSteel = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<FerrousMetalsLinksBox />
 			<GetInTouch />
 		</div>
 	);

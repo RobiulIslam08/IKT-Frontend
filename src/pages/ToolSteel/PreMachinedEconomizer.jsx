@@ -5,6 +5,7 @@ import RequestBrochure from '../../components/products/ToolSteel/PreMachinedEcon
 import GetInTouch from '../../components/products/ToolSteel/PreMachinedEconomizer/GetInTouch';
 import Banner from '../../components/products/ToolSteel/PreMachinedEconomizer/Banner';
 import PropertiesTable from '../../components/products/ToolSteel/PreMachinedEconomizer/PropertiesTable';
+import ToolSteelLinksBox from '../../components/products/ToolSteel/ToolSteelLinksBox';
 
 const PreMachinedEconomizer = () => {
   return (
@@ -14,6 +15,7 @@ const PreMachinedEconomizer = () => {
       <Applications />
       <PropertiesTable />
       <RequestBrochure />
+      <ToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

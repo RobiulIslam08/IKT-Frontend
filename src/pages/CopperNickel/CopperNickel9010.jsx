@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/CopperNickel/CopperNickel9010
 import Applications from '../../components/products/CopperNickel/CopperNickel9010/Applications';
 import GetInTouch from '../../components/products/CopperNickel/CopperNickel9010/GetInTouch';
 import PropertiesTable from '../../components/products/CopperNickel/CopperNickel9010/PropertiesTable';
+import CopperNickelLinksBox from '../../components/products/CopperNickel/CopperNickelLinksBox';
 
 const CopperNickel9010 = () => {
   return (
@@ -12,6 +13,7 @@ const CopperNickel9010 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <CopperNickelLinksBox />
       <GetInTouch />
     </div>
   );

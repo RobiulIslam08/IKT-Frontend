@@ -7,6 +7,7 @@ import GetInTouch from '../../components/products/PressureVesselSteel/Product490
 import PropertiesTable from '../../components/products/PressureVesselSteel/Product490bLt50/PropertiesTable';
 import Banner from '../../components/products/PressureVesselSteel/Product490bLt50/Banner';
 import MaterialPropertiesTable from '../../components/products/PressureVesselSteel/490bLt50/MaterialPropertiesTable';
+import PressureVesselSteelLinksBox from '../../components/products/PressureVesselSteel/PressureVesselSteelLinksBox';
 
 const Product490bLt50 = () => {
 	return (
@@ -15,8 +16,9 @@ const Product490bLt50 = () => {
 			<InfoSection />
 			<Applications />
 			{/* <PropertiesTable /> */}
-			<MaterialPropertiesTable/>
+			<MaterialPropertiesTable />
 			<RequestBrochure />
+			<PressureVesselSteelLinksBox />
 			<GetInTouch />
 		</div>
 	);

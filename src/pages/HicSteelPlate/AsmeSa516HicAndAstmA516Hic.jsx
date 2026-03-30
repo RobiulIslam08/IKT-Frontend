@@ -6,6 +6,7 @@ import RequestBrochure from '../../components/products/HicSteelPlate/AsmeSa516Hi
 import GetInTouch from '../../components/products/HicSteelPlate/AsmeSa516HicAndAstmA516Hic/GetInTouch';
 import PropertiesTable from '../../components/products/HicSteelPlate/AsmeSa516HicAndAstmA516Hic/PropertiesTable';
 import Banner from '../../components/products/HicSteelPlate/AsmeSa516HicAndAstmA516Hic/Banner';
+import HicSteelPlateLinksBox from '../../components/products/HicSteelPlate/HicSteelPlateLinksBox';
 
 const AsmeSa516HicAndAstmA516Hic = () => {
 	return (
@@ -15,6 +16,7 @@ const AsmeSa516HicAndAstmA516Hic = () => {
 			<Applications />
 			<PropertiesTable />
 			<RequestBrochure />
+			<HicSteelPlateLinksBox />
 			<GetInTouch />
 		</div>
 	);

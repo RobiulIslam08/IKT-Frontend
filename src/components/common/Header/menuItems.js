@@ -266,38 +266,38 @@ export const menuItems = [
             name: "Monel",
             subItems: ["Monel 400", "Monel K500"],
           },
-          // {
-          //   name: "Hastelloy",
-          //   subItems: [
-          //     "Hastelloy B / B2 / B3",
-          //     "Hastelloy C22",
-          //     "Hastelloy C276",
-          //     "Hastelloy C2000",
-          //     "Hastelloy X",
-          //   ],
-          // },
-          // {
-          //   name: "Nickel Alloy",
-          //   subItems: ["Nickel 200", "Nickel 201"],
-          // },
-          // "254 SMO",
-          // "Alloy 20",
-          // "904L Stainless Steel",
-          // {
-          //   name: "Titanium",
-          //   subItems: [
-          //     "Titanium Grade 1",
-          //     "Titanium Grade 2",
-          //     "Titanium Grade 3",
-          //     "Titanium Grade 4",
-          //     "Titanium Grade 5",
-          //     "Titanium Grade 6",
-          //     "Titanium Grade 7",
-          //     "Titanium Grade 9",
-          //     "Titanium Grade 11",
-          //     "Titanium Grade 12",
-          //   ],
-          // },
+          {
+            name: "Hastelloy",
+            subItems: [
+              "Hastelloy B / B2 / B3",
+              "Hastelloy C22",
+              "Hastelloy C276",
+              "Hastelloy C2000",
+              "Hastelloy X",
+            ],
+          },
+          {
+            name: "Nickel Alloy",
+            subItems: ["Nickel 200", "Nickel 201"],
+          },
+          "254 SMO",
+          "Alloy 20",
+          "904L Stainless Steel",
+          {
+            name: "Titanium",
+            subItems: [
+              "Titanium Grade 1",
+              "Titanium Grade 2",
+              "Titanium Grade 3",
+              "Titanium Grade 4",
+              "Titanium Grade 5",
+              "Titanium Grade 6",
+              "Titanium Grade 7",
+              "Titanium Grade 9",
+              "Titanium Grade 11",
+              "Titanium Grade 12",
+            ],
+          },
 
           // {
           //   name: "Copper Nickel",
@@ -365,7 +365,7 @@ export const menuItems = [
       {
         name: "",
         items: [
-          "Tool steel application chart",
+          
 
           "O9B",
 
@@ -383,6 +383,7 @@ export const menuItems = [
           "Ground flat stock",
           "Pre-machined Economizer",
           "Steel Hardness conversions",
+          "Tool steel application chart",
         ],
       },
     ],

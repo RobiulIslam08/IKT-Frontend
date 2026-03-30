@@ -5,6 +5,7 @@ import Applications from '../../components/products/NonFerrousMetals/Aluminum/Ap
 import RequestBrochure from '../../components/products/NonFerrousMetals/Aluminum/RequestBrochure';
 import GetInTouch from '../../components/products/NonFerrousMetals/Aluminum/GetInTouch';
 import Banner from '../../components/products/NonFerrousMetals/Aluminum/Banner';
+import NonFerrousMetalsLinksBox from '../../components/products/NonFerrousMetals/NonFerrousMetalsLinksBox';
 
 const Aluminum = () => {
 	return (
@@ -13,6 +14,7 @@ const Aluminum = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<NonFerrousMetalsLinksBox />
 			<GetInTouch />
 		</div>
 	);

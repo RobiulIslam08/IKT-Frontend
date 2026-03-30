@@ -7,6 +7,7 @@ import GetInTouch from '../../components/products/PressureVesselSteel/P355nl2/Ge
 import PropertiesTable from '../../components/products/PressureVesselSteel/P355nl2/PropertiesTable';
 import Banner from '../../components/products/PressureVesselSteel/P355nl2/Banner';
 import P355Specifications from '../../components/products/PressureVesselSteel/P355nl2/P355Specifications';
+import PressureVesselSteelLinksBox from '../../components/products/PressureVesselSteel/PressureVesselSteelLinksBox';
 
 const P355nl2 = () => {
 	return (
@@ -15,8 +16,9 @@ const P355nl2 = () => {
 			<InfoSection />
 			<Applications />
 			{/* <PropertiesTable /> */}
-			<P355Specifications/>
+			<P355Specifications />
 			<RequestBrochure />
+			<PressureVesselSteelLinksBox />
 			<GetInTouch />
 		</div>
 	);

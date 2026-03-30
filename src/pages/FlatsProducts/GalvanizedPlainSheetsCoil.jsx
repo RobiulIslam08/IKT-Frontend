@@ -5,6 +5,7 @@ import Applications from '../../components/products/FlatsProducts/GalvanizedPlai
 import RequestBrochure from '../../components/products/FlatsProducts/GalvanizedPlainSheetsCoil/RequestBrochure';
 import GetInTouch from '../../components/products/FlatsProducts/GalvanizedPlainSheetsCoil/GetInTouch';
 import Banner from '../../components/products/FlatsProducts/GalvanizedPlainSheetsCoil/Banner';
+import FlatsProductsLinksBox from '../../components/products/FlatsProducts/FlatsProductsLinksBox';
 
 const GalvanizedPlainSheetsCoil = () => {
 	return (
@@ -13,6 +14,7 @@ const GalvanizedPlainSheetsCoil = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<FlatsProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

@@ -5,6 +5,7 @@ import Applications from '../../components/products/Rebar/EpoxyCotedRebar/Applic
 import RequestBrochure from '../../components/products/Rebar/EpoxyCotedRebar/RequestBrochure';
 import GetInTouch from '../../components/products/Rebar/EpoxyCotedRebar/GetInTouch';
 import Banner from '../../components/products/Rebar/EpoxyCotedRebar/Banner';
+import RebarLinksBox from '../../components/products/Rebar/RebarLinksBox';
 
 const EpoxyCotedRebar = () => {
 	return (
@@ -13,6 +14,7 @@ const EpoxyCotedRebar = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<RebarLinksBox />
 			<GetInTouch />
 		</div>
 	);

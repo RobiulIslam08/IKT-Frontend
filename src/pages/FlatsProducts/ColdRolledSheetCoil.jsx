@@ -5,6 +5,7 @@ import Applications from '../../components/products/FlatsProducts/ColdRolledShee
 import RequestBrochure from '../../components/products/FlatsProducts/ColdRolledSheetCoil/RequestBrochure';
 import GetInTouch from '../../components/products/FlatsProducts/ColdRolledSheetCoil/GetInTouch';
 import Banner from '../../components/products/FlatsProducts/ColdRolledSheetCoil/Banner';
+import FlatsProductsLinksBox from '../../components/products/FlatsProducts/FlatsProductsLinksBox';
 
 const ColdRolledSheetCoil = () => {
 	return (
@@ -13,6 +14,7 @@ const ColdRolledSheetCoil = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<FlatsProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

@@ -5,6 +5,7 @@ import Applications from '../../components/products/LongProducts/FlatSquareAndRo
 import RequestBrochure from '../../components/products/LongProducts/FlatSquareAndRoundBars/RequestBrochure';
 import GetInTouch from '../../components/products/LongProducts/FlatSquareAndRoundBars/GetInTouch';
 import Banner from '../../components/products/LongProducts/FlatSquareAndRoundBars/Banner';
+import LongProductsLinksBox from '../../components/products/LongProducts/LongProductsLinksBox';
 
 const FlatSquareAndRoundBars = () => {
 	return (
@@ -13,6 +14,7 @@ const FlatSquareAndRoundBars = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<LongProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

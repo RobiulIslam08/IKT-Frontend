@@ -7,6 +7,7 @@ import GetInTouch from '../../components/products/460YieldSteelPlate/En100283P46
 import PropertiesTable from '../../components/products/460YieldSteelPlate/En100283P460nl2/PropertiesTable';
 import Banner from '../../components/products/460YieldSteelPlate/En100283P460nl2/Banner';
 import MaterialSpecificationsTablep460nl2 from '../../components/products/460YieldSteelPlate/En100283P460nl2/MaterialSpecificationsTablep460nl2';
+import YieldSteelPlateLinksBox from '../../components/products/460YieldSteelPlate/YieldSteelPlateLinksBox';
 
 const En100283P460nl2 = () => {
 	return (
@@ -15,8 +16,9 @@ const En100283P460nl2 = () => {
 			<InfoSection />
 			<Applications />
 			{/* <PropertiesTable /> */}
-			<MaterialSpecificationsTablep460nl2/>
+			<MaterialSpecificationsTablep460nl2 />
 			<RequestBrochure />
+			<YieldSteelPlateLinksBox />
 			<GetInTouch />
 		</div>
 	);

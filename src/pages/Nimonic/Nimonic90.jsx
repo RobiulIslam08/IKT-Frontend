@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Nimonic/Nimonic90/InfoSection
 import Applications from '../../components/products/Nimonic/Nimonic90/Applications';
 import GetInTouch from '../../components/products/Nimonic/Nimonic90/GetInTouch';
 import PropertiesTable from '../../components/products/Nimonic/Nimonic90/PropertiesTable';
+import NimonicLinksBox from '../../components/products/Nimonic/NimonicLinksBox';
 
 const Nimonic90 = () => {
   return (
@@ -12,6 +13,7 @@ const Nimonic90 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <NimonicLinksBox />
       <GetInTouch />
     </div>
   );

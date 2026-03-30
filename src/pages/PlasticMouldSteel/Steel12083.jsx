@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/PlasticMouldSteel/12083/InfoS
 import Applications from '../../components/products/PlasticMouldSteel/12083/Applications';
 import GetInTouch from '../../components/products/PlasticMouldSteel/12083/GetInTouch';
 import PropertiesTable from '../../components/products/PlasticMouldSteel/12083/PropertiesTable';
+import PlasticMouldSteelLinksBox from '../../components/products/PlasticMouldSteel/PlasticMouldSteelLinksBox';
 
 const Steel12083 = () => {
   return (
@@ -12,6 +13,7 @@ const Steel12083 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <PlasticMouldSteelLinksBox />
       <GetInTouch />
     </div>
   );

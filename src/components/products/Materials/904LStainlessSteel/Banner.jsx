@@ -3,29 +3,40 @@
 
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
-import banner1 from "../../../../assets/banner1.jpg";
+import banner1 from "../../../../assets/images/SpeacialAlloys/common1.png";
 
 export default function Banner() {
-  const slide = {
-    title: '904L Stainless Steel',
-    description: 'IKT is your trusted supplier of premium 904L Stainless Steel. This high-performance material is engineered to meet the most demanding industrial applications, providing outstanding mechanical properties and reliability in service.',
-    points: ["Superior mechanical properties and performance characteristics of 904L Stainless Steel.","Optimized for demanding industrial environments and critical applications."],
-    bgColor: 'from-slate-900 via-slate-800 to-slate-900',
-    image: banner1,
-  };
+  const slides = [
+    {
+      title: 'IKT 904L Stainless Steel (UNS N08904 / 1.4539)',
+      description:
+        'Conquer aggressive acidic environments with IKT\'s Grade 904L. As a non-stabilized austenitic stainless steel with high nickel and molybdenum content, it is specifically fortified with copper to deliver elite resistance to sulfuric acid and warm seawater. It is the gold standard for high-stakes chemical processing and marine infrastructure across Saudi Arabia.',
+      points: [
+        'Superior resistance to chloride attack and stress corrosion cracking compared to 316L.',
+        'Low carbon formulation ensuring exceptional weldability without post-weld heat treatment.',
+      ],
+      bgColor: 'from-slate-900 via-slate-800 to-slate-900',
+      image: banner1
+    }
+  ];
+
+  const slide = slides[0];
 
   return (
     <div className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{ duration: 0.7 }}
         className={`absolute inset-0 bg-linear-to-br ${slide.bgColor}`}
       >
         <div className="absolute inset-0 opacity-20">
           <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
         </div>
+
         <div className="absolute inset-0 bg-black/40" />
+
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="w-full grid md:grid-cols-2 gap-8 items-center">
             <motion.div
@@ -42,6 +53,7 @@ export default function Banner() {
               >
                 {slide.title}
               </motion.h1>
+
               <motion.p
                 className="text-base md:text-lg font-medium text-gray-200 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
@@ -50,6 +62,7 @@ export default function Banner() {
               >
                 {slide.description}
               </motion.p>
+
               <motion.ul
                 className="space-y-3"
                 initial={{ opacity: 0, y: 20 }}
@@ -70,6 +83,7 @@ export default function Banner() {
                 ))}
               </motion.ul>
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}

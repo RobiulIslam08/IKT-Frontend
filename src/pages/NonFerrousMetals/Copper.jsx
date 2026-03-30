@@ -4,8 +4,7 @@ import InfoSection from '../../components/products/NonFerrousMetals/Copper/InfoS
 import Applications from '../../components/products/NonFerrousMetals/Copper/Applications';
 import RequestBrochure from '../../components/products/NonFerrousMetals/Copper/RequestBrochure';
 import GetInTouch from '../../components/products/NonFerrousMetals/Copper/GetInTouch';
-import Banner from '../../components/products/NonFerrousMetals/Copper/Banner';
-
+import Banner from '../../components/products/NonFerrousMetals/Copper/Banner'; import NonFerrousMetalsLinksBox from '../../components/products/NonFerrousMetals/NonFerrousMetalsLinksBox';
 const Copper = () => {
 	return (
 		<div>
@@ -13,6 +12,7 @@ const Copper = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<NonFerrousMetalsLinksBox />
 			<GetInTouch />
 		</div>
 	);

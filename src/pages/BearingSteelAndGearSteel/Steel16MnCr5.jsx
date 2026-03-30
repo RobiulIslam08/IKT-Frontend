@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/BearingSteelAndGearSteel/16Mn
 import Applications from '../../components/products/BearingSteelAndGearSteel/16MnCr5/Applications';
 import GetInTouch from '../../components/products/BearingSteelAndGearSteel/16MnCr5/GetInTouch';
 import PropertiesTable from '../../components/products/BearingSteelAndGearSteel/16MnCr5/PropertiesTable';
+import BearingSteelLinksBox from '../../components/products/BearingSteelAndGearSteel/BearingSteelLinksBox';
 
 const Steel16MnCr5 = () => {
   return (
@@ -12,6 +13,7 @@ const Steel16MnCr5 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <BearingSteelLinksBox />
       <GetInTouch />
     </div>
   );

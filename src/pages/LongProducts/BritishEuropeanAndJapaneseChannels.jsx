@@ -5,6 +5,7 @@ import Applications from '../../components/products/LongProducts/BritishEuropean
 import RequestBrochure from '../../components/products/LongProducts/BritishEuropeanAndJapaneseChannels/RequestBrochure';
 import GetInTouch from '../../components/products/LongProducts/BritishEuropeanAndJapaneseChannels/GetInTouch';
 import Banner from '../../components/products/LongProducts/BritishEuropeanAndJapaneseChannels/Banner';
+import LongProductsLinksBox from '../../components/products/LongProducts/LongProductsLinksBox';
 
 const BritishEuropeanAndJapaneseChannels = () => {
 	return (
@@ -13,6 +14,7 @@ const BritishEuropeanAndJapaneseChannels = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<LongProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

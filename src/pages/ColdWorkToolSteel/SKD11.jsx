@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/ColdWorkToolSteel/SKD11/InfoS
 import Applications from '../../components/products/ColdWorkToolSteel/SKD11/Applications';
 import GetInTouch from '../../components/products/ColdWorkToolSteel/SKD11/GetInTouch';
 import PropertiesTable from '../../components/products/ColdWorkToolSteel/SKD11/PropertiesTable';
+import ColdWorkToolSteelLinksBox from '../../components/products/ColdWorkToolSteel/ColdWorkToolSteelLinksBox';
 
 const SKD11 = () => {
   return (
@@ -12,6 +13,7 @@ const SKD11 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <ColdWorkToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

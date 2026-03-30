@@ -6,6 +6,7 @@ import Applications from '../../components/products/DuplexStainlessSteel/S31803S
 import Properties from '../../components/products/DuplexStainlessSteel/S31803S32205/Properties';
 import RequestBrochure from '../../components/products/DuplexStainlessSteel/S31803S32205/RequestBrochure';
 import GetInTouch from '../../components/products/DuplexStainlessSteel/S31803S32205/GetInTouch';
+import DuplexStainlessSteelLinksBox from '../../components/products/DuplexStainlessSteel/DuplexStainlessSteelLinksBox';
 
 const S31803S32205DuplexSteel = () => {
 	return (
@@ -15,6 +16,7 @@ const S31803S32205DuplexSteel = () => {
 			<Applications />
 			<Properties />
 			<RequestBrochure />
+			<DuplexStainlessSteelLinksBox />
 			<GetInTouch />
 		</div>
 	);

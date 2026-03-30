@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Materials/904LStainlessSteel/
 import Applications from '../../components/products/Materials/904LStainlessSteel/Applications';
 import GetInTouch from '../../components/products/Materials/904LStainlessSteel/GetInTouch';
 import PropertiesTable from '../../components/products/Materials/904LStainlessSteel/PropertiesTable';
+import SpecialAlloysLinksBox from '../../components/products/Materials/SpecialAlloysLinksBox';
 
 const Steel904LStainlessSteel = () => {
   return (
@@ -12,6 +13,7 @@ const Steel904LStainlessSteel = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <SpecialAlloysLinksBox />
       <GetInTouch />
     </div>
   );

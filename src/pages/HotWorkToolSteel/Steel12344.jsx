@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/HotWorkToolSteel/12344/InfoSe
 import Applications from '../../components/products/HotWorkToolSteel/12344/Applications';
 import GetInTouch from '../../components/products/HotWorkToolSteel/12344/GetInTouch';
 import PropertiesTable from '../../components/products/HotWorkToolSteel/12344/PropertiesTable';
+import HotWorkToolSteelLinksBox from '../../components/products/HotWorkToolSteel/HotWorkToolSteelLinksBox';
 
 const Steel12344 = () => {
   return (
@@ -12,6 +13,7 @@ const Steel12344 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <HotWorkToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

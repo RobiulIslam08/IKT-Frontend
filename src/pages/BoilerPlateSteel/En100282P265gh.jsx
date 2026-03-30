@@ -7,6 +7,7 @@ import GetInTouch from '../../components/products/BoilerPlateSteel/En100282P265g
 import PropertiesTable from '../../components/products/BoilerPlateSteel/En100282P265gh/PropertiesTable';
 import Banner from '../../components/products/BoilerPlateSteel/En100282P265gh/Banner';
 import MaterialSpecificationsTableEn100282 from '../../components/products/BoilerPlateSteel/En100282P265gh/MaterialSpecificationsTableEn100282';
+import BoilerPlateSteelLinksBox from '../../components/products/BoilerPlateSteel/BoilerPlateSteelLinksBox';
 
 const En100282P265gh = () => {
 	return (
@@ -15,8 +16,9 @@ const En100282P265gh = () => {
 			<InfoSection />
 			<Applications />
 			{/* <PropertiesTable /> */}
-			<MaterialSpecificationsTableEn100282/>
+			<MaterialSpecificationsTableEn100282 />
 			<RequestBrochure />
+			<BoilerPlateSteelLinksBox />
 			<GetInTouch />
 		</div>
 	);

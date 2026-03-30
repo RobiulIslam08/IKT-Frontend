@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/CarbonSteel/1045/InfoSection'
 import Applications from '../../components/products/CarbonSteel/1045/Applications';
 import GetInTouch from '../../components/products/CarbonSteel/1045/GetInTouch';
 import PropertiesTable from '../../components/products/CarbonSteel/1045/PropertiesTable';
+import CarbonSteelLinksBox from '../../components/products/CarbonSteel/CarbonSteelLinksBox';
 
 const Steel1045 = () => {
   return (
@@ -12,6 +13,7 @@ const Steel1045 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <CarbonSteelLinksBox />
       <GetInTouch />
     </div>
   );

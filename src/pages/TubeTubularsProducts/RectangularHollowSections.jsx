@@ -5,6 +5,7 @@ import Applications from '../../components/products/TubeTubularsProducts/Rectang
 import RequestBrochure from '../../components/products/TubeTubularsProducts/RectangularHollowSections/RequestBrochure';
 import GetInTouch from '../../components/products/TubeTubularsProducts/RectangularHollowSections/GetInTouch';
 import Banner from '../../components/products/TubeTubularsProducts/RectangularHollowSections/Banner';
+import TubeAndTubularsProductsLinksBox from '../../components/products/TubeTubularsProducts/TubeAndTubularsProductsLinksBox';
 
 const RectangularHollowSections = () => {
 	return (
@@ -13,6 +14,7 @@ const RectangularHollowSections = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<TubeAndTubularsProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

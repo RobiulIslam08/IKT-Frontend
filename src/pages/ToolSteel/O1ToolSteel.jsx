@@ -5,6 +5,7 @@ import RequestBrochure from '../../components/products/ToolSteel/O1ToolSteel/Req
 import GetInTouch from '../../components/products/ToolSteel/O1ToolSteel/GetInTouch';
 import Banner from '../../components/products/ToolSteel/O1ToolSteel/Banner';
 import PropertiesTable from '../../components/products/ToolSteel/O1ToolSteel/PropertiesTable';
+import ToolSteelLinksBox from '../../components/products/ToolSteel/ToolSteelLinksBox';
 
 const O1ToolSteel = () => {
   return (
@@ -14,6 +15,7 @@ const O1ToolSteel = () => {
       <Applications />
       <PropertiesTable />
       <RequestBrochure />
+      <ToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

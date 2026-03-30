@@ -1,0 +1,62 @@
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
+const longProductsLinks = [
+	{ label: 'American Wide Flange Beam', href: '/products/american-wide-flange-beam' },
+	{ label: 'Universal Beams', href: '/products/universal-beams' },
+	{ label: 'British European And Japanese Channels', href: '/products/british-european-and-japanese-channels' },
+	{ label: 'Equal Unequal And T-Angle', href: '/products/equal-unequal-and-t-angle' },
+	{ label: 'Flat Square And Round Bars', href: '/products/flat-square-and-round-bars' },
+	{ label: 'HEA And HEB, IPE, IPEAA, IPN (European) & I-Beam, H-Beam (Japanese Section)', href: '/products/hea-and-heb-ipe-ipeaa-ipn-european-i-beam-h-beam-japanese-section' },
+	{ label: 'Cutting And Bending', href: '/products/cutting-and-bending' },
+	{ label: 'Epoxy Coted Rebar', href: '/products/epoxy-coted-rebar' },
+	{ label: 'Deformed Welded Wire Mesh', href: '/products/deformed-welded-wire-mesh' },
+	{ label: 'Blockmesh', href: '/products/blockmesh' },
+];
+
+const LongProductsLinksBox = () => {
+	const location = useLocation();
+
+	return (
+		<section className="px-4 sm:px-6 lg:px-8 py-10 bg-slate-50">
+			<div className="max-w-7xl mx-auto border border-slate-200 rounded-2xl p-6 md:p-8 bg-white shadow-sm text-center">
+				<div className="mb-5">
+					<h2 className="text-2xl md:text-3xl font-bold text-slate-900">Long Products</h2>
+					<p className="text-sm md:text-base text-slate-600 mt-2">
+						Browse all Long Products grades and related pages from one place.
+					</p>
+				</div>
+
+				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 justify-items-center">
+					{longProductsLinks.map((item) => {
+						const isActive = location.pathname === item.href;
+
+						return (
+							<Link
+								key={item.href}
+								to={item.href}
+								className={`w-full rounded-lg border px-4 py-3 text-sm font-medium transition-colors text-center flex items-center justify-center ${isActive
+									? 'border-primary bg-primary/10 text-primary'
+									: 'border-slate-200 bg-white text-slate-700 hover:bg-slate-100'
+									}`}
+							>
+								{item.label}
+							</Link>
+						);
+					})}
+				</div>
+
+				<div className="mt-6 flex justify-center">
+					<Link
+						to="/menu-data-sheet"
+						className="inline-flex items-center rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition hover:opacity-90"
+					>
+						Explore More
+					</Link>
+				</div>
+			</div>
+		</section>
+	);
+};
+
+export default LongProductsLinksBox;

@@ -5,6 +5,7 @@ import Applications from '../../components/products/SuperAusteniticStainlessStee
 import RequestBrochure from '../../components/products/SuperAusteniticStainlessSteel/SuperAusteniticStainlessSteel/RequestBrochure';
 import GetInTouch from '../../components/products/SuperAusteniticStainlessSteel/SuperAusteniticStainlessSteel/GetInTouch';
 import Banner from '../../components/products/SuperAusteniticStainlessSteel/SuperAusteniticStainlessSteel/Banner';
+import SuperAusteniticStainlessSteelLinksBox from '../../components/products/SuperAusteniticStainlessSteel/SuperAusteniticStainlessSteelLinksBox';
 import MaterialSpecifications from '../../components/products/SuperAusteniticStainlessSteel/SuperAusteniticStainlessSteel/MaterialSpecifications';
 
 const SuperAusteniticStainlessSteel = () => {
@@ -13,9 +14,10 @@ const SuperAusteniticStainlessSteel = () => {
 			<Banner />
 			<InfoSection />
 			<Applications />
-			<MaterialSpecifications/>
-		
+			<MaterialSpecifications />
+
 			<RequestBrochure />
+			<SuperAusteniticStainlessSteelLinksBox />
 			<GetInTouch />
 		</div>
 	);

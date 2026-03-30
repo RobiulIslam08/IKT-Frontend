@@ -6,6 +6,8 @@ import RequestBrochure from '../../components/products/QuenchedAndTemperedSteel/
 import GetInTouch from '../../components/products/QuenchedAndTemperedSteel/QuenchedAndTemperedSteel/GetInTouch';
 import Banner from '../../components/products/QuenchedAndTemperedSteel/QuenchedAndTemperedSteel/Banner';
 import QuenchedProperties from '../../components/products/QuenchedAndTemperedSteel/QuenchedAndTemperedSteel/QuenchedProperties';
+import QuenchedAndTemperedSteelLinksBox from '../../components/products/QuenchedAndTemperedSteel/QuenchedAndTemperedSteelLinksBox';
+import SpecialSteelMenuLinksBox from '../../components/products/SpecialSteelMenuLinksBox';
 
 const QuenchedAndTemperedSteel = () => {
 	return (
@@ -13,8 +15,10 @@ const QuenchedAndTemperedSteel = () => {
 			<Banner />
 			<InfoSection />
 			<Applications />
-			<QuenchedProperties/>
+			<QuenchedProperties />
 			<RequestBrochure />
+			{/* <QuenchedAndTemperedSteelLinksBox /> */}
+			<SpecialSteelMenuLinksBox />
 			<GetInTouch />
 		</div>
 	);

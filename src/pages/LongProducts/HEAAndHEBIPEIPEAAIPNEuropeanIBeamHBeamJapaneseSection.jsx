@@ -5,6 +5,7 @@ import Applications from '../../components/products/LongProducts/HEAAndHEBIPEIPE
 import RequestBrochure from '../../components/products/LongProducts/HEAAndHEBIPEIPEAAIPNEuropeanIBeamHBeamJapaneseSection/RequestBrochure';
 import GetInTouch from '../../components/products/LongProducts/HEAAndHEBIPEIPEAAIPNEuropeanIBeamHBeamJapaneseSection/GetInTouch';
 import Banner from '../../components/products/LongProducts/HEAAndHEBIPEIPEAAIPNEuropeanIBeamHBeamJapaneseSection/Banner';
+import LongProductsLinksBox from '../../components/products/LongProducts/LongProductsLinksBox';
 
 const HEAAndHEBIPEIPEAAIPNEuropeanIBeamHBeamJapaneseSection = () => {
 	return (
@@ -13,6 +14,7 @@ const HEAAndHEBIPEIPEAAIPNEuropeanIBeamHBeamJapaneseSection = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<LongProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

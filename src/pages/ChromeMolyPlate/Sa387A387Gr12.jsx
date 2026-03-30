@@ -7,6 +7,7 @@ import GetInTouch from '../../components/products/ChromeMolyPlate/Sa387A387Gr12/
 import PropertiesTable from '../../components/products/ChromeMolyPlate/Sa387A387Gr12/PropertiesTable';
 import Banner from '../../components/products/ChromeMolyPlate/Sa387A387Gr12/Banner';
 import MaterialSpecificationsTableGr12 from '../../components/products/ChromeMolyPlate/Sa387A387Gr12/MaterialSpecificationsTableGr12';
+import ChromeMolyPlateLinksBox from '../../components/products/ChromeMolyPlate/ChromeMolyPlateLinksBox';
 
 const Sa387A387Gr12 = () => {
 	return (
@@ -15,8 +16,9 @@ const Sa387A387Gr12 = () => {
 			<InfoSection />
 			<Applications />
 			{/* <PropertiesTable /> */}
-			<MaterialSpecificationsTableGr12/>
+			<MaterialSpecificationsTableGr12 />
 			<RequestBrochure />
+			<ChromeMolyPlateLinksBox />
 			<GetInTouch />
 		</div>
 	);

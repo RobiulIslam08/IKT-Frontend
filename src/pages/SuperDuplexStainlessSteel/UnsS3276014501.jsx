@@ -14,9 +14,8 @@ const UnsS3276014501 = () => {
 			<Banner />
 			<InfoSection />
 			<Applications />
-			<UNSS32750FullSpecifications/>
-			<RequestBrochure />
-			<GetInTouch />
+			<UNSS32750FullSpecifications />
+			<RequestBrochure />			<SuperDuplexStainlessSteelLinksBox />			<GetInTouch />
 		</div>
 	);
 };

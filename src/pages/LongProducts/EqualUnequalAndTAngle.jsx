@@ -5,6 +5,7 @@ import Applications from '../../components/products/LongProducts/EqualUnequalAnd
 import RequestBrochure from '../../components/products/LongProducts/EqualUnequalAndTAngle/RequestBrochure';
 import GetInTouch from '../../components/products/LongProducts/EqualUnequalAndTAngle/GetInTouch';
 import Banner from '../../components/products/LongProducts/EqualUnequalAndTAngle/Banner';
+import LongProductsLinksBox from '../../components/products/LongProducts/LongProductsLinksBox';
 
 const EqualUnequalAndTAngle = () => {
 	return (
@@ -13,6 +14,7 @@ const EqualUnequalAndTAngle = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<LongProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

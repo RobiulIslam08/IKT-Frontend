@@ -5,6 +5,7 @@ import Applications from '../../components/products/FlatsProducts/BulbBars/Appli
 import RequestBrochure from '../../components/products/FlatsProducts/BulbBars/RequestBrochure';
 import GetInTouch from '../../components/products/FlatsProducts/BulbBars/GetInTouch';
 import Banner from '../../components/products/FlatsProducts/BulbBars/Banner';
+import FlatsProductsLinksBox from '../../components/products/FlatsProducts/FlatsProductsLinksBox';
 
 const BulbBars = () => {
 	return (
@@ -13,6 +14,7 @@ const BulbBars = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<FlatsProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

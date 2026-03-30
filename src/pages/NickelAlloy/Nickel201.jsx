@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/NickelAlloy/Nickel201/InfoSec
 import Applications from '../../components/products/NickelAlloy/Nickel201/Applications';
 import GetInTouch from '../../components/products/NickelAlloy/Nickel201/GetInTouch';
 import PropertiesTable from '../../components/products/NickelAlloy/Nickel201/PropertiesTable';
+import NickelAlloyLinksBox from '../../components/products/NickelAlloy/NickelAlloyLinksBox';
 
 const Nickel201 = () => {
   return (
@@ -12,6 +13,7 @@ const Nickel201 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <NickelAlloyLinksBox />
       <GetInTouch />
     </div>
   );

@@ -6,6 +6,8 @@ import RequestBrochure from '../../components/products/AbracladChromiumCarbideWe
 import GetInTouch from '../../components/products/AbracladChromiumCarbideWearPlate/AbracladChromiumCarbideWearPlate/GetInTouch';
 import PropertiesTable from '../../components/products/AbracladChromiumCarbideWearPlate/AbracladChromiumCarbideWearPlate/PropertiesTable';
 import Banner from '../../components/products/AbracladChromiumCarbideWearPlate/AbracladChromiumCarbideWearPlate/Banner';
+import AbracladChromiumCarbideWearPlateLinksBox from '../../components/products/AbracladChromiumCarbideWearPlate/AbracladChromiumCarbideWearPlateLinksBox';
+import SpecialSteelMenuLinksBox from '../../components/products/SpecialSteelMenuLinksBox';
 
 const AbracladChromiumCarbideWearPlate = () => {
 	return (
@@ -15,6 +17,8 @@ const AbracladChromiumCarbideWearPlate = () => {
 			<Applications />
 			{/* <PropertiesTable /> */}
 			<RequestBrochure />
+			{/* <AbracladChromiumCarbideWearPlateLinksBox /> */}
+			<SpecialSteelMenuLinksBox />
 			<GetInTouch />
 		</div>
 	);

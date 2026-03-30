@@ -5,6 +5,7 @@ import RequestBrochure from '../../components/products/ToolSteel/C45uToolSteel/R
 import GetInTouch from '../../components/products/ToolSteel/C45uToolSteel/GetInTouch';
 import Banner from '../../components/products/ToolSteel/C45uToolSteel/Banner';
 import PropertiesTable from '../../components/products/ToolSteel/C45uToolSteel/PropertiesTable';
+import ToolSteelLinksBox from '../../components/products/ToolSteel/ToolSteelLinksBox';
 
 const C45uToolSteel = () => {
   return (
@@ -14,6 +15,7 @@ const C45uToolSteel = () => {
       <Applications />
       <PropertiesTable />
       <RequestBrochure />
+      <ToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

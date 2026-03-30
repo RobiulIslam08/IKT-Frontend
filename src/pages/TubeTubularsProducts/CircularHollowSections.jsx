@@ -5,6 +5,7 @@ import Applications from '../../components/products/TubeTubularsProducts/Circula
 import RequestBrochure from '../../components/products/TubeTubularsProducts/CircularHollowSections/RequestBrochure';
 import GetInTouch from '../../components/products/TubeTubularsProducts/CircularHollowSections/GetInTouch';
 import Banner from '../../components/products/TubeTubularsProducts/CircularHollowSections/Banner';
+import TubeAndTubularsProductsLinksBox from '../../components/products/TubeTubularsProducts/TubeAndTubularsProductsLinksBox';
 
 const CircularHollowSections = () => {
 	return (
@@ -13,6 +14,7 @@ const CircularHollowSections = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<TubeAndTubularsProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

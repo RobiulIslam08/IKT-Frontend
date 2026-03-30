@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/CarbonSteel/S235JR/InfoSectio
 import Applications from '../../components/products/CarbonSteel/S235JR/Applications';
 import GetInTouch from '../../components/products/CarbonSteel/S235JR/GetInTouch';
 import PropertiesTable from '../../components/products/CarbonSteel/S235JR/PropertiesTable';
+import CarbonSteelLinksBox from '../../components/products/CarbonSteel/CarbonSteelLinksBox';
 
 const S235JR = () => {
   return (
@@ -12,6 +13,7 @@ const S235JR = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <CarbonSteelLinksBox />
       <GetInTouch />
     </div>
   );

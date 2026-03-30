@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Materials/AlloyA286/InfoSecti
 import Applications from '../../components/products/Materials/AlloyA286/Applications';
 import GetInTouch from '../../components/products/Materials/AlloyA286/GetInTouch';
 import PropertiesTable from '../../components/products/Materials/AlloyA286/PropertiesTable';
+import SpecialAlloysLinksBox from '../../components/products/Materials/SpecialAlloysLinksBox';
 
 const AlloyA286 = () => {
   return (
@@ -12,6 +13,7 @@ const AlloyA286 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <SpecialAlloysLinksBox />
       <GetInTouch />
     </div>
   );

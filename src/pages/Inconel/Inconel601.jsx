@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Inconel/Inconel601/InfoSectio
 import Applications from '../../components/products/Inconel/Inconel601/Applications';
 import GetInTouch from '../../components/products/Inconel/Inconel601/GetInTouch';
 import PropertiesTable from '../../components/products/Inconel/Inconel601/PropertiesTable';
+import InconelLinksBox from '../../components/products/Inconel/InconelLinksBox';
 
 const Inconel601 = () => {
   return (
@@ -12,6 +13,7 @@ const Inconel601 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <InconelLinksBox />
       <GetInTouch />
     </div>
   );

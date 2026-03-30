@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Monel/Monel400/InfoSection';
 import Applications from '../../components/products/Monel/Monel400/Applications';
 import GetInTouch from '../../components/products/Monel/Monel400/GetInTouch';
 import PropertiesTable from '../../components/products/Monel/Monel400/PropertiesTable';
+import MonelLinksBox from '../../components/products/Monel/MonelLinksBox';
 
 const Monel400 = () => {
   return (
@@ -12,6 +13,7 @@ const Monel400 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <MonelLinksBox />
       <GetInTouch />
     </div>
   );

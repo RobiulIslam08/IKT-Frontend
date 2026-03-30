@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Materials/Invar/InfoSection';
 import Applications from '../../components/products/Materials/Invar/Applications';
 import GetInTouch from '../../components/products/Materials/Invar/GetInTouch';
 import PropertiesTable from '../../components/products/Materials/Invar/PropertiesTable';
+import SpecialAlloysLinksBox from '../../components/products/Materials/SpecialAlloysLinksBox';
 
 const Invar = () => {
   return (
@@ -12,6 +13,7 @@ const Invar = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <SpecialAlloysLinksBox />
       <GetInTouch />
     </div>
   );

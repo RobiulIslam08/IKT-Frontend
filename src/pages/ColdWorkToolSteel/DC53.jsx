@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/ColdWorkToolSteel/DC53/InfoSe
 import Applications from '../../components/products/ColdWorkToolSteel/DC53/Applications';
 import GetInTouch from '../../components/products/ColdWorkToolSteel/DC53/GetInTouch';
 import PropertiesTable from '../../components/products/ColdWorkToolSteel/DC53/PropertiesTable';
+import ColdWorkToolSteelLinksBox from '../../components/products/ColdWorkToolSteel/ColdWorkToolSteelLinksBox';
 
 const DC53 = () => {
   return (
@@ -12,6 +13,7 @@ const DC53 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <ColdWorkToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

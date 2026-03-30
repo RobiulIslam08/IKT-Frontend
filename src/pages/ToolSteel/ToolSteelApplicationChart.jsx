@@ -5,6 +5,7 @@ import RequestBrochure from '../../components/products/ToolSteel/ToolSteelApplic
 import GetInTouch from '../../components/products/ToolSteel/ToolSteelApplicationChart/GetInTouch';
 import Banner from '../../components/products/ToolSteel/ToolSteelApplicationChart/Banner';
 import PropertiesTable from '../../components/products/ToolSteel/ToolSteelApplicationChart/PropertiesTable';
+import ToolSteelLinksBox from '../../components/products/ToolSteel/ToolSteelLinksBox';
 
 const ToolSteelApplicationChart = () => {
   return (
@@ -14,6 +15,7 @@ const ToolSteelApplicationChart = () => {
       <Applications />
       <PropertiesTable />
       <RequestBrochure />
+      <ToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

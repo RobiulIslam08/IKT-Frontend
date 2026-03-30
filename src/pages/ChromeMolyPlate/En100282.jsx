@@ -7,6 +7,7 @@ import GetInTouch from '../../components/products/ChromeMolyPlate/En100282/GetIn
 import PropertiesTable from '../../components/products/ChromeMolyPlate/En100282/PropertiesTable';
 import Banner from '../../components/products/ChromeMolyPlate/En100282/Banner';
 import MaterialSpecificationsEn100282 from '../../components/products/ChromeMolyPlate/En100282/MaterialSpecificationsEn100282';
+import ChromeMolyPlateLinksBox from '../../components/products/ChromeMolyPlate/ChromeMolyPlateLinksBox';
 
 const En100282 = () => {
 	return (
@@ -15,8 +16,9 @@ const En100282 = () => {
 			<InfoSection />
 			<Applications />
 			{/* <PropertiesTable /> */}
-			<MaterialSpecificationsEn100282/>
+			<MaterialSpecificationsEn100282 />
 			<RequestBrochure />
+			<ChromeMolyPlateLinksBox />
 			<GetInTouch />
 		</div>
 	);

@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/ColdWorkToolSteel/A8/InfoSect
 import Applications from '../../components/products/ColdWorkToolSteel/A8/Applications';
 import GetInTouch from '../../components/products/ColdWorkToolSteel/A8/GetInTouch';
 import PropertiesTable from '../../components/products/ColdWorkToolSteel/A8/PropertiesTable';
+import ColdWorkToolSteelLinksBox from '../../components/products/ColdWorkToolSteel/ColdWorkToolSteelLinksBox';
 
 const A8 = () => {
   return (
@@ -12,6 +13,7 @@ const A8 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <ColdWorkToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

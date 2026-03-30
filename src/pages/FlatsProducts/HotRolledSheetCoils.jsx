@@ -5,6 +5,7 @@ import Applications from '../../components/products/FlatsProducts/HotRolledSheet
 import RequestBrochure from '../../components/products/FlatsProducts/HotRolledSheetCoils/RequestBrochure';
 import GetInTouch from '../../components/products/FlatsProducts/HotRolledSheetCoils/GetInTouch';
 import Banner from '../../components/products/FlatsProducts/HotRolledSheetCoils/Banner';
+import FlatsProductsLinksBox from '../../components/products/FlatsProducts/FlatsProductsLinksBox';
 
 const HotRolledSheetCoils = () => {
 	return (
@@ -13,6 +14,7 @@ const HotRolledSheetCoils = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<FlatsProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

@@ -5,6 +5,7 @@ import Applications from '../../components/products/FlatsProducts/HotRolledPlate
 import RequestBrochure from '../../components/products/FlatsProducts/HotRolledPlates/RequestBrochure';
 import GetInTouch from '../../components/products/FlatsProducts/HotRolledPlates/GetInTouch';
 import Banner from '../../components/products/FlatsProducts/HotRolledPlates/Banner';
+import FlatsProductsLinksBox from '../../components/products/FlatsProducts/FlatsProductsLinksBox';
 
 const HotRolledPlates = () => {
 	return (
@@ -13,6 +14,7 @@ const HotRolledPlates = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<FlatsProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

@@ -7,6 +7,7 @@ import GetInTouch from '../../components/products/PressureVesselSteel/AsmeSa516A
 import PropertiesTable from '../../components/products/PressureVesselSteel/AsmeSa516AstmA516Gr65/PropertiesTable';
 import Banner from '../../components/products/PressureVesselSteel/AsmeSa516AstmA516Gr65/Banner';
 import MechanicalRequirementsTable from '../../components/products/PressureVesselSteel/AsmeSa516AstmA516Gr65/MechanicalRequirementsTable';
+import PressureVesselSteelLinksBox from '../../components/products/PressureVesselSteel/PressureVesselSteelLinksBox';
 
 
 const AsmeSa516AstmA516Gr65 = () => {
@@ -16,8 +17,9 @@ const AsmeSa516AstmA516Gr65 = () => {
 			<InfoSection />
 			<Applications />
 			<PropertiesTable />
-			<MechanicalRequirementsTable/>
+			<MechanicalRequirementsTable />
 			<RequestBrochure />
+			<PressureVesselSteelLinksBox />
 			<GetInTouch />
 		</div>
 	);

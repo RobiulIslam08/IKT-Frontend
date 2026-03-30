@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Incoloy/AlloyA286Incoloy/Info
 import Applications from '../../components/products/Incoloy/AlloyA286Incoloy/Applications';
 import GetInTouch from '../../components/products/Incoloy/AlloyA286Incoloy/GetInTouch';
 import PropertiesTable from '../../components/products/Incoloy/AlloyA286Incoloy/PropertiesTable';
+import IncoloyLinksBox from '../../components/products/Incoloy/IncoloyLinksBox';
 
 const AlloyA286Incoloy = () => {
   return (
@@ -12,6 +13,7 @@ const AlloyA286Incoloy = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <IncoloyLinksBox />
       <GetInTouch />
     </div>
   );

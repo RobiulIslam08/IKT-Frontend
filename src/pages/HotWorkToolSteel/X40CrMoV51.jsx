@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/HotWorkToolSteel/X40CrMoV51/I
 import Applications from '../../components/products/HotWorkToolSteel/X40CrMoV51/Applications';
 import GetInTouch from '../../components/products/HotWorkToolSteel/X40CrMoV51/GetInTouch';
 import PropertiesTable from '../../components/products/HotWorkToolSteel/X40CrMoV51/PropertiesTable';
+import HotWorkToolSteelLinksBox from '../../components/products/HotWorkToolSteel/HotWorkToolSteelLinksBox';
 
 const X40CrMoV51 = () => {
   return (
@@ -12,6 +13,7 @@ const X40CrMoV51 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <HotWorkToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

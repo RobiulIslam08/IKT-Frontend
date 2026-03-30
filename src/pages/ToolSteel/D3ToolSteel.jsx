@@ -5,6 +5,7 @@ import RequestBrochure from '../../components/products/ToolSteel/D3ToolSteel/Req
 import GetInTouch from '../../components/products/ToolSteel/D3ToolSteel/GetInTouch';
 import Banner from '../../components/products/ToolSteel/D3ToolSteel/Banner';
 import PropertiesTable from '../../components/products/ToolSteel/D3ToolSteel/PropertiesTable';
+import ToolSteelLinksBox from '../../components/products/ToolSteel/ToolSteelLinksBox';
 
 const D3ToolSteel = () => {
   return (
@@ -14,6 +15,7 @@ const D3ToolSteel = () => {
       <Applications />
       <PropertiesTable />
       <RequestBrochure />
+      <ToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

@@ -5,6 +5,7 @@ import Applications from '../../components/products/FerrousMetals/DieToolSteel/A
 import RequestBrochure from '../../components/products/FerrousMetals/DieToolSteel/RequestBrochure';
 import GetInTouch from '../../components/products/FerrousMetals/DieToolSteel/GetInTouch';
 import Banner from '../../components/products/FerrousMetals/DieToolSteel/Banner';
+import FerrousMetalsLinksBox from '../../components/products/FerrousMetals/FerrousMetalsLinksBox';
 
 const DieToolSteel = () => {
 	return (
@@ -13,6 +14,7 @@ const DieToolSteel = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<FerrousMetalsLinksBox />
 			<GetInTouch />
 		</div>
 	);

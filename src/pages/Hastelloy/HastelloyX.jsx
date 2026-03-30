@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Hastelloy/HastelloyX/InfoSect
 import Applications from '../../components/products/Hastelloy/HastelloyX/Applications';
 import GetInTouch from '../../components/products/Hastelloy/HastelloyX/GetInTouch';
 import PropertiesTable from '../../components/products/Hastelloy/HastelloyX/PropertiesTable';
+import HasteloyLinksBox from '../../components/products/Hastelloy/HasteloyLinksBox';
 
 const HastelloyX = () => {
   return (
@@ -12,6 +13,7 @@ const HastelloyX = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <HasteloyLinksBox />
       <GetInTouch />
     </div>
   );

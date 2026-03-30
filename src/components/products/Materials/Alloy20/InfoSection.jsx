@@ -2,20 +2,21 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { LayersIcon, Settings, PackageOpen } from 'lucide-react';
+import { Target, LayersIcon, PackageOpen } from 'lucide-react';
 
 export function InfoSection() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
   };
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
   };
 
   return (
-    <div className="bg-gray-50 py-5 md:py-10">
+    <div className="min-h-screen bg-gray-50 py-16 md:py-24">
       <motion.section
         variants={containerVariants}
         initial="hidden"
@@ -23,44 +24,63 @@ export function InfoSection() {
         viewport={{ once: true, amount: 0.1 }}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
-        <motion.div variants={itemVariants} className="text-center md:text-left mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Material Overview</h1>
-          <p className="text-lg font-medium text-primary">Alloy 20</p>
+        <motion.div variants={itemVariants} className="mb-16 text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Material Overview
+          </h1>
+          <p className="text-base font-medium text-primary uppercase tracking-wider">
+            Alloy 20 Super Stainless Steel (UNS N08020 / 2.4660)
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-8">
+          {/* Box 1 */}
+          <motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div className="flex flex-col md:flex-row gap-6 items-start">
+              <motion.div whileHover={{ rotate: 10, scale: 1.1 }} transition={{ duration: 0.3 }} className="p-4 bg-primary/10 rounded-xl">
+                <Target className="w-8 h-8 text-primary shrink-0" />
+              </motion.div>
+              <div className="flex-1 text-left">
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                  The Sulfuric Acid Authority
+                </h2>
+                <p className="text-base font-medium text-gray-700 leading-relaxed">
+                  Alloy 20 is an austenitic nickel-iron-chromium "Super" stainless steel originally developed for maximum resistance to sulfuric acid attack. While traditional grades fail in severe acidic concentrations, Alloy 20 provides immunity to pitting and stress corrosion cracking, making it a critical asset for Saudi Arabia's chemical and energy generation sectors.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Box 2 */}
           <motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex flex-col md:flex-row gap-6 items-start">
               <motion.div whileHover={{ rotate: 10, scale: 1.1 }} transition={{ duration: 0.3 }} className="p-4 bg-primary/10 rounded-xl">
                 <LayersIcon className="w-8 h-8 text-primary shrink-0" />
               </motion.div>
-              <div className="flex-1">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">Technical Insights: Alloy 20</h2>
-                <p className="text-base font-medium text-gray-700 leading-relaxed">IKT supplies Alloy 20 to the highest industry standards. This material offers exceptional performance characteristics that make it ideal for critical applications. Our team of metallurgical experts ensures every batch meets stringent quality requirements before delivery to our customers worldwide.</p>
+              <div className="flex-1 text-left">
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                  Casting vs Wrought Comparison (CN7M)
+                </h2>
+                <p className="text-base font-medium text-gray-700 leading-relaxed">
+                  Alloy 20 has a cast equivalent known as CN7M, a designation utilized within the ASTM and ACI systems. While the original cast composition was difficult to hot-work, Carpenter Steel's breakthrough made various wrought forms like pipes, plates, and bars possible. This versatility allows IKT to supply Alloy 20 in formats that meet both casting and high-pressure wrought industrial standards.
+                </p>
               </div>
             </div>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex flex-col md:flex-row gap-6 items-start">
-              <motion.div whileHover={{ rotate: 10, scale: 1.1 }} transition={{ duration: 0.3 }} className="p-4 bg-primary/10 rounded-xl">
-                <Settings className="w-8 h-8 text-primary shrink-0" />
-              </motion.div>
-              <div className="flex-1">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">Performance & Properties</h2>
-                <p className="text-base font-medium text-gray-700 leading-relaxed">Alloy 20 from IKT delivers outstanding mechanical performance including excellent strength, toughness, and durability. The material undergoes rigorous testing to verify compliance with international standards. IKT recommends this grade for applications where dimensional accuracy and material consistency are paramount.</p>
-              </div>
-            </div>
-          </motion.div>
-
+          {/* Box 3 */}
           <motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex flex-col md:flex-row gap-6 items-start">
               <motion.div whileHover={{ rotate: 10, scale: 1.1 }} transition={{ duration: 0.3 }} className="p-4 bg-primary/10 rounded-xl">
                 <PackageOpen className="w-8 h-8 text-primary shrink-0" />
               </motion.div>
-              <div className="flex-1">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">Forms, Sizes & Availability</h2>
-                <p className="text-base font-medium text-gray-700 leading-relaxed">IKT maintains an extensive inventory of Alloy 20 in a wide range of forms, sizes, and finishes to suit your specific requirements. We supply this material in round bars, flat bars, plates, sheets, and custom profiles in both imperial and metric dimensions. Contact IKT for rapid quotation and delivery to your facility.</p>
+              <div className="flex-1 text-left">
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                  Global Sourcing and KSA Readiness
+                </h2>
+                <p className="text-base font-medium text-gray-700 leading-relaxed">
+                  To fuel the manufacturing demands of the Kingdom, IKT maintains a robust supply of Alloy 20. Whether sourced from Indian, Japanese, or European origins, our inventory ensures that petrochemical refineries and desalination plants have immediate access to high-grade Alloy 20 pipes, tubing, sheets, and round bars with full metallurgical traceability.
+                </p>
               </div>
             </div>
           </motion.div>

@@ -1,42 +1,47 @@
 /* eslint-disable no-unused-vars */
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
-import image from "../../../../assets/application.jpg";
+import { motion } from 'framer-motion'
+import { ChevronRight } from 'lucide-react'
+import image from "../../../../assets/application.jpg"
 
 export default function Applications() {
   const applications = [
-    "Aerospace Structural Components",
-    "Medical Implants and Prosthetics",
-    "Chemical Processing Equipment",
-    "Marine Hardware and Fasteners",
-    "Sporting Equipment",
-    "Automotive Exhaust Systems",
-    "Military and Defence Applications"
-];
+    'Critical Surgical Implants and Medical Fixation Devices',
+    'Aerospace Airframe Structures and Hydraulic Components',
+    'High-Pressure Chemical Reaction Vessels and Heat Exchangers',
+    'Marine Subsea Equipment and Deep-Water Infrastructure',
+    'Gas Turbine Transition Ducts and Compressor Blades',
+    'Desalination Plant Evaporators and Brine Piping',
+    'Precision Industrial Fasteners and Cryogenic Hardware'
+  ]
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
-  };
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+    },
+  }
+
   const itemVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-  };
+  }
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-x-hidden">
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-x-hidden text-center md:text-left">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div className="mb-8">
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                 <div className="w-1 h-6 bg-primary rounded-full"></div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a4a]">Common Applications</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a4a]">Core Industry Applications</h2>
               </div>
-              <div className="w-16 h-1 bg-linear-to-r from-primary to-primary/30 rounded-full"></div>
+              <div className="w-16 h-1 bg-linear-to-r from-primary to-primary/30 rounded-full mx-auto md:mx-0"></div>
             </div>
+
             <motion.ul variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-3 mb-8">
               {applications.map((app, index) => (
                 <motion.li key={index} variants={itemVariants} className="flex items-center gap-3 group">
@@ -50,11 +55,12 @@ export default function Applications() {
                 </motion.li>
               ))}
             </motion.ul>
+
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4, duration: 0.5 }}>
-              <button className="group relative px-6 py-3 bg-primary text-white font-semibold rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-                <motion.div className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></motion.div>
-                <span className="relative flex items-center gap-2">
-                  REQUEST A QUOTE FROM IKT
+              <button className="group relative px-6 py-3 bg-primary text-white font-semibold rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 mx-auto md:mx-0">
+                <motion.div className="absolute inset-0 bg-black/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></motion.div>
+                <span className="relative flex items-center gap-2 font-bold uppercase tracking-wider">
+           GET IN TOUCH
                   <motion.svg
                     className="w-4 h-4"
                     fill="none"
@@ -80,14 +86,15 @@ export default function Applications() {
             <div className="w-full h-72 md:h-[380px] lg:h-[400px] xl:h-[430px] rounded-xl overflow-hidden shadow-2xl">
               <img
                 src={image}
-                alt="Titanium Grade 4 Applications"
+                alt="CP Grade 4 Titanium Applications"
                 className="w-full h-full object-cover object-center"
               />
             </div>
           </motion.div>
         </div>
       </div>
+
       <div className="absolute top-40 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
     </section>
-  );
+  )
 }

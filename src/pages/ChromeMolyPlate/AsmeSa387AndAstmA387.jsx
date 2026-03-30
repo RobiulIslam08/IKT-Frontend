@@ -6,6 +6,7 @@ import RequestBrochure from '../../components/products/ChromeMolyPlate/AsmeSa387
 import GetInTouch from '../../components/products/ChromeMolyPlate/AsmeSa387AndAstmA387/GetInTouch';
 import PropertiesTable from '../../components/products/ChromeMolyPlate/AsmeSa387AndAstmA387/PropertiesTable';
 import Banner from '../../components/products/ChromeMolyPlate/AsmeSa387AndAstmA387/Banner';
+import ChromeMolyPlateLinksBox from '../../components/products/ChromeMolyPlate/ChromeMolyPlateLinksBox';
 
 const AsmeSa387AndAstmA387 = () => {
 	return (
@@ -15,6 +16,7 @@ const AsmeSa387AndAstmA387 = () => {
 			<Applications />
 			<PropertiesTable />
 			<RequestBrochure />
+			<ChromeMolyPlateLinksBox />
 			<GetInTouch />
 		</div>
 	);

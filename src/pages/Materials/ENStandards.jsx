@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Materials/ENStandards/InfoSec
 import Applications from '../../components/products/Materials/ENStandards/Applications';
 import GetInTouch from '../../components/products/Materials/ENStandards/GetInTouch';
 import PropertiesTable from '../../components/products/Materials/ENStandards/PropertiesTable';
+import SpecialAlloysLinksBox from '../../components/products/Materials/SpecialAlloysLinksBox';
 
 const ENStandards = () => {
 	return (
@@ -12,6 +13,7 @@ const ENStandards = () => {
 			<InfoSection />
 			<Applications />
 			<PropertiesTable />
+			<SpecialAlloysLinksBox />
 			<GetInTouch />
 		</div>
 	);

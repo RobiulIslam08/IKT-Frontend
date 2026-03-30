@@ -59,28 +59,21 @@ const MenuDataSheet = () => {
 	}, []);
 
 	return (
-		<section className="min-h-screen bg-slate-100 py-8 px-4 sm:px-6 lg:px-8">
-			<div className="mx-auto max-w-[1200px] rounded-xl border border-slate-300 bg-white shadow-lg overflow-hidden">
-				<div className="border-b border-slate-200 bg-slate-50 p-4 md:p-6">
+		<section className="min-h-screen bg-slate-100 py-8 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+			<div className="mx-auto max-w-[1200px] rounded-xl border border-slate-300 bg-white shadow-lg overflow-hidden w-full">
+				<div className="border-b border-slate-200 bg-slate-50 p-4 md:p-6 text-center">
 					<h1 className="text-2xl md:text-3xl font-bold text-slate-900">Explore Products</h1>
 					<p className="text-sm text-slate-600 mt-1">Click any item to open its page.</p>
-					<div className="mt-3">
-						<Link
-							to="/"
-							className="inline-flex rounded-md border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
-						>
-							Back To Home
-						</Link>
-					</div>
+
 				</div>
 
 				<div className="p-4 md:p-6 grid gap-5">
 					{groupedMenus.map((menu) => (
-						<div key={menu.name} className="rounded-lg border border-slate-200 bg-white p-4">
+						<div key={menu.name} className="rounded-lg border border-slate-200 bg-white p-4 text-center">
 							<h2 className="text-lg font-semibold text-slate-900 mb-3">{menu.name}</h2>
 
 							{menu.directLinks.length > 0 && (
-								<div className="mb-3 flex flex-wrap gap-2">
+								<div className="mb-3 flex flex-wrap gap-2 justify-center">
 									{menu.directLinks.map((item) => (
 										<Link
 											key={`${menu.name}-${item.label}`}
@@ -95,9 +88,9 @@ const MenuDataSheet = () => {
 
 							<div className="grid gap-4 md:grid-cols-1">
 								{menu.categories.map((category) => (
-									<div key={`${menu.name}-${category.name}`} className="rounded border border-slate-200 p-3">
+									<div key={`${menu.name}-${category.name}`} className="rounded border border-slate-200 p-3 text-center">
 										<h3 className="text-sm font-semibold text-slate-800 mb-2">{category.name || 'Items'}</h3>
-										<div className="flex flex-wrap gap-2">
+										<div className="flex flex-wrap gap-2 justify-center">
 											{category.links.map((item) => (
 												<Link
 													key={`${menu.name}-${category.name}-${item.label}`}

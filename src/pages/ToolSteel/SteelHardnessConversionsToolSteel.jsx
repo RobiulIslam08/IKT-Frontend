@@ -5,6 +5,7 @@ import RequestBrochure from '../../components/products/ToolSteel/SteelHardnessCo
 import GetInTouch from '../../components/products/ToolSteel/SteelHardnessConversionsToolSteel/GetInTouch';
 import Banner from '../../components/products/ToolSteel/SteelHardnessConversionsToolSteel/Banner';
 import PropertiesTable from '../../components/products/ToolSteel/SteelHardnessConversionsToolSteel/PropertiesTable';
+import ToolSteelLinksBox from '../../components/products/ToolSteel/ToolSteelLinksBox';
 
 const SteelHardnessConversionsToolSteel = () => {
   return (
@@ -14,6 +15,7 @@ const SteelHardnessConversionsToolSteel = () => {
       <Applications />
       <PropertiesTable />
       <RequestBrochure />
+      <ToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

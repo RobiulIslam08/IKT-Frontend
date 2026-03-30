@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/BearingSteelAndGearSteel/8620
 import Applications from '../../components/products/BearingSteelAndGearSteel/8620/Applications';
 import GetInTouch from '../../components/products/BearingSteelAndGearSteel/8620/GetInTouch';
 import PropertiesTable from '../../components/products/BearingSteelAndGearSteel/8620/PropertiesTable';
+import BearingSteelLinksBox from '../../components/products/BearingSteelAndGearSteel/BearingSteelLinksBox';
 
 const Steel8620 = () => {
   return (
@@ -12,6 +13,7 @@ const Steel8620 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <BearingSteelLinksBox />
       <GetInTouch />
     </div>
   );

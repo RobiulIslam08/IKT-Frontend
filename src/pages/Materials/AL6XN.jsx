@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Materials/AL6XN/InfoSection';
 import Applications from '../../components/products/Materials/AL6XN/Applications';
 import GetInTouch from '../../components/products/Materials/AL6XN/GetInTouch';
 import PropertiesTable from '../../components/products/Materials/AL6XN/PropertiesTable';
+import SpecialAlloysLinksBox from '../../components/products/Materials/SpecialAlloysLinksBox';
 
 const AL6XN = () => {
   return (
@@ -12,6 +13,7 @@ const AL6XN = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <SpecialAlloysLinksBox />
       <GetInTouch />
     </div>
   );

@@ -5,6 +5,7 @@ import Applications from '../../components/products/QuenchedAndTemperedAlloyStee
 import RequestBrochure from '../../components/products/QuenchedAndTemperedAlloySteels/4140Plate/RequestBrochure';
 import GetInTouch from '../../components/products/QuenchedAndTemperedAlloySteels/4140Plate/GetInTouch';
 import PropertiesTable from '../../components/products/QuenchedAndTemperedAlloySteels/4140Plate/PropertiesTable';
+import QuenchedAndTemperedAlloyLinksBox from '../../components/products/QuenchedAndTemperedAlloySteels/QuenchedAndTemperedAlloyLinksBox';
 
 const Steel4140Plate = () => {
 	return (
@@ -14,6 +15,7 @@ const Steel4140Plate = () => {
 			<Applications />
 			<PropertiesTable />
 			<RequestBrochure />
+			<QuenchedAndTemperedAlloyLinksBox />
 			<GetInTouch />
 		</div>
 	);

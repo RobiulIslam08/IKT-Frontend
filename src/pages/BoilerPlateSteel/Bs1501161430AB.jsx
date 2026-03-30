@@ -7,6 +7,7 @@ import GetInTouch from '../../components/products/BoilerPlateSteel/Bs1501161430A
 import PropertiesTable from '../../components/products/BoilerPlateSteel/Bs1501161430AB/PropertiesTable';
 import Banner from '../../components/products/BoilerPlateSteel/Bs1501161430AB/Banner';
 import MaterialSpecificationsTableBS from '../../components/products/BoilerPlateSteel/Bs1501161430AB/MaterialSpecificationsTableBS.jsx';
+import BoilerPlateSteelLinksBox from '../../components/products/BoilerPlateSteel/BoilerPlateSteelLinksBox';
 
 const Bs1501161430AB = () => {
 	return (
@@ -15,8 +16,9 @@ const Bs1501161430AB = () => {
 			<InfoSection />
 			<Applications />
 			{/* <PropertiesTable /> */}
-			<MaterialSpecificationsTableBS/>
+			<MaterialSpecificationsTableBS />
 			<RequestBrochure />
+			<BoilerPlateSteelLinksBox />
 			<GetInTouch />
 		</div>
 	);

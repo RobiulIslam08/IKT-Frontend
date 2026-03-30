@@ -5,6 +5,7 @@ import Applications from '../../components/products/NonFerrousMetals/Brass/Appli
 import RequestBrochure from '../../components/products/NonFerrousMetals/Brass/RequestBrochure';
 import GetInTouch from '../../components/products/NonFerrousMetals/Brass/GetInTouch';
 import Banner from '../../components/products/NonFerrousMetals/Brass/Banner';
+import NonFerrousMetalsLinksBox from '../../components/products/NonFerrousMetals/NonFerrousMetalsLinksBox';
 
 const Brass = () => {
 	return (
@@ -13,6 +14,7 @@ const Brass = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<NonFerrousMetalsLinksBox />
 			<GetInTouch />
 		</div>
 	);

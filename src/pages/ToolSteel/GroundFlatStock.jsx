@@ -5,6 +5,7 @@ import RequestBrochure from '../../components/products/ToolSteel/GroundFlatStock
 import GetInTouch from '../../components/products/ToolSteel/GroundFlatStock/GetInTouch';
 import Banner from '../../components/products/ToolSteel/GroundFlatStock/Banner';
 import PropertiesTable from '../../components/products/ToolSteel/GroundFlatStock/PropertiesTable';
+import ToolSteelLinksBox from '../../components/products/ToolSteel/ToolSteelLinksBox';
 
 const GroundFlatStock = () => {
   return (
@@ -14,6 +15,7 @@ const GroundFlatStock = () => {
       <Applications />
       <PropertiesTable />
       <RequestBrochure />
+      <ToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

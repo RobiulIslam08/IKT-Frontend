@@ -5,6 +5,7 @@ import Applications from '../../components/products/Rebar/CuttingAndBending/Appl
 import RequestBrochure from '../../components/products/Rebar/CuttingAndBending/RequestBrochure';
 import GetInTouch from '../../components/products/Rebar/CuttingAndBending/GetInTouch';
 import Banner from '../../components/products/Rebar/CuttingAndBending/Banner';
+import RebarLinksBox from '../../components/products/Rebar/RebarLinksBox';
 
 const CuttingAndBending = () => {
 	return (
@@ -13,6 +14,7 @@ const CuttingAndBending = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<RebarLinksBox />
 			<GetInTouch />
 		</div>
 	);

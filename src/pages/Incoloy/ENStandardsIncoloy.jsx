@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Incoloy/ENStandardsIncoloy/In
 import Applications from '../../components/products/Incoloy/ENStandardsIncoloy/Applications';
 import GetInTouch from '../../components/products/Incoloy/ENStandardsIncoloy/GetInTouch';
 import PropertiesTable from '../../components/products/Incoloy/ENStandardsIncoloy/PropertiesTable';
+import IncoloyLinksBox from '../../components/products/Incoloy/IncoloyLinksBox';
 
 const ENStandardsIncoloy = () => {
   return (
@@ -12,6 +13,7 @@ const ENStandardsIncoloy = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <IncoloyLinksBox />
       <GetInTouch />
     </div>
   );

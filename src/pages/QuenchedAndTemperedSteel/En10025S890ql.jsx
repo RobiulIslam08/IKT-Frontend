@@ -7,6 +7,8 @@ import GetInTouch from '../../components/products/QuenchedAndTemperedSteel/En100
 import PropertiesTable from '../../components/products/QuenchedAndTemperedSteel/En10025S890ql/PropertiesTable';
 import Banner from '../../components/products/QuenchedAndTemperedSteel/En10025S890ql/Banner';
 import MaterialSpecificationsTableEn890ql from '../../components/products/QuenchedAndTemperedSteel/En10025S890ql/MaterialSpecificationsTableEn890ql';
+import QuenchedAndTemperedSteelLinksBox from '../../components/products/QuenchedAndTemperedSteel/QuenchedAndTemperedSteelLinksBox';
+import SpecialSteelMenuLinksBox from '../../components/products/SpecialSteelMenuLinksBox';
 
 const En10025S890ql = () => {
 	return (
@@ -15,8 +17,15 @@ const En10025S890ql = () => {
 			<InfoSection />
 			<Applications />
 			{/* <PropertiesTable /> */}
-		<MaterialSpecificationsTableEn890ql/>
-			<RequestBrochure />
+			<MaterialSpecificationsTableEn890ql />
+				<SpecialSteelMenuLinksBox />
+			<RequestBrochure />		
+			
+			
+			{/* <QuenchedAndTemperedSteelLinksBox />			
+			
+			 */}
+					
 			<GetInTouch />
 		</div>
 	);

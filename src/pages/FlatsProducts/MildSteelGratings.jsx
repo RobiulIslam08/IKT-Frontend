@@ -5,6 +5,7 @@ import Applications from '../../components/products/FlatsProducts/MildSteelGrati
 import RequestBrochure from '../../components/products/FlatsProducts/MildSteelGratings/RequestBrochure';
 import GetInTouch from '../../components/products/FlatsProducts/MildSteelGratings/GetInTouch';
 import Banner from '../../components/products/FlatsProducts/MildSteelGratings/Banner';
+import FlatsProductsLinksBox from '../../components/products/FlatsProducts/FlatsProductsLinksBox';
 
 const MildSteelGratings = () => {
 	return (
@@ -13,6 +14,7 @@ const MildSteelGratings = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<FlatsProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

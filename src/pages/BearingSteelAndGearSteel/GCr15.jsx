@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/BearingSteelAndGearSteel/GCr1
 import Applications from '../../components/products/BearingSteelAndGearSteel/GCr15/Applications';
 import GetInTouch from '../../components/products/BearingSteelAndGearSteel/GCr15/GetInTouch';
 import PropertiesTable from '../../components/products/BearingSteelAndGearSteel/GCr15/PropertiesTable';
+import BearingSteelLinksBox from '../../components/products/BearingSteelAndGearSteel/BearingSteelLinksBox';
 
 const GCr15 = () => {
   return (
@@ -12,6 +13,7 @@ const GCr15 = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <BearingSteelLinksBox />
       <GetInTouch />
     </div>
   );

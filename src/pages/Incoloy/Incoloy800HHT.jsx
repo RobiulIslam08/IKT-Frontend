@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/Incoloy/Incoloy800HHT/InfoSec
 import Applications from '../../components/products/Incoloy/Incoloy800HHT/Applications';
 import GetInTouch from '../../components/products/Incoloy/Incoloy800HHT/GetInTouch';
 import PropertiesTable from '../../components/products/Incoloy/Incoloy800HHT/PropertiesTable';
+import IncoloyLinksBox from '../../components/products/Incoloy/IncoloyLinksBox';
 
 const Incoloy800HHT = () => {
   return (
@@ -12,6 +13,7 @@ const Incoloy800HHT = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <IncoloyLinksBox />
       <GetInTouch />
     </div>
   );

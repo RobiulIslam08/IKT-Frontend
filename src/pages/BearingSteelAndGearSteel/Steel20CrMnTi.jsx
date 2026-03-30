@@ -4,6 +4,7 @@ import InfoSection from '../../components/products/BearingSteelAndGearSteel/20Cr
 import Applications from '../../components/products/BearingSteelAndGearSteel/20CrMnTi/Applications';
 import GetInTouch from '../../components/products/BearingSteelAndGearSteel/20CrMnTi/GetInTouch';
 import PropertiesTable from '../../components/products/BearingSteelAndGearSteel/20CrMnTi/PropertiesTable';
+import BearingSteelLinksBox from '../../components/products/BearingSteelAndGearSteel/BearingSteelLinksBox';
 
 const Steel20CrMnTi = () => {
   return (
@@ -12,6 +13,7 @@ const Steel20CrMnTi = () => {
       <InfoSection />
       <Applications />
       <PropertiesTable />
+      <BearingSteelLinksBox />
       <GetInTouch />
     </div>
   );

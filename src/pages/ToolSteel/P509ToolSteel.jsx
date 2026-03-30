@@ -5,6 +5,7 @@ import RequestBrochure from '../../components/products/ToolSteel/P509ToolSteel/R
 import GetInTouch from '../../components/products/ToolSteel/P509ToolSteel/GetInTouch';
 import Banner from '../../components/products/ToolSteel/P509ToolSteel/Banner';
 import PropertiesTable from '../../components/products/ToolSteel/P509ToolSteel/PropertiesTable';
+import ToolSteelLinksBox from '../../components/products/ToolSteel/ToolSteelLinksBox';
 
 const P509ToolSteel = () => {
   return (
@@ -14,6 +15,7 @@ const P509ToolSteel = () => {
       <Applications />
       <PropertiesTable />
       <RequestBrochure />
+      <ToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

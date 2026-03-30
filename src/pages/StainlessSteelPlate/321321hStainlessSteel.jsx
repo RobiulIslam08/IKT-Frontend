@@ -6,6 +6,7 @@ import RequestBrochure from '../../components/products/StainlessSteelPlate/32132
 import GetInTouch from '../../components/products/StainlessSteelPlate/321321hStainlessSteel/GetInTouch';
 import PropertiesTable from '../../components/products/StainlessSteelPlate/321321hStainlessSteel/PropertiesTable';
 import Banner from '../../components/products/StainlessSteelPlate/321321hStainlessSteel/Banner';
+import StainlessSteelLinksBox from '../../components/products/StainlessSteelPlate/StainlessSteelLinksBox';
 
 const 321321hStainlessSteel = () => {
 	return (
@@ -15,6 +16,7 @@ const 321321hStainlessSteel = () => {
 			<Applications />
 			<PropertiesTable />
 			<RequestBrochure />
+			<StainlessSteelLinksBox />
 			<GetInTouch />
 		</div>
 	);

@@ -5,6 +5,7 @@ import Applications from '../../components/products/FlatsProducts/ShipbuildingGr
 import RequestBrochure from '../../components/products/FlatsProducts/ShipbuildingGrades/RequestBrochure';
 import GetInTouch from '../../components/products/FlatsProducts/ShipbuildingGrades/GetInTouch';
 import Banner from '../../components/products/FlatsProducts/ShipbuildingGrades/Banner';
+import FlatsProductsLinksBox from '../../components/products/FlatsProducts/FlatsProductsLinksBox';
 
 const ShipbuildingGrades = () => {
 	return (
@@ -13,6 +14,7 @@ const ShipbuildingGrades = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<FlatsProductsLinksBox />
 			<GetInTouch />
 		</div>
 	);

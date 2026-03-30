@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import video from "../../assets/heroVideo.mp4"
 import slide3 from "../../assets/banner6.png"
@@ -38,6 +38,15 @@ const slides = [
 const HeroSection = () => {
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const navigate = useNavigate();
+
+	// Auto slide every 6 seconds
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setCurrentSlide((prev) => (prev + 1) % slides.length);
+		}, 6000);
+
+		return () => clearInterval(interval);
+	}, []);
 
 	const nextSlide = () => {
 		setCurrentSlide((prev) => (prev + 1) % slides.length);

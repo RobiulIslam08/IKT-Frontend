@@ -5,6 +5,7 @@ import RequestBrochure from '../../components/products/ToolSteel/M42ToolSteel/Re
 import GetInTouch from '../../components/products/ToolSteel/M42ToolSteel/GetInTouch';
 import Banner from '../../components/products/ToolSteel/M42ToolSteel/Banner';
 import PropertiesTable from '../../components/products/ToolSteel/M42ToolSteel/PropertiesTable';
+import ToolSteelLinksBox from '../../components/products/ToolSteel/ToolSteelLinksBox';
 
 const M42ToolSteel = () => {
   return (
@@ -14,6 +15,7 @@ const M42ToolSteel = () => {
       <Applications />
       <PropertiesTable />
       <RequestBrochure />
+      <ToolSteelLinksBox />
       <GetInTouch />
     </div>
   );

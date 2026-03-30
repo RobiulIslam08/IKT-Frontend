@@ -5,6 +5,7 @@ import Applications from '../../components/products/Rebar/Blockmesh/Applications
 import RequestBrochure from '../../components/products/Rebar/Blockmesh/RequestBrochure';
 import GetInTouch from '../../components/products/Rebar/Blockmesh/GetInTouch';
 import Banner from '../../components/products/Rebar/Blockmesh/Banner';
+import RebarLinksBox from '../../components/products/Rebar/RebarLinksBox';
 
 const Blockmesh = () => {
 	return (
@@ -13,6 +14,7 @@ const Blockmesh = () => {
 			<InfoSection />
 			<Applications />
 			<RequestBrochure />
+			<RebarLinksBox />
 			<GetInTouch />
 		</div>
 	);

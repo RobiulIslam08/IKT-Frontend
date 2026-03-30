@@ -6,6 +6,7 @@ import RequestBrochure from '../../components/products/BoilerPlateSteel/AsmeSa51
 import GetInTouch from '../../components/products/BoilerPlateSteel/AsmeSa516AstmA516Gr60/GetInTouch';
 import PropertiesTable from '../../components/products/BoilerPlateSteel/AsmeSa516AstmA516Gr60/PropertiesTable';
 import Banner from '../../components/products/BoilerPlateSteel/AsmeSa516AstmA516Gr60/Banner';
+import BoilerPlateSteelLinksBox from '../../components/products/BoilerPlateSteel/BoilerPlateSteelLinksBox';
 
 const AsmeSa516AstmA516Gr60 = () => {
 	return (
@@ -15,6 +16,7 @@ const AsmeSa516AstmA516Gr60 = () => {
 			<Applications />
 			<PropertiesTable />
 			<RequestBrochure />
+			<BoilerPlateSteelLinksBox />
 			<GetInTouch />
 		</div>
 	);
