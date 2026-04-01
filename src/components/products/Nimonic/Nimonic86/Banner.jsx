@@ -3,29 +3,40 @@
 
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
-import banner1 from "../../../../assets/banner1.jpg";
+import banner1 from "../../../../assets/images/SpeacialAlloys/common1.png";
 
 export default function Banner() {
-  const slide = {
-    title: 'Nimonic 86',
-    description: 'IKT is your trusted supplier of premium Nimonic 86. This high-performance material is engineered to meet the most demanding industrial applications, providing outstanding mechanical properties and reliability in service.',
-    points: ["Superior mechanical properties and performance characteristics of Nimonic 86.","Optimized for demanding industrial environments and critical applications."],
-    bgColor: 'from-slate-900 via-slate-800 to-slate-900',
-    image: banner1,
-  };
+  const slides = [
+    {
+      title: 'IKT Nimonic 86 (Nickel-Chromium-Molybdenum Alloy)',
+      description:
+        'Nimonic 86 is a high-performance alloy optimized for exceptional creep-rupture strength and oxidation resistance. Engineered with Cerium for enhanced stability, it is the premier solution for Saudi Arabia\'s demanding gas turbine and industrial furnace applications.',
+      points: [
+        'Outstanding oxidation resistance at temperatures exceeding 1000°C.',
+        'Fortified with Molybdenum and Cerium for elite structural integrity.',
+      ],
+      bgColor: 'from-slate-900 via-slate-800 to-slate-900',
+      image: banner1
+    }
+  ];
+
+  const slide = slides[0];
 
   return (
     <div className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{ duration: 0.7 }}
         className={`absolute inset-0 bg-linear-to-br ${slide.bgColor}`}
       >
         <div className="absolute inset-0 opacity-20">
           <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
         </div>
+
         <div className="absolute inset-0 bg-black/40" />
+
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="w-full grid md:grid-cols-2 gap-8 items-center">
             <motion.div
@@ -42,14 +53,16 @@ export default function Banner() {
               >
                 {slide.title}
               </motion.h1>
+
               <motion.p
-                className="text-base md:text-lg font-medium text-gray-200 leading-relaxed"
+                className="text-base md:text-lg font-medium text-gray-200 leading-relaxed max-w-xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 {slide.description}
               </motion.p>
+
               <motion.ul
                 className="space-y-3"
                 initial={{ opacity: 0, y: 20 }}
@@ -70,6 +83,7 @@ export default function Banner() {
                 ))}
               </motion.ul>
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}

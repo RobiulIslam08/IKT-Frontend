@@ -175,7 +175,7 @@ export default function PropertiesTable() {
           </motion.div>
 
           {/* 5. Pricing Index */}
-          <motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden w-full">
+          {/* <motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden w-full">
             <div className="bg-primary/10 px-6 py-4 border-b border-gray-200 text-center">
               <h3 className="text-xl font-bold text-gray-800">Ti-6Al-4V Grade 5 Price Index (Per Kg)</h3>
             </div>
@@ -197,7 +197,7 @@ export default function PropertiesTable() {
                 </tbody>
               </table>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* 6. Industrial Form Availability */}
           <motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden w-full text-left">

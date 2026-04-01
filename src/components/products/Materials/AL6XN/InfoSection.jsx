@@ -2,68 +2,56 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { LayersIcon, Settings, PackageOpen } from 'lucide-react';
+import { Target, LayersIcon, PackageOpen } from 'lucide-react';
 
 export function InfoSection() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
-  };
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-  };
-
   return (
-    <div className="bg-gray-50 py-5 md:py-10">
-      <motion.section
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-      >
-        <motion.div variants={itemVariants} className="text-center md:text-left mb-8">
+    <div className="min-h-screen bg-gray-50 py-16 md:py-24 text-center md:text-left">
+      <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Material Overview</h1>
-          <p className="text-lg font-medium text-primary">AL6XN</p>
-        </motion.div>
+          <p className="text-base font-medium text-primary uppercase tracking-wider">Super Austenitic AL-6XN (UNS N08367 / SSC-6MO)</p>
+        </div>
 
-        <div className="grid grid-cols-1 gap-8">
-          <motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div className="grid grid-cols-1 gap-8 text-left">
+          {/* Box 1 */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
             <div className="flex flex-col md:flex-row gap-6 items-start">
-              <motion.div whileHover={{ rotate: 10, scale: 1.1 }} transition={{ duration: 0.3 }} className="p-4 bg-primary/10 rounded-xl">
-                <LayersIcon className="w-8 h-8 text-primary shrink-0" />
-              </motion.div>
+              <div className="p-4 bg-primary/10 rounded-xl mx-auto md:mx-0"><Target className="w-8 h-8 text-primary shrink-0" /></div>
               <div className="flex-1">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">Technical Insights: AL6XN</h2>
-                <p className="text-base font-medium text-gray-700 leading-relaxed">IKT supplies AL6XN to the highest industry standards. This material offers exceptional performance characteristics that make it ideal for critical applications. Our team of metallurgical experts ensures every batch meets stringent quality requirements before delivery to our customers worldwide.</p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">Superior Halide Resistance</h2>
+                <p className="text-base font-medium text-gray-700 leading-relaxed">
+                  AL-6XN is a "6-moly" super-austenitic alloy containing high levels of Chromium, Molybdenum, and Nitrogen. Developed to withstand aggressive chloride environments, it provides a cost-effective alternative to nickel-base superalloys like Hastelloy C276. It is the premier metallurgical choice for Saudi Arabia\'s massive desalination brine systems and offshore infrastructure.
+                </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          {/* Box 2 */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
             <div className="flex flex-col md:flex-row gap-6 items-start">
-              <motion.div whileHover={{ rotate: 10, scale: 1.1 }} transition={{ duration: 0.3 }} className="p-4 bg-primary/10 rounded-xl">
-                <Settings className="w-8 h-8 text-primary shrink-0" />
-              </motion.div>
+              <div className="p-4 bg-primary/10 rounded-xl mx-auto md:mx-0"><LayersIcon className="w-8 h-8 text-primary shrink-0" /></div>
               <div className="flex-1">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">Performance & Properties</h2>
-                <p className="text-base font-medium text-gray-700 leading-relaxed">AL6XN from IKT delivers outstanding mechanical performance including excellent strength, toughness, and durability. The material undergoes rigorous testing to verify compliance with international standards. IKT recommends this grade for applications where dimensional accuracy and material consistency are paramount.</p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">Enhanced Structural Strength</h2>
+                <p className="text-base font-medium text-gray-700 leading-relaxed">
+                  Thanks to its significant nitrogen content (0.18 - 0.25%), AL-6XN possesses a higher tensile strength and modulus than standard 316L stainless steel. With a density of 8.06 g/cm³ and an optimized PREN (Pitting Resistance Equivalent Number), it maintains structural stability in high-pressure seawater heat exchangers and chemical reaction vessels.
+                </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          {/* Box 3 */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
             <div className="flex flex-col md:flex-row gap-6 items-start">
-              <motion.div whileHover={{ rotate: 10, scale: 1.1 }} transition={{ duration: 0.3 }} className="p-4 bg-primary/10 rounded-xl">
-                <PackageOpen className="w-8 h-8 text-primary shrink-0" />
-              </motion.div>
+              <div className="p-4 bg-primary/10 rounded-xl mx-auto md:mx-0"><PackageOpen className="w-8 h-8 text-primary shrink-0" /></div>
               <div className="flex-1">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">Forms, Sizes & Availability</h2>
-                <p className="text-base font-medium text-gray-700 leading-relaxed">IKT maintains an extensive inventory of AL6XN in a wide range of forms, sizes, and finishes to suit your specific requirements. We supply this material in round bars, flat bars, plates, sheets, and custom profiles in both imperial and metric dimensions. Contact IKT for rapid quotation and delivery to your facility.</p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">Certified Infrastructure Supply</h2>
+                <p className="text-base font-medium text-gray-700 leading-relaxed">
+                  IKT holds a certified inventory of AL-6XN products strictly compliant with ASTM B675, B688, and B462 standards. We supply fully traceable forms, including seamless/welded pipes, industrial plates, and forged flanges. Sourced from globally recognized manufacturers, our supply chain supports rapid deployment for energy and marine maintenance throughout the Kingdom.
+                </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </motion.section>
     </div>

@@ -57,7 +57,7 @@ export default function Applications() {
             </motion.ul>
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4, duration: 0.5 }}>
-              <button className="group relative px-6 py-3 bg-primary text-white font-semibold rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 mx-auto md:mx-0">
+              <a href="#get-in-touch" className="group relative inline-block px-6 py-3 bg-primary text-white font-semibold rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 mx-auto md:mx-0">
                 <motion.div className="absolute inset-0 bg-black/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></motion.div>
                 <span className="relative flex items-center gap-2 font-bold uppercase tracking-wider">
                 GET IN TOUCH
@@ -72,7 +72,7 @@ export default function Applications() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </motion.svg>
                 </span>
-              </button>
+              </a>
             </motion.div>
           </motion.div>
 

@@ -2,78 +2,60 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { LayersIcon, Settings, PackageOpen } from 'lucide-react';
+import { Target, LayersIcon, PackageOpen } from 'lucide-react';
 
 export function InfoSection() {
-	const containerVariants = {
-		hidden: { opacity: 0 },
-		visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
-	};
-	const itemVariants = {
-		hidden: { opacity: 0, y: 20 },
-		visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-	};
+  return (
+    <div className="min-h-screen bg-gray-50 py-16 md:py-24 text-center md:text-left">
+      <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Material Overview</h1>
+          <p className="text-base font-medium text-primary uppercase tracking-wider">European Standardization Steel Hierarchy (EN Series)</p>
+        </div>
 
-	return (
-		<div className="bg-gray-50 py-5 md:py-10">
-			<motion.section
-				variants={containerVariants}
-				initial="hidden"
-				whileInView="visible"
-				viewport={{ once: true, amount: 0.1 }}
-				className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-			>
-				<motion.div variants={itemVariants} className="text-center md:text-left mb-8">
-					<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Material Overview</h1>
-					<p className="text-lg font-medium text-primary">EN Standards — European Norm Certified Materials from IKT</p>
-				</motion.div>
+        <div className="grid grid-cols-1 gap-8 text-left">
+          {/* Box 1 */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+            <div className="flex flex-col md:flex-row gap-6 items-start">
+              <div className="p-4 bg-primary/10 rounded-xl mx-auto md:mx-0"><Target className="w-8 h-8 text-primary shrink-0" /></div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">Unified European Quality</h2>
+                <p className="text-base font-medium text-gray-700 leading-relaxed">
+                  The European Standard (EN) provides a unified reference code adopted by CEN, CENELEC, and ETSI. These standards ensure that steel used in construction and manufacturing across Saudi Arabia and the global market meets rigorous structural and chemical benchmarks. From common carbon steels to specialized alloy variants, the EN series facilitates seamless material procurement for the Single European Market and its global partners.
+                </p>
+              </div>
+            </div>
+          </div>
 
-				<div className="grid grid-cols-1 gap-8">
-					<motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-						<div className="flex flex-col md:flex-row gap-6 items-start">
-							<motion.div whileHover={{ rotate: 10, scale: 1.1 }} transition={{ duration: 0.3 }} className="p-4 bg-primary/10 rounded-xl">
-								<LayersIcon className="w-8 h-8 text-primary shrink-0" />
-							</motion.div>
-							<div className="flex-1">
-								<h2 className="text-2xl font-bold text-gray-900 mb-3">Technical Insights: EN Standards Compliance</h2>
-								<p className="text-base font-medium text-gray-700 leading-relaxed">
-									European Norm (EN) standards define strict requirements for chemical composition, mechanical properties, dimensional tolerances, and test methods for a broad spectrum of metallic materials. IKT is fully equipped to supply EN-compliant materials spanning nickel alloys (EN 10095, EN 10168), heat-resistant steels, stainless steels (EN 10088), pressure vessel steels (EN 10028), and structural steels (EN 10025). Every material is supplied with full traceability and mill test certificates.
-								</p>
-							</div>
-						</div>
-					</motion.div>
+          {/* Box 2 */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+            <div className="flex flex-col md:flex-row gap-6 items-start">
+              <div className="p-4 bg-primary/10 rounded-xl mx-auto md:mx-0"><LayersIcon className="w-8 h-8 text-primary shrink-0" /></div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">Precision Equivalent Mapping</h2>
+                <p className="text-base font-medium text-gray-700 leading-relaxed">
+                  IKT specializes in cross-referencing EN steel numbers (e.g., 1.7225) with globally recognized systems like SAE (4140), DIN (42CrMo4), and JIS (SCM 440). This precision mapping ensures that engineers and project managers can identify the exact material properties needed for high-stress applications such as EN19 gears and EN24 shafts, maintaining metallurgical integrity throughout the fabrication lifecycle.
+                </p>
+              </div>
+            </div>
+          </div>
 
-					<motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-						<div className="flex flex-col md:flex-row gap-6 items-start">
-							<motion.div whileHover={{ rotate: 10, scale: 1.1 }} transition={{ duration: 0.3 }} className="p-4 bg-primary/10 rounded-xl">
-								<Settings className="w-8 h-8 text-primary shrink-0" />
-							</motion.div>
-							<div className="flex-1">
-								<h2 className="text-2xl font-bold text-gray-900 mb-3">Quality Assurance & Certification</h2>
-								<p className="text-base font-medium text-gray-700 leading-relaxed">
-									All EN-certified materials supplied by IKT are sourced from approved mills with documented quality management systems. Our rigorous inspection process covers chemical analysis, mechanical testing, dimensional verification, and surface inspection. We provide EN 10204 3.1 and 3.2 mill test certificates on request, ensuring full compliance for regulated industries including oil and gas, petrochemical, aerospace, power generation, and marine engineering.
-								</p>
-							</div>
-						</div>
-					</motion.div>
-
-					<motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-						<div className="flex flex-col md:flex-row gap-6 items-start">
-							<motion.div whileHover={{ rotate: 10, scale: 1.1 }} transition={{ duration: 0.3 }} className="p-4 bg-primary/10 rounded-xl">
-								<PackageOpen className="w-8 h-8 text-primary shrink-0" />
-							</motion.div>
-							<div className="flex-1">
-								<h2 className="text-2xl font-bold text-gray-900 mb-3">Product Range & Availability</h2>
-								<p className="text-base font-medium text-gray-700 leading-relaxed">
-									IKT stocks an extensive range of EN-standard materials including Incoloy alloys to EN standards, stainless and duplex steels, pressure vessel and boiler steels, structural steels, and high-performance engineering alloys. Materials are available in bar, plate, sheet, tube, and pipe forms. Our knowledgeable team is ready to assist with EN-equivalent cross-references and full material traceability documentation.
-								</p>
-							</div>
-						</div>
-					</motion.div>
-				</div>
-			</motion.section>
-		</div>
-	);
+          {/* Box 3 */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+            <div className="flex flex-col md:flex-row gap-6 items-start">
+              <div className="p-4 bg-primary/10 rounded-xl mx-auto md:mx-0"><PackageOpen className="w-8 h-8 text-primary shrink-0" /></div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">Comprehensive Inventory in KSA</h2>
+                <p className="text-base font-medium text-gray-700 leading-relaxed">
+                  Supporting the Kingdom’s industrial vision, IKT stocks an extensive range of EN-certified materials in various forms—including seamless pipes, industrial plates, and solid bars. Sourced from globally recognized manufacturers, our inventory covers Carbon, Alloy, Stainless, and Tool steel grades, all provided with full metallurgical traceability and certifications for high-stakes energy and defense sectors.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+    </div>
+  );
 }
 
 export default InfoSection;
