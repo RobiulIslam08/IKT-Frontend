@@ -4,6 +4,7 @@ import HomePage from '../pages/HomePage';
 import ProductPage from '../pages/ProductPage';
 import NotFoundPage from '../pages/NotFoundPage';
 import MenuDataSheet from '../pages/MenuDataSheet';
+import MaterialsRange from '../pages/MaterialsRange';
 import MainLayout from '../layout/MainLayout';
 import StainlessSteel304_304L from '../pages/StainlessSteelPlate/StainlessSteel304_304L';
 import StainlessSteel304H from '../pages/StainlessSteelPlate/StainlessSteel304H';
@@ -288,6 +289,10 @@ export const router = createBrowserRouter([
       {
         path: '/menu-data-sheet',
         element: <MenuDataSheet />,
+      },
+      {
+        path: '/materials-range',
+        element: <MaterialsRange />,
       },
       {
         path: '/products/304-304l-stainless-steel',

@@ -4,6 +4,8 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import video from "../../assets/heroVideo.mp4"
+import video2 from "../../assets/video2.mp4"
+import video3 from "../../assets/video3.mp4"
 import slide3 from "../../assets/banner6.png"
 import slide2 from "../../assets/slide3333.png"
 import slide1 from "../../assets/slide1.jpg"
@@ -22,16 +24,16 @@ const slides = [
 		title: "Our services",
 		description:
 			"Since its beginnings as a simple contributor in the field of steel plates. We have expanded our range of services to the point where we not only offer a wide range of the assemble and prepare complex finished parts ready for assembly.",
-		image: slide1,
-		isVideo: false,
+		video: video2,
+		isVideo: true,
 	},
 	{
 		id: 3,
 		title: "Quality Products",
 		description:
 			"We provide the highest quality steel products with precision engineering and superior craftsmanship for all industrial applications.",
-		image: slide3,
-		isVideo: false,
+		video: video3,
+		isVideo: true,
 	},
 ];
 

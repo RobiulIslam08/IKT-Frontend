@@ -1,8 +1,10 @@
-/* eslint-disable no-unused-vars */
 "use client";
 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ArrowRight, Quote } from "lucide-react";
+
+const MotionLink = motion(Link);
 
 export default function MaterialsSection() {
   return (
@@ -23,9 +25,9 @@ export default function MaterialsSection() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6"
             >
-     The foundation of modern industry. The catalyst for future evolution.
+              The foundation of modern industry. The catalyst for future evolution.
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +37,7 @@ export default function MaterialsSection() {
             >
               IKT: A premier distributor of high-performance, corrosion-resistant, and heat-tolerant alloys. We bridge the gap between world-class material science and industrial excellence, delivering unparalleled expertise and quality from the globe’s most trusted names in specialty metals.
             </motion.p>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -45,8 +47,9 @@ export default function MaterialsSection() {
             >
               We provide a comprehensive range of products in numerous metals, types and grades.
             </motion.p>
-            
-            <motion.button
+
+            <MotionLink
+              to="/materials-range"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -57,9 +60,9 @@ export default function MaterialsSection() {
             >
               VIEW OUR RANGE
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+            </MotionLink>
           </motion.div>
-          
+
           {/* Right - Testimonial Card */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -78,11 +81,11 @@ export default function MaterialsSection() {
               >
                 <Quote className="w-6 h-6 text-white" />
               </motion.div>
-              
+
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Latest success story
               </h3>
-              
+
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -92,7 +95,7 @@ export default function MaterialsSection() {
               >
                 "Their commitment to excellence and proactive support ensures we can consistently deliver high-performance solutions to our clients. Partnering with Specialty Metals isn't just a choice; it’s the foundation that enables us to fulfill our operational promises."
               </motion.p>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -107,7 +110,7 @@ export default function MaterialsSection() {
                 </div>
               </motion.div>
             </div>
-            
+
             {/* Decorative Element */}
             <motion.div
               initial={{ opacity: 0 }}

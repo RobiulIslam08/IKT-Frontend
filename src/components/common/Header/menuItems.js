@@ -63,15 +63,16 @@ export const menuItems = [
           "304H-Stainless-Steel",
           "316-316L-Stainless-Steel",
           "321-321H-Stainless-Steel",
+          "904L Stainless Steel",
           "Super-Austenitic-Stainless-Steel",
           {
-        name: "Duplex-Stainless-Steel",
-        subItems: ["S31803-(1.4462)-and-S32205-Duplex-Steel"],
-      },
-      {
-        name: "Super-Duplex-Stainless-Steel",
-        subItems: ["UNS S32750 (1.4410)", "UNS S32760 (1.4501)"],
-      },
+            name: "Duplex-Stainless-Steel",
+            subItems: ["S31803-(1.4462)-and-S32205-Duplex-Steel"],
+          },
+          {
+            name: "Super-Duplex-Stainless-Steel",
+            subItems: ["UNS S32750 (1.4410)", "UNS S32760 (1.4501)"],
+          },
         ],
       },
       // {
@@ -84,7 +85,6 @@ export const menuItems = [
       //   items: ["S31803 (1.4462) AND S32205 DUPLEX STEEL"],
       // },
 
-      
       // {
       //   name: "Duplex-Stainless-Steel",
       //   items: ["S31803-(1.4462)-and-S32205-Duplex-Steel"],
@@ -196,7 +196,14 @@ export const menuItems = [
       },
       {
         name: "Quenched-and-Tempered-Alloy-Steels",
-        items: ["4130 - 708A25", "4140 - 708M40", "4140 - Plate" ,"4340", "1.7225", "1.6511"],
+        items: [
+          "4130 - 708A25",
+          "4140 - 708M40",
+          "4140 - Plate",
+          "4340",
+          "1.7225",
+          "1.6511",
+        ],
       },
       {
         name: "Carbon-Steel",
@@ -259,7 +266,6 @@ export const menuItems = [
               "Incoloy 925",
               "Alloy 330",
               "Alloy A286",
-              
             ],
           },
           {
@@ -280,9 +286,6 @@ export const menuItems = [
             name: "Nickel Alloy",
             subItems: ["Nickel 200", "Nickel 201"],
           },
-          "254 SMO",
-          "Alloy 20",
-          "904L Stainless Steel",
           {
             name: "Titanium",
             subItems: [
@@ -317,6 +320,9 @@ export const menuItems = [
               "Nimonic 901",
             ],
           },
+          "254 SMO",
+          "Alloy 20",
+
           "Invar",
           "AL6XN",
 
@@ -365,8 +371,6 @@ export const menuItems = [
       {
         name: "",
         items: [
-          
-
           "O9B",
 
           "C45U",

@@ -16,7 +16,7 @@ const Header = () => {
 			<header className="w-full bg-white shadow-sm relative z-50 ">
 				{/* Top Bar */}
 				<div className="border-b border-border">
-					<div className="px-4 mx-auto ">
+					<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 						<div className="flex items-center justify-between py-4">
 							{/* Logo */}
 							<motion.div
@@ -26,7 +26,7 @@ const Header = () => {
 								className="shrink-0"
 							>
 								<img src="/logo4.png" className="h-8 w-62" alt="" srcset="" />
-								
+
 							</motion.div>
 
 							{/* Contact Info */}
@@ -86,7 +86,7 @@ const Header = () => {
 
 				{/* Navigation Bar */}
 				<nav className="bg-background border-b border-border  ">
-					<div className=" mx-auto  ">
+					<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 						<div className="flex items-center justify-between">
 							<motion.ul
 								initial={{ opacity: 0 }}
@@ -109,7 +109,7 @@ const Header = () => {
 											>
 												<Link
 													to={item.href}
-													className={`flex items-center gap-1 px-4 py-4 text-sm font-medium transition-colors hover:text-primary ${item.isArabic ? "text-primary" : "text-foreground"
+													className={`flex items-center gap-1 px-0 py-4 text-sm font-medium transition-colors hover:text-primary ${item.isArabic ? "text-primary" : "text-foreground"
 														}`}
 												>
 													{item.name}
