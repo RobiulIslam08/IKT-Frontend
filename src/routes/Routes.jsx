@@ -84,6 +84,7 @@ import Aluminum from '../pages/NonFerrousMetals/Aluminum';
 import Brass from '../pages/NonFerrousMetals/Brass';
 import Bronze from '../pages/NonFerrousMetals/Bronze';
 import Copper from '../pages/NonFerrousMetals/Copper';
+import Fe from '../pages/NonFerrousMetals/Fe';
 
 // Ferrous-Metals
 import StainlessSteelPage from '../pages/FerrousMetals/StainlessSteel';
@@ -575,6 +576,10 @@ export const router = createBrowserRouter([
       {
         path: '/products/copper',
         element: <Copper />,
+      },
+      {
+        path: '/products/fe',
+        element: <Fe />,
       },
       // Ferrous-Metals
       {

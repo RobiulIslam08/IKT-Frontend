@@ -2,14 +2,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const alloys = [
-  { number: "22", symbol: "Ti", name: "Titanium", weight: "47.867" },
-  { number: "24", symbol: "Cr", name: "Stainless Steel", weight: "51.996" },
-  { number: "28", symbol: "Ni", name: "Nickel Alloys", weight: "58.693" },
-  { number: "26", symbol: "Fe", name: "Iron", weight: "55.845" },
-  { number: "29", symbol: "Cu", name: "Copper Based", weight: "29.985" },
-  { number: "13", symbol: "Al", name: "Aluminium", weight: "26.982" },
+  { number: "22", symbol: "Ti", name: "Titanium", weight: "47.867", to: "products/titanium-grade-1" },
+  { number: "24", symbol: "Cr", name: "Stainless Steel", weight: "51.996", to: "products/304-304l-stainless-steel" },
+  { number: "28", symbol: "Ni", name: "Nickel Alloys", weight: "58.693", to: "products/nickel-200" },
+  { number: "26", symbol: "Fe", name: "Iron", weight: "55.845", to: "products/fe" },
+  { number: "29", symbol: "Cu", name: "Copper Based", weight: "29.985", to: "products/copper" },
+  { number: "13", symbol: "Al", name: "Aluminium", weight: "26.982", to: "products/aluminum" },
 ];
 
 const containerVariants = {
@@ -58,42 +59,43 @@ export default function FeaturedAlloys() {
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6"
         >
-          {alloys.map((alloy, index) => (
-            <motion.div
-              key={alloy.symbol}
-              variants={itemVariants}
-              whileHover={{ 
-                scale: 1.05, 
-                boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-                y: -5
-              }}
-              className="bg-white border-2 border-gray-200 p-6 cursor-pointer transition-colors hover:border-[#408ccb] group"
-            >
-              <div className="text-right">
-                <span className="text-sm font-medium text-gray-400 group-hover:text-[#408ccb] transition-colors">
-                  {alloy.number}
-                </span>
-              </div>
-              
+          {alloys.map((alloy) => (
+            <Link key={alloy.symbol} to={alloy.to} className="block">
               <motion.div
-                initial={{ scale: 1 }}
-                whileHover={{ scale: 1.1 }}
-                className="text-center py-4"
+                variants={itemVariants}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                  y: -5
+                }}
+                className="bg-white border-2 border-gray-200 p-6 cursor-pointer transition-colors hover:border-[#408ccb] group"
               >
-                <span className="text-5xl md:text-6xl lg:text-7xl font-light text-gray-900 group-hover:text-[#408ccb] transition-colors">
-                  {alloy.symbol}
-                </span>
+                <div className="text-right">
+                  <span className="text-sm font-medium text-gray-400 group-hover:text-[#408ccb] transition-colors">
+                    {alloy.number}
+                  </span>
+                </div>
+
+                <motion.div
+                  initial={{ scale: 1 }}
+                  whileHover={{ scale: 1.1 }}
+                  className="text-center py-4"
+                >
+                  <span className="text-5xl md:text-6xl lg:text-7xl font-light text-gray-900 group-hover:text-[#408ccb] transition-colors">
+                    {alloy.symbol}
+                  </span>
+                </motion.div>
+
+                <div className="text-center">
+                  <h3 className="font-semibold text-gray-900 text-sm md:text-base mb-1">
+                    {alloy.name}
+                  </h3>
+                  <p className="text-xs text-gray-400">
+                    {alloy.weight}
+                  </p>
+                </div>
               </motion.div>
-              
-              <div className="text-center">
-                <h3 className="font-semibold text-gray-900 text-sm md:text-base mb-1">
-                  {alloy.name}
-                </h3>
-                <p className="text-xs text-gray-400">
-                  {alloy.weight}
-                </p>
-              </div>
-            </motion.div>
+            </Link>
           ))}
         </motion.div>
       </div>
