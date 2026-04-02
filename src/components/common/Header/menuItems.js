@@ -156,7 +156,7 @@ export const menuItems = [
 
       {
         name: "Non-Ferrous-Metals",
-        items: ["Aluminum", "Brass", "Bronze", "Copper","Fe"],
+        items: ["Aluminum", "Brass", "Bronze", "Copper", "Fe"],
       },
       {
         name: "Ferrous-Metals",
