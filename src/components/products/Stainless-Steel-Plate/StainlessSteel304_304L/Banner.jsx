@@ -8,7 +8,7 @@ import banner1 from "../../../../assets/banner1.jpg";
 export default function Banner() {
 			const slides = [
 		{
-			title: '304 & 304L Stainless Steel Plate sdfsfsdf',
+			title: '304 & 304L Stainless Steel Plate ',
 			description:
 				'304 stainless steel is a versatile and dexterous material. It is widely used across numerous industries for its superior corrosion resistance, strength, and formability. Perfect for demanding applications.',
 			points: [

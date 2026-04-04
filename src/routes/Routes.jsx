@@ -268,6 +268,12 @@ import Steel12316 from '../pages/ToolSteel/Steel12316';
 import GroundFlatStock from '../pages/ToolSteel/GroundFlatStock';
 import PreMachinedEconomizer from '../pages/ToolSteel/PreMachinedEconomizer';
 import SteelHardnessConversionsToolSteel from '../pages/ToolSteel/SteelHardnessConversionsToolSteel';
+import TitaniumForHomePage from '../pages/Titanium/TitaniumForHomePage';
+import CrForHomePage from '../pages/HomePageFeaturedAlloy/Cr';
+import NickelAlloyForHomePage from '../pages/HomePageFeaturedAlloy/NickelAlloyForHomePage';
+import FeForHomePage from '../pages/HomePageFeaturedAlloy/FeForHomePage';
+import CuForHomePage from '../pages/HomePageFeaturedAlloy/CuForHomePage';
+import AlForHomePage from '../pages/HomePageFeaturedAlloy/AlForHomePage';
 
 export const router = createBrowserRouter([
   {
@@ -931,6 +937,15 @@ export const router = createBrowserRouter([
       { path: '/products/nimonic-115', element: <Nimonic115 /> },
       { path: '/products/nimonic-263', element: <Nimonic263 /> },
       { path: '/products/nimonic-901', element: <Nimonic901 /> },
+
+
+      // home
+      {path: '/titanium', element: <TitaniumForHomePage />},
+      {path: '/cr', element: <CrForHomePage />},
+      {path: '/NickelAlloys', element: <NickelAlloyForHomePage />},
+      {path: '/Fe', element: <FeForHomePage />},
+      {path: '/Cu', element: <CuForHomePage />},
+      {path: '/Al', element: <AlForHomePage />},
     ],
   },
 ]);

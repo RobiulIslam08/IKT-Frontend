@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const alloys = [
-  { number: "22", symbol: "Ti", name: "Titanium", weight: "47.867", to: "products/titanium-grade-1" },
-  { number: "24", symbol: "Cr", name: "Stainless Steel", weight: "51.996", to: "products/304-304l-stainless-steel" },
-  { number: "28", symbol: "Ni", name: "Nickel Alloys", weight: "58.693", to: "products/nickel-200" },
-  { number: "26", symbol: "Fe", name: "Iron", weight: "55.845", to: "products/fe" },
-  { number: "29", symbol: "Cu", name: "Copper Based", weight: "29.985", to: "products/copper" },
-  { number: "13", symbol: "Al", name: "Aluminium", weight: "26.982", to: "products/aluminum" },
+  { number: "22", symbol: "Ti", name: "Titanium", weight: "47.867", to: "titanium" },
+  { number: "24", symbol: "Cr", name: "Stainless Steel", weight: "51.996", to: "cr" },
+  { number: "28", symbol: "Ni", name: "Nickel Alloys", weight: "58.693", to: "NickelAlloys" },
+  { number: "26", symbol: "Fe", name: "Iron", weight: "55.845", to: "Fe" },
+  { number: "29", symbol: "Cu", name: "Copper Based", weight: "29.985", to: "Cu" },
+  { number: "13", symbol: "Al", name: "Aluminium", weight: "26.982", to: "Al" },
 ];
 
 const containerVariants = {
