@@ -11,6 +11,8 @@ const MegaDropdown = ({ categories }) => {
 	const navigate = useNavigate();
 	const [activeCategory, setActiveCategory] = useState(categories[0]?.name || "");
 	const [activeSubItem, setActiveSubItem] = useState(null);
+	const [categoryPanelPosition, setCategoryPanelPosition] = useState({ top: 0, maxHeight: 420 });
+	const [subMenuPosition, setSubMenuPosition] = useState({ top: 0, maxHeight: 320 });
 	const [showScrollDown, setShowScrollDown] = useState(false);
 	const [showScrollUp, setShowScrollUp] = useState(false);
 	const leftColumnRef = useRef(null);
@@ -54,6 +56,51 @@ const MegaDropdown = ({ categories }) => {
 		}
 	};
 
+	const handleCategoryHover = (categoryName, event) => {
+		setActiveCategory(categoryName);
+		setActiveSubItem(null);
+
+		if (!leftColumnRef.current || !event?.currentTarget) return;
+
+		const currentTarget = event.currentTarget;
+		const scrollTop = leftColumnRef.current.scrollTop;
+		const top = Math.max(0, currentTarget.offsetTop - scrollTop);
+		const itemRect = currentTarget.getBoundingClientRect();
+		const viewportPadding = 12;
+		const maxHeight = Math.max(160, window.innerHeight - itemRect.top - viewportPadding);
+
+		setCategoryPanelPosition({ top, maxHeight });
+	};
+
+	useEffect(() => {
+		if (hideLeftColumn || !leftColumnRef.current || !activeCategory) return;
+
+		const activeButton = leftColumnRef.current.querySelector(`[data-category-name="${CSS.escape(activeCategory)}"]`);
+		if (!activeButton) return;
+
+		const scrollTop = leftColumnRef.current.scrollTop;
+		const top = Math.max(0, activeButton.offsetTop - scrollTop);
+		const itemRect = activeButton.getBoundingClientRect();
+		const viewportPadding = 12;
+		const maxHeight = Math.max(160, window.innerHeight - itemRect.top - viewportPadding);
+
+		setCategoryPanelPosition({ top, maxHeight });
+	}, [activeCategory, categories, hideLeftColumn]);
+
+	const handleSubItemHover = (itemName, event) => {
+		setActiveSubItem(itemName);
+
+		if (!rightColumnRef.current || !event?.currentTarget) return;
+
+		const containerRect = rightColumnRef.current.getBoundingClientRect();
+		const itemRect = event.currentTarget.getBoundingClientRect();
+		const viewportPadding = 12;
+		const top = Math.max(0, itemRect.top - containerRect.top);
+		const maxHeight = Math.max(140, window.innerHeight - itemRect.top - viewportPadding);
+
+		setSubMenuPosition({ top, maxHeight });
+	};
+
 	return (
 		<motion.div
 			initial={{ opacity: 0, y: 10, scaleY: 0.95 }}
@@ -63,7 +110,7 @@ const MegaDropdown = ({ categories }) => {
 			className="absolute left-0 top-full bg-background shadow-2xl border border-border rounded-b-lg z-50"
 			style={{ transformOrigin: "top" }}
 		>
-			<div className="flex">
+			<div className="relative flex">
 				{/* Left Column - Categories */}
 				{!hideLeftColumn && (
 					<div className="relative w-64 bg-muted/50 border-r border-border">
@@ -74,10 +121,12 @@ const MegaDropdown = ({ categories }) => {
 							{categories.map((category, index) => (
 								<button
 									key={category.name}
-									onMouseEnter={() => setActiveCategory(category.name)}
+									data-category-name={category.name}
+									onMouseEnter={(event) => handleCategoryHover(category.name, event)}
 									onClick={() => {
 										if (category.items && category.items.length > 0) {
 											setActiveCategory(category.name);
+											setActiveSubItem(null);
 										} else if (category.href) {
 											navigate(category.href);
 										}
@@ -134,11 +183,13 @@ const MegaDropdown = ({ categories }) => {
 				{/* Right Column - Items (only render if there are items to show) */}
 				{activeItems.length > 0 && (
 					<div
-						className={`${hideLeftColumn ? 'w-64' : 'w-64'} bg-background relative`}
+						ref={rightColumnRef}
+						className={`${hideLeftColumn ? 'w-64 relative' : 'w-64 absolute left-full border-l border-border'} bg-background self-start`}
+						style={!hideLeftColumn ? { top: `${categoryPanelPosition.top}px`, maxHeight: `${categoryPanelPosition.maxHeight}px` } : undefined}
 						onMouseLeave={() => setActiveSubItem(null)}
 					>
 						{/* Scrollable items list */}
-						<div className="p-2 max-h-[calc(100vh-150px)] overflow-y-auto mega-scrollbar">
+						<div className="p-2 max-h-[calc(100vh-150px)] overflow-y-auto mega-scrollbar" style={!hideLeftColumn ? { maxHeight: `${categoryPanelPosition.maxHeight}px` } : undefined}>
 							<div key={activeCategory}>
 								{activeItems.map((item, index) => {
 									// Handle both string items (products), object items (services with href), and nested items (with subItems)
@@ -152,7 +203,7 @@ const MegaDropdown = ({ categories }) => {
 										return (
 											<div
 												key={itemKey}
-												onMouseEnter={() => setActiveSubItem(item.name)}
+												onMouseEnter={(event) => handleSubItemHover(item.name, event)}
 											>
 												<div
 													className={`flex items-center justify-between px-4 py-2 text-[12px] font-medium rounded-md transition-colors duration-150 cursor-pointer ${activeSubItem === item.name
@@ -192,7 +243,10 @@ const MegaDropdown = ({ categories }) => {
 							);
 							if (!activeItem || !activeItem.subItems || activeItem.subItems.length === 0) return null;
 							return (
-								<div className="absolute left-full top-0 w-56 bg-background shadow-xl border border-border rounded-md p-2 z-50 min-h-full max-h-[calc(100vh-150px)] overflow-y-auto mega-scrollbar">
+								<div
+									className="absolute left-full w-56 bg-background shadow-xl border border-border  p-2 z-50 overflow-y-auto mega-scrollbar"
+									style={{ top: `${subMenuPosition.top}px`, maxHeight: `${subMenuPosition.maxHeight}px` }}
+								>
 									{activeItem.subItems.map((subItem) => {
 										const subKey = typeof subItem === "string" ? subItem : subItem.name;
 										const subHref = typeof subItem === "string" ? generateProductUrl(subItem) : subItem.href;

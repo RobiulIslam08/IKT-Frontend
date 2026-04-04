@@ -10,6 +10,9 @@ import { menuItems } from "./menuItems";
 const Header = () => {
 	const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 	const [activeDropdown, setActiveDropdown] = useState(null);
+	const desktopNavItems = menuItems.filter(
+		(item) => item.name !== "About Us" && item.name !== "Contact Us"
+	);
 
 	return (
 		<>
@@ -94,7 +97,7 @@ const Header = () => {
 								transition={{ duration: 0.5, delay: 0.2 }}
 								className="hidden lg:flex items-center"
 							>
-								{menuItems.map((item, index) => (
+								{desktopNavItems.map((item, index) => (
 									<li
 										key={item.name}
 										className="relative"
