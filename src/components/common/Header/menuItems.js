@@ -235,7 +235,6 @@ export const menuItems = [
 
       {
         name: "Offshore-&-Structura-Steel-Plate",
-        items: [],
         href: generateProductUrl("OFFSHORE-&-STRUCTURA-STEEL-PLATE"),
       },
     ],

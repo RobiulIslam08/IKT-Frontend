@@ -109,7 +109,7 @@ const Header = () => {
 											>
 												<Link
 													to={item.href}
-													className={`flex items-center gap-1 px-0 py-4 text-sm font-medium transition-colors hover:text-primary ${item.isArabic ? "text-primary" : "text-foreground"
+													className={`flex items-center gap-1 pr-4 py-4 text-sm font-medium transition-colors hover:text-primary ${item.isArabic ? "text-primary" : "text-foreground"
 														}`}
 												>
 													{item.name}

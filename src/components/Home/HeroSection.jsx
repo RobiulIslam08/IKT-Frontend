@@ -59,7 +59,7 @@ const HeroSection = () => {
 	};
 
 	return (
-		<section className="relative h-[600px] lg:h-[700px] overflow-hidden">
+		<section className="relative h-[600px] lg:h-[700px] overflow-hidden ">
 			{/* Background Images and Video */}
 			{slides.map((slide, index) => (
 				<motion.div
@@ -93,7 +93,7 @@ const HeroSection = () => {
 			))}
 
 			{/* Content */}
-			<div className="relative h-full container mx-auto px-4 lg:px-8 flex items-center">
+			<div className="relative h-full container  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
 				<div className="max-w-2xl">
 					<motion.div
 						key={currentSlide}
