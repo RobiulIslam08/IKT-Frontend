@@ -39,6 +39,13 @@ const Header = () => {
 								transition={{ duration: 0.5, delay: 0.1 }}
 								className="hidden lg:flex items-center gap-8"
 							>
+
+
+								<div>
+									<p className="text-sm font-semibold text-primary whitespace-nowrap">
+										ISO 9001 Certified | Qualified Professionals
+									</p>
+								</div>
 								{/* Phone */}
 								<div className="flex items-center gap-3">
 									<div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">

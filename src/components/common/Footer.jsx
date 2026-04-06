@@ -25,12 +25,12 @@ const productLinks = [
 
 const aboutLinks = [
   "Company Profile",
-  "Capability Statement",
   "About Us",
-  "Industries",
-  "What We Do",
-  "Weight Calculator",
-  "Terms & Conditions",
+  // "Capability Statement",
+  // "Industries",
+  // "What We Do",
+  // "Weight Calculator",
+  // "Terms & Conditions",
   
 ];
 

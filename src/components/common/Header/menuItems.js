@@ -484,6 +484,29 @@ export const menuItems = [
       },
     ],
   },
+  {
+    name: "Sectors",
+    hasDropdown: true,
+    categories: [
+      {
+        name: "", 
+        items: [
+          { name: "Construction", href: "/sectors/construction" },
+          { name: "Defence", href: "/sectors/defence" },
+          { name: "Nuclear", href: "/sectors/nuclear" },
+          { name: "Oil & Gas", href: "/sectors/oil-gas" },
+          { name: "Offshore", href: "/sectors/offshore" },
+          { name: "Agricultural", href: "/sectors/agricultural" },
+          { name: "Materials And Handling", href: "/sectors/materials-and-handling" },
+          { name: "Safety and Access", href: "/sectors/safety-and-access" },
+          { name: "Transport", href: "/sectors/transport" },
+          { name: "Engineering", href: "/sectors/engineering" },
+        ],
+      },
+    ],
+  },
+  { name: "Customers", href: "/customers" },
+  { name: "Quality", href: "/quality" },
   { name: "About Us", href: "/about" },
   { name: "Contact Us", href: "/contact" },
 ];

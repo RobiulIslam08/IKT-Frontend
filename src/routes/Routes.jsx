@@ -274,6 +274,20 @@ import NickelAlloyForHomePage from '../pages/HomePageFeaturedAlloy/NickelAlloyFo
 import FeForHomePage from '../pages/HomePageFeaturedAlloy/FeForHomePage';
 import CuForHomePage from '../pages/HomePageFeaturedAlloy/CuForHomePage';
 import AlForHomePage from '../pages/HomePageFeaturedAlloy/AlForHomePage';
+import CustomersPage from '../pages/CustomersPage';
+import Quality from '../pages/Quality';
+
+// Sectors
+import Construction from '../pages/Sectors/Construction';
+import Defence from '../pages/Sectors/Defence';
+import Nuclear from '../pages/Sectors/Nuclear';
+import OilAndGas from '../pages/Sectors/OilAndGas';
+import Offshore from '../pages/Sectors/Offshore';
+import Agricultural from '../pages/Sectors/Agricultural';
+import MaterialsAndHandling from '../pages/Sectors/MaterialsAndHandling';
+import SafetyAndAccess from '../pages/Sectors/SafetyAndAccess';
+import Transport from '../pages/Sectors/Transport';
+import Engineering from '../pages/Sectors/Engineering';
 
 export const router = createBrowserRouter([
   {
@@ -292,6 +306,14 @@ export const router = createBrowserRouter([
       {
         path: '/contact',
         element: <div>Contact Us Page</div>,
+      },
+      {
+        path: '/customers',
+        element: <CustomersPage />,
+      },
+      {
+        path: '/quality',
+        element: <Quality />,
       },
       {
         path: '/menu-data-sheet',
@@ -946,6 +968,18 @@ export const router = createBrowserRouter([
       {path: '/Fe', element: <FeForHomePage />},
       {path: '/Cu', element: <CuForHomePage />},
       {path: '/Al', element: <AlForHomePage />},
+
+      // ── Sectors ───────────────────────────────────────────────────────────
+      { path: '/sectors/construction', element: <Construction /> },
+      { path: '/sectors/defence', element: <Defence /> },
+      { path: '/sectors/nuclear', element: <Nuclear /> },
+      { path: '/sectors/oil-gas', element: <OilAndGas /> },
+      { path: '/sectors/offshore', element: <Offshore /> },
+      { path: '/sectors/agricultural', element: <Agricultural /> },
+      { path: '/sectors/materials-and-handling', element: <MaterialsAndHandling /> },
+      { path: '/sectors/safety-and-access', element: <SafetyAndAccess /> },
+      { path: '/sectors/transport', element: <Transport /> },
+      { path: '/sectors/engineering', element: <Engineering /> },
     ],
   },
 ]);

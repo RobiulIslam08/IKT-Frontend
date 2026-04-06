@@ -38,7 +38,11 @@ const extractLinks = (items = []) => {
 
 const MenuDataSheet = () => {
 	const groupedMenus = useMemo(() => {
-		return menuItems.map((menu) => {
+		const excludedMenuNames = ['Home', 'About Us', 'Contact Us', "Customers"];
+
+		return menuItems
+			.filter((menu) => !excludedMenuNames.includes(menu.name))
+			.map((menu) => {
 			const categories = Array.isArray(menu.categories)
 				? menu.categories
 					.map((category) => ({
@@ -55,7 +59,7 @@ const MenuDataSheet = () => {
 				categories,
 				directLinks,
 			};
-		});
+			});
 	}, []);
 
 	return (
