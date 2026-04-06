@@ -1,63 +1,133 @@
 /* eslint-disable no-unused-vars */
 'use client';
+
 import { motion } from 'framer-motion';
 
 export default function PropertiesTable() {
-  const keyMaterials = [
-    { material: 'Armour Steel Plate', standard: 'MIL-DTL-12560 / Armox 500T' },
-    { material: 'Ballistic Structural Steel', standard: 'STANAG 4569 Certified' },
-    { material: 'High-Strength Alloy Steel', standard: 'ASTM A517 / EN 10083' },
-    { material: 'Stainless Steel Plate', standard: 'ASTM A240 / EN 10088' },
-    { material: 'Specialty Military Alloys', standard: 'AMS / MIL Specifications' },
+
+  const complianceData = [
+    { standard: 'EN 1090-2 EXC4', aspect: 'Highest Structural Execution Class' },
+    { standard: 'ISO 3471', aspect: 'Roll-Over Protection Structures (ROPS) Standard' },
+    { standard: 'EN 3.1 / 3.2', aspect: 'Full Mill Traceability Certification' },
+    { standard: 'PPAP / ISIR', aspect: 'OEM Repeatability & Sample Validation' }
   ];
-  const sectorApplications = [
-    { process: 'Armour Systems', details: 'Certified ballistic armour steel plates for vehicle protection, infantry shelter, and personnel carrier applications in active defence environments.' },
-    { process: 'Defence Infrastructure', details: 'Heavy structural steel for military bases, hardened bunkers, blast-proof command centres, and weapons storage facilities across the Kingdom.' },
-    { process: 'Naval & Aerospace', details: 'Corrosion-resistant and high-strength alloys for maritime defence vessels, naval structures, and aerospace defence component fabrication.' },
+
+  const highStrengthGrades = [
+    { grade: 'S700 Hollow Sections', benefit: 'Maximum Weight Reduction & Tensile Strength' },
+    { grade: 'S500 / S460 Sections', benefit: 'Agile Vehicle Chassis & Heavy Load Support' },
+    { grade: 'S355 (Hot & Cold)', benefit: 'Standard Structural & Defence Infrastructure' },
+    { grade: 'Specialist ROPS/FOPS', benefit: 'Occupant Safety in Combat Environments' }
   ];
-  const containerVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, staggerChildren: 0.1 } } };
-  const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } } };
+
+  const processingCapability = [
+    { facility: 'Multi-Axis Tube Laser', detail: '3D Precision cutting up to 610mm Diameter' },
+    { facility: 'Robotic 3D Coping', detail: 'Precision edge prep for high-integrity welding' },
+    { facility: 'CNC Bending & Forming', detail: 'Optimized for complex Chassis fabrication' },
+    { facility: 'Kitting & JIT Logistics', detail: 'Production-ready parts directly to assembly lines' }
+  ];
+
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="max-w-7xl mx-auto">
-        <motion.div variants={itemVariants} className="mb-12 text-center">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 text-center">
+      <div className="max-w-7xl mx-auto">
+
+        <div className="mb-16 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-1 h-8 bg-primary rounded-full"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Technical Data & Standards</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Technical Capability & Defence Standards</h2>
           </div>
-          <p className="text-base font-medium text-gray-600">Certified defence sector steel materials, specifications, and supply formats available in KSA.</p>
-        </motion.div>
-        <div className="grid grid-cols-1 gap-8">
-          <motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
-            <div className="mb-6 border-b border-gray-200 pb-4 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 flex items-center justify-center gap-2"><span className="w-2 h-2 rounded-full bg-primary"></span> Key Materials Supplied</h3>
+          <p className="text-base font-medium text-gray-600">IKT Defence sector technical matrix, high-strength material portfolio, and compliance benchmarks.</p>
+        </div>
+
+        <div className="flex flex-col gap-10">
+
+          {/* 1. Compliance Matrix */}
+          <div className="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden w-full">
+            <div className="bg-primary/10 px-6 py-4 border-b border-gray-200 text-center">
+              <h3 className="text-xl font-bold text-gray-800">Accreditation & Documentation Matrix</h3>
             </div>
-            <div className="overflow-x-auto rounded-lg border border-gray-200">
+            <div className="overflow-x-auto">
               <table className="w-full border-collapse">
-                <thead><tr className="bg-gray-50 text-base text-gray-900 border-b border-gray-200"><th className="px-6 py-4 text-center font-bold border-r border-gray-100 w-1/2">Material</th><th className="px-6 py-4 text-center font-bold w-1/2">Standard</th></tr></thead>
-                <tbody>{keyMaterials.map((row, index) => (<tr key={index} className="border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors"><td className="px-6 py-4 text-center border-r border-gray-100 text-gray-700 font-medium text-base">{row.material}</td><td className="px-6 py-4 text-center text-gray-700 font-medium text-base">{row.standard}</td></tr>))}</tbody>
+                <thead>
+                  <tr className="bg-gray-50 text-base text-gray-900 border-b border-gray-200 text-center">
+                    <th className="px-6 py-4 font-bold border-r border-gray-100 w-1/2">Regulation / Framework</th>
+                    <th className="px-6 py-4 font-bold w-1/2">Technical Compliance Scope</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {complianceData.map((row, index) => (
+                    <tr key={index} className="border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors text-center">
+                      <td className="px-6 py-4 text-center text-gray-700 font-medium text-base border-r border-gray-100">{row.standard}</td>
+                      <td className="px-6 py-4 text-center text-gray-700 font-medium text-base">{row.aspect}</td>
+                    </tr>
+                  ))}
+                </tbody>
               </table>
             </div>
-          </motion.div>
-          <motion.div variants={itemVariants} className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
-            <div className="mb-6 border-b border-gray-200 pb-4 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 flex items-center justify-center gap-2"><span className="w-2 h-2 rounded-full bg-primary"></span> Sector Application Profile</h3>
+          </div>
+
+          {/* 2. Material Strength Matrix */}
+          <div className="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden w-full">
+            <div className="bg-primary/10 px-6 py-4 border-b border-gray-200 text-center">
+              <h3 className="text-xl font-bold text-gray-800">High-Strength Defence Grades</h3>
             </div>
-            <div className="flex flex-col gap-4">
-              {sectorApplications.map((step, index) => (
-                <div key={index} className="bg-gray-50 border border-gray-100 p-4 rounded-lg flex flex-col sm:flex-row gap-4 items-start md:items-center">
-                  <span className="px-4 py-2 bg-primary text-white text-base font-medium rounded-md min-w-[210px] w-[210px] text-center shadow-sm shrink-0">{step.process}</span>
-                  <div className="flex-1"><p className="text-base text-gray-700 font-medium leading-relaxed">{step.details}</p></div>
-                </div>
-              ))}
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-gray-50 text-base text-gray-900 border-b border-gray-200 text-center">
+                    <th className="px-6 py-4 font-bold border-r border-gray-100 w-1/2 text-center">Steel Grade</th>
+                    <th className="px-6 py-4 font-bold w-1/2 text-center">Operational Benefit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {highStrengthGrades.map((row, index) => (
+                    <tr key={index} className="border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors text-center">
+                      <td className="px-6 py-4 text-center text-gray-700 font-medium text-base border-r border-gray-100">{row.grade}</td>
+                      <td className="px-6 py-4 text-center text-gray-700 font-medium text-base">{row.benefit}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-          </motion.div>
+          </div>
+
+          {/* 3. Processing Capacity Table */}
+          <div className="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden w-full text-left">
+            <div className="bg-primary/10 px-6 py-4 border-b border-gray-200 text-center">
+              <h3 className="text-xl font-bold text-gray-800">Precision Processing Capability (KSA)</h3>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-gray-50 text-base text-gray-900 border-b border-gray-200 text-center">
+                    <th className="px-6 py-4 font-bold border-r border-gray-100 w-1/2">Service / Equipment</th>
+                    <th className="px-6 py-4 font-bold w-1/2">Technical Specification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {processingCapability.map((row, index) => (
+                    <tr key={index} className="border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors text-center">
+                      <td className="px-6 py-4 text-center text-gray-700 font-medium text-base border-r border-gray-100">{row.facility}</td>
+                      <td className="px-6 py-4 text-center text-gray-700 font-medium text-base w-1/2">{row.detail}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
         </div>
-        <motion.div variants={itemVariants} className="mt-8 p-6 bg-gray-100 border border-gray-200 rounded-lg text-center">
-          <p className="text-base font-medium text-gray-700 mb-2"><span className="font-bold text-gray-900">IKT Defence Steel Supply in KSA:</span> Full range of certified materials stocked across Saudi Arabia for immediate defence sector deployment.</p>
-          <p className="text-base font-medium text-gray-600">For procurement inquiries, material certifications, or custom fabrication, contact our expert team at <span className="font-bold text-primary">+966-13-3444036</span>.</p>
-        </motion.div>
-      </motion.div>
+
+        <div className="mt-12 p-8 bg-gray-100 border border-gray-200 rounded-lg text-center md:text-left">
+          <p className="text-base font-medium text-gray-700 mb-2">
+            <span className="font-bold text-gray-900">IKT Specialized Defence Logistics in KSA:</span>
+            Mission-critical structural steel and precision-processed components for armoured vehicles and security infrastructure are heavily stocked across Saudi Arabia. We provide full melt-to-part traceability and sustainable carbon reporting for high-stakes military and NATO-standard programs.
+          </p>
+          <p className="text-base font-medium text-gray-600">
+            For critical defence procurement operations, specific sizing details for KSA, or PPAP documentation, contact our expert engineering team in Saudi Arabia at <span className="font-bold text-primary">+966-13-3444036</span> or email <span className="font-bold text-primary">sales@ikt.sa</span>.
+          </p>
+        </div>
+
+      </div>
     </section>
   );
 }
