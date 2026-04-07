@@ -2,7 +2,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
-import banner from "../../../assets/slide1.jpg";
+import banner from "../../../assets/images/Sectors/engineering.png";
 
 export default function Banner() {
   const slide = {

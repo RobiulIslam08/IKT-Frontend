@@ -12,6 +12,8 @@ import {
   ChevronRight
 } from "lucide-react";
 
+import companyProfilePdf from "../../assets/FREE QUALIFICATION CATALOG & PROFILES.pdf";
+
 const productLinks = [
   "Titanium",
   "Stainless Steel",
@@ -126,7 +128,9 @@ export default function Footer() {
               {aboutLinks.map((link) => (
                 <motion.li key={link} variants={itemVariants}>
                   <a
-                    href="#"
+                    href={link === "Company Profile" ? companyProfilePdf : link === "About Us" ? "/about" : "#"}
+                    target={link === "Company Profile" ? "_blank" : undefined}
+                    rel={link === "Company Profile" ? "noopener noreferrer" : undefined}
                     className="text-gray-400 hover:text-[#408ccb] transition-colors text-sm flex items-center gap-1 group"
                   >
                     <ChevronRight className="w-4 h-4 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />

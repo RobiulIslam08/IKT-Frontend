@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
-import banner1 from "../../../assets/images/Sectors/defence.png";;
+import banner1 from "../../../assets/images/Sectors/defence.png";
 
 export default function Banner() {
   const slides = [

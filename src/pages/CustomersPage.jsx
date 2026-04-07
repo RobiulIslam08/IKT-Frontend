@@ -32,7 +32,7 @@ const CustomersPage = () => {
           {customers.map((customer, index) => (
             <div 
               key={index} 
-              className="w-full h-24 flex items-center justify-center p-4 grayscale hover:grayscale-0 transition duration-300 ease-in-out transform hover:scale-105"
+              className="w-full h-24 flex items-center justify-center p-4 grayscale-0 transition duration-300 ease-in-out transform hover:scale-105"
             >
               <img
                 src={customer.logo}

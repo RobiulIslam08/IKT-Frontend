@@ -289,6 +289,8 @@ import SafetyAndAccess from '../pages/Sectors/SafetyAndAccess';
 import Transport from '../pages/Sectors/Transport';
 import Engineering from '../pages/Sectors/Engineering';
 
+import AboutUsPage from '../pages/AboutUsPage';
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -301,7 +303,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/about',
-        element: <div>About Us Page</div>,
+        element: <AboutUsPage />,
       },
       {
         path: '/contact',
