@@ -1,22 +1,18 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import video from "../../assets/heroVideo.mp4"
-import video2 from "../../assets/video2.mp4"
-import video3 from "../../assets/video3.mp4"
-import slide3 from "../../assets/banner6.png"
-import slide2 from "../../assets/slide3333.png"
-import slide1 from "../../assets/slide1.jpg"
 
+// Use public-relative paths instead of bundled imports
+// This keeps video files out of the JS bundle entirely
 const slides = [
 	{
 		id: 1,
 		title: "Welcome to Our Steel World",
 		description:
 			"Discover premium quality steel products and exceptional services tailored for your industrial needs. Experience innovation and reliability like never before.",
-		video: video,
+		video: "/assets/heroVideo.mp4",
 		isVideo: true,
 	},
 	{
@@ -24,7 +20,7 @@ const slides = [
 		title: "Our services",
 		description:
 			"Since its beginnings as a simple contributor in the field of steel plates. We have expanded our range of services to the point where we not only offer a wide range of the assemble and prepare complex finished parts ready for assembly.",
-		video: video2,
+		video: "/assets/video2.mp4",
 		isVideo: true,
 	},
 	{
@@ -32,7 +28,7 @@ const slides = [
 		title: "Quality Products",
 		description:
 			"We provide the highest quality steel products with precision engineering and superior craftsmanship for all industrial applications.",
-		video: video3,
+		video: "/assets/video3.mp4",
 		isVideo: true,
 	},
 ];
@@ -68,17 +64,24 @@ const HeroSection = () => {
 					animate={{ opacity: currentSlide === index ? 1 : 0 }}
 					transition={{ duration: 0.8 }}
 					className="absolute inset-0"
+					// Keep inactive slides in DOM but hide — avoids layout shift
+					aria-hidden={currentSlide !== index}
 				>
 					{slide.isVideo ? (
 						<>
-							<video
-								className="absolute inset-0 w-full h-full object-cover"
-								src={slide.video}
-								autoPlay
-								muted
-								loop
-								playsInline
-							/>
+							{/* Only render video element for the active slide */}
+							{currentSlide === index && (
+								<video
+									className="absolute inset-0 w-full h-full object-cover"
+									src={slide.video}
+									autoPlay
+									muted
+									loop
+									playsInline
+									// Only the first slide preloads metadata; others load on demand
+									preload={index === 0 ? "metadata" : "none"}
+								/>
+							)}
 							<div className="absolute inset-0 bg-linear-to-r from-slate-900/10 via-slate-800/10 to-slate-900/10" />
 						</>
 					) : (
@@ -141,6 +144,7 @@ const HeroSection = () => {
 						className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors"
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.9 }}
+						aria-label="Previous slide"
 					>
 						<ChevronLeft className="w-6 h-6" />
 					</motion.button>
@@ -149,6 +153,7 @@ const HeroSection = () => {
 						className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors"
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.9 }}
+						aria-label="Next slide"
 					>
 						<ChevronRight className="w-6 h-6" />
 					</motion.button>
@@ -166,6 +171,7 @@ const HeroSection = () => {
 								}`}
 							whileHover={{ scale: 1.2 }}
 							whileTap={{ scale: 0.9 }}
+							aria-label={`Go to slide ${index + 1}`}
 						/>
 					))}
 				</div>

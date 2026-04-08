@@ -7,6 +7,7 @@ import GetInTouch from '../../components/products/SuperDuplexStainlessSteel/UnsS
 import PropertiesTable from '../../components/products/SuperDuplexStainlessSteel/UnsS3276014501/PropertiesTable';
 import Banner from '../../components/products/SuperDuplexStainlessSteel/UnsS3276014501/Banner';
 import UNSS32750FullSpecifications from '../../components/products/SuperDuplexStainlessSteel/UnsS3275014410/UNSS32750FullSpecifications';
+import SuperDuplexStainlessSteelLinksBox from '../../components/products/SuperDuplexStainlessSteel/SuperDuplexStainlessSteelLinksBox';
 
 const UnsS3276014501 = () => {
 	return (
