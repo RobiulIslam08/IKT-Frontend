@@ -31,6 +31,11 @@ const Header = () => {
 								<img src="/logo4.png" className="h-8 w-62" alt="" srcset="" />
 
 							</motion.div>
+							<div>
+									<p className="hidden md:block text-sm font-semibold text-primary whitespace-nowrap">
+										ISO 9001 Certified | Qualified Professionals
+									</p>
+								</div>
 
 							{/* Contact Info */}
 							<motion.div
@@ -41,11 +46,7 @@ const Header = () => {
 							>
 
 
-								<div>
-									<p className="text-sm font-semibold text-primary whitespace-nowrap">
-										ISO 9001 Certified | Qualified Professionals
-									</p>
-								</div>
+								
 								{/* Phone */}
 								<div className="flex items-center gap-3">
 									<div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">

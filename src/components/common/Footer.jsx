@@ -2,6 +2,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
   Phone, 
   Mail, 
@@ -12,17 +13,14 @@ import {
   ChevronRight
 } from "lucide-react";
 
-import companyProfilePdf from "../../assets/FREE QUALIFICATION CATALOG & PROFILES.pdf";
+import companyProfilePdf from "../../assets/IthraProfile.pdf";
 
 const productLinks = [
-  "Titanium",
-  "Stainless Steel",
-  "Nickel Based Alloys",
-  "Copper Based Alloys",
-  "Aluminium Based Alloys",
-  "Cobalt",
-  "Duplex",
-  "Tantalum",
+  { label: "Titanium", path: "/titanium" },
+  { label: "Stainless Steel", path: "/cr" },
+  { label: "Nickel Based Alloys", path: "/NickelAlloys" },
+  { label: "Copper Based Alloys", path: "/Cu" },
+  { label: "Aluminium Based Alloys", path: "/Al" },
 ];
 
 const aboutLinks = [
@@ -97,14 +95,14 @@ export default function Footer() {
               className="space-y-3"
             >
               {productLinks.map((link) => (
-                <motion.li key={link} variants={itemVariants}>
-                  <a
-                    href="#"
+                <motion.li key={link.label} variants={itemVariants}>
+                  <Link
+                    to={link.path}
                     className="text-gray-400 hover:text-[#408ccb] transition-colors text-sm flex items-center gap-1 group"
                   >
                     <ChevronRight className="w-4 h-4 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                    {link}
-                  </a>
+                    {link.label}
+                  </Link>
                 </motion.li>
               ))}
             </motion.ul>
@@ -127,15 +125,25 @@ export default function Footer() {
             >
               {aboutLinks.map((link) => (
                 <motion.li key={link} variants={itemVariants}>
-                  <a
-                    href={link === "Company Profile" ? companyProfilePdf : link === "About Us" ? "/about" : "#"}
-                    target={link === "Company Profile" ? "_blank" : undefined}
-                    rel={link === "Company Profile" ? "noopener noreferrer" : undefined}
-                    className="text-gray-400 hover:text-[#408ccb] transition-colors text-sm flex items-center gap-1 group"
-                  >
-                    <ChevronRight className="w-4 h-4 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                    {link}
-                  </a>
+                  {link === "Company Profile" ? (
+                    <a
+                      href={companyProfilePdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-[#408ccb] transition-colors text-sm flex items-center gap-1 group"
+                    >
+                      <ChevronRight className="w-4 h-4 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                      {link}
+                    </a>
+                  ) : (
+                    <Link
+                      to={link === "About Us" ? "/about" : "#"}
+                      className="text-gray-400 hover:text-[#408ccb] transition-colors text-sm flex items-center gap-1 group"
+                    >
+                      <ChevronRight className="w-4 h-4 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                      {link}
+                    </Link>
+                  )}
                 </motion.li>
               ))}
             </motion.ul>

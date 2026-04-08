@@ -12,7 +12,7 @@ const WhatsAppIcon = ({ className }) => (
 );
 
 const WhatsAppButton = () => {
-  const phoneNumber = "966133444036";
+  const phoneNumber = "966541722684";
   const message = "Hello! I am interested in your services.";
   
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
