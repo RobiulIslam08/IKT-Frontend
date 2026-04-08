@@ -28,7 +28,9 @@ const Header = () => {
 								transition={{ duration: 0.5 }}
 								className="shrink-0"
 							>
+							<Link to="/">
 								<img src="/logo4.png" className="h-8 w-62" alt="" srcset="" />
+							</Link>
 
 							</motion.div>
 							<div>
